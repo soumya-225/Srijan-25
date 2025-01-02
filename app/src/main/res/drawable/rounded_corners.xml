@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Define the corners radius (5dp) -->
+
+
+    <!-- Optional: Define a border/stroke for the image -->
+    <stroke
+        android:color="#F1A820"
+        android:width="2dp" />
+
+    <!-- Optional: Define a background color -->
+    <solid android:color="@color/transparent"/>
+
+
+
+
+</shape>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_corners"
+    android:orientation="vertical"
+    android:elevation="8dp">
+
+        <!-- Image for the card -->
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/rounded_corners">
+
+
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop" />
+
+</FrameLayout>
+
+
+        <!-- Title/Text for the card -->
+        <LinearLayout
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:background="@color/transparent"
+            style="@style/h4"
+            android:layout_weight="1"
+            android:id="@+id/cardTitle"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:layout_height="50dp"
+            android:text="Dr. A.P.J Abdul Kalam" />
+
+        <TextView
+            android:padding="15dp"
+            android:layout_gravity="end"
+            android:id="@+id/cardSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See More" />
+        </LinearLayout>
+    </LinearLayout>
+
+

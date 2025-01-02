@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Srijan 25</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Tanu_jain">Dr. Tanu Jain, an IAS officer and former dentist, gained recognition after clearing the
+        UPSC Civil Services Examination. Known for her motivational talks, she shares insights on perseverance and
+        discipline, inspiring many civil service aspirants. Her journey from medicine to administration,
+        along with her service in the Armed Forces Headquarters, continues to motivate young professionals, especially women.</string>
+
+    <string name="anubhav_dubey">
+Anubhav Dubey is the co-founder of Chai Sutta Bar, a popular Indian tea chain known for serving tea in eco-friendly kulhads (clay cups).
+        His entrepreneurial journey is highly inspirational, as he started the venture with limited resources alongside his friend Anand
+        Nayak.
+        Initially from a small town in Madhya Pradesh, Anubhav moved to Indore, where the idea for Chai Sutta Bar was born.</string>
+
+    <string name="vijender_chauhan">Vijender Chauhan is a rising entrepreneur and motivational speaker from India,
+        renowned for his impactful speeches on personal development and leadership. He empowers youth through inspirational t
+        alks that emphasize self-confidence, perseverance, and goal-setting. His journey from humble beginnings to success resonates
+        with many aspiring professionals, as he highlights resilience in overcoming challenges. Through workshops and seminars,
+        Vijender encourages individuals to take charge of their lives and prioritize personal growth.</string>
+
+    <string-array name="date">
+        <item>18th Oct</item>
+        <item>19th Oct</item>
+        <item>20th Oct</item>
+    </string-array>
+
+
+</resources>

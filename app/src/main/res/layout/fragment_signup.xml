@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.SignupFragment"
+    tools:ignore="hardcodedText">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/cardBgColor"
+        android:layout_marginVertical="80dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.MyApp.MediumComponent.Rounded">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvRegister"
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create Account"
+                    android:textColor="@color/primaryDark"/>
+
+                <TextView
+                    android:id="@+id/tvCollegeEmail"
+                    style="@style/h4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please enter your college email"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/ltEtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        style="@style/h5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Name"
+                        android:textColor="@color/white" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:inputType="textPersonName"
+                        android:lines="1"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ltEtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        style="@style/h5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="@color/white" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ltEtCollege"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCollege"
+                        style="@style/h5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="University / College"
+                        android:textColor="@color/white" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCollege"
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                </LinearLayout>
+
+                <!--            <LinearLayout-->
+                <!--                android:id="@+id/ltEtContact"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="16dp"-->
+                <!--                android:orientation="vertical">-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/tvContact"-->
+                <!--                    style="@style/h5"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="Contact Number"-->
+                <!--                    android:textColor="@color/white" />-->
+
+                <!--                <com.google.android.material.textfield.TextInputEditText-->
+                <!--                    android:id="@+id/etContact"-->
+                <!--                    -->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="4dp"-->
+                <!--                    android:inputType="phone"-->
+                <!--                    android:lines="1"-->
+                <!--                    android:scrollHorizontally="true"-->
+                <!--                    android:singleLine="true"-->
+                <!--                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />-->
+                <!--            </LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/ltEtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPassword"
+                        style="@style/h5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Password"
+                        android:textColor="@color/white" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ltEtConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvConfirmPassword"
+                        style="@style/h5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Confirm Password"
+                        android:textColor="@color/white" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etConfirmPassword"
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ltEtReferralCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvReferralCode"
+                        style="@style/h5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Referral Code (Optional)"
+                        android:textColor="@color/white" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etReferralCode"
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvIITISM"
+                    style="@style/h5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Are you an IIT ISM student?"
+                    android:textColor="@color/white"/>
+
+                <RadioGroup
+                    android:id="@+id/rgIITISM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/rbYes"
+                    android:weightSum="2" >
+
+                    <RadioButton
+                        android:id="@+id/rbYes"
+                        
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/rbNo"
+                        
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="No" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/btnSignUp"
+                    style="@style/btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="SIGN UP" />
+
+                <TextView
+                    android:id="@+id/tvAlreadyAccount"
+                    style="@style/h5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Already have an account?"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    style="@style/h5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="LOGIN"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryDark"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="35dp"-->
+<!--            app:cardBackgroundColor="@color/cardBgColor"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:shapeAppearance="@style/ShapeAppearance.MyApp.MediumComponent.Rounded">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="24dp">-->
+
+<!--                <TextView-->
+<!--                    style="@style/h2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Create Account"-->
+<!--                    android:textColor="@color/primaryDark" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/h4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Please enter your college email"-->
+<!--                    android:textColor="#C8C7C7" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/h4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:text="Name"-->
+<!--                    android:textColor="@color/text"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/etName"-->
+<!--                    style="@style/h4"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:autofillHints="name"-->
+<!--                    android:background="@drawable/border2"-->
+<!--                    android:inputType="textPersonName"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@color/text"-->
+<!--                    android:textCursorDrawable="@color/primary" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/h4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:text="Email"-->
+<!--                    android:textColor="@color/text"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/etEmail"-->
+<!--                    style="@style/h4"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:autofillHints="emailAddress"-->
+<!--                    android:background="@drawable/border2"-->
+<!--                    android:inputType="textEmailAddress"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@color/text"-->
+<!--                    android:textCursorDrawable="@color/primary" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/h4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:text="Contact Number"-->
+<!--                    android:textColor="@color/text"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/etPhone"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:autofillHints="phone"-->
+<!--                    android:background="@drawable/border2"-->
+<!--                    android:inputType="phone"-->
+<!--                    android:maxLength="10"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@color/text"-->
+<!--                    android:textCursorDrawable="@color/primary" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/h4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:text="Password"-->
+<!--                    android:textColor="@color/text"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/etPassword"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:autofillHints="password"-->
+<!--                    style="@style/h4"-->
+<!--                    android:background="@drawable/border2"-->
+<!--                    android:inputType="textPassword"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@color/text" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/h4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:text="Confirm Password"-->
+<!--                    android:textColor="@color/text"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/etConfirmPassword"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:autofillHints="password"-->
+<!--                    style="@style/h4"-->
+<!--                    android:background="@drawable/border2"-->
+<!--                    android:inputType="textPassword"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@color/text" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/h4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="18dp"-->
+<!--                    android:text="Are you an IIT ISM student?"-->
+<!--                    android:textColor="#DAD8D8" />-->
+
+<!--                <RadioGroup-->
+<!--                    android:id="@+id/radioGroup"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="12dp"-->
+<!--                    android:checkedButton="@id/btnYes"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="2">-->
+
+<!--                    <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--                        android:id="@+id/btnYes"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:buttonTint="@color/primary"-->
+<!--                        android:text="Yes"-->
+<!--                        android:textColor="#DAD8D8" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatRadioButton-->
+<!--                        android:id="@+id/btnNo"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:buttonTint="@color/primary"-->
+<!--                        android:text="No"-->
+<!--                        android:textColor="#DAD8D8" />-->
+
+<!--                </RadioGroup>-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnSignup"-->
+<!--                    style="@style/btn"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="end"-->
+<!--                    android:layout_marginTop="24dp"-->
+
+<!--                    android:text="SIGNUP" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        style="@style/h4"-->
+<!--                        android:text="Already have an account?"-->
+<!--                        android:textColor="@color/text" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvLogin"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Login"-->
+<!--                        style="@style/h4"-->
+<!--                        android:textColor="@color/primary" />-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp" />-->
+
+<!--    </LinearLayout>-->
+</ScrollView>

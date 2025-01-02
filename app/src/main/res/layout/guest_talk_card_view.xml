@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:elevation="20dp"
+    android:backgroundTint="@color/transparent"
+    android:outlineAmbientShadowColor="@color/white"
+    app:cardCornerRadius="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/transparent"
+                android:layout_marginTop="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginLeft="17dp"
+                app:cardCornerRadius="30dp">
+
+                <ImageView
+                    android:id="@+id/guest_img"
+                    android:outlineProvider="background"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="350dp"
+                    android:elevation="50dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvGuestName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guest Name"
+                android:layout_marginTop="10dp"
+                style="@style/h4"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center"
+                android:textColor="@color/text"
+                />
+
+            <LinearLayout
+                android:padding="8dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text"
+                        android:text="Venue: "
+                        style="@style/h4"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tv_venue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text"
+                        style="@style/h4"
+                        android:text="tv_venue">
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_viewmore"
+            android:layout_margin="16dp"
+            android:text="View More"
+            android:textColor="@color/black"
+            style="@style/h5"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:textAllCaps="false"
+            android:elevation="20dp"
+            app:cornerRadius="20dp"
+            android:backgroundTint="@color/appBartext" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

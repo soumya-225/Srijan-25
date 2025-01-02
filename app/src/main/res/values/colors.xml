@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="primaryDark">#FF7900</color>
+    <color name="bg">#00000000</color>
+    <color name="progress_bar">#CC000000</color>
+    <!--    <color name="bgLight">#33FFEB3B</color>-->
+    <color name="appBartext">#FAE2DC</color>
+    <color name="cardBgColor">#372916</color>
+    <color name="btnRegular">#FF7900</color>
+    <color name="bgBackDark">#E6052323</color>
+    <color name="bgLight">#BC5B463C</color>
+    <color name="bgBrownLight">#86052323</color>
+    <!--    <color name="brown">#723B14</color>-->
+    <color name="alternate">#1F1E1E</color>
+    <color name="bgAlternate">#919191</color>
+    <color name="dotColor">#F4DA02</color>
+
+    <color name="primary">#5B463C</color>
+    <color name="primary2">#5B463C</color>
+    <color name="secondary">#FF000000</color>
+    <color name="primaryTranslucent">#635B463C</color>
+
+    <color name="text">#FFFFFF</color>
+    <!--    <color name="text">#FF000000</color>-->
+    <color name="light_text">#636262</color>
+
+    <color name="action_bar">#FF000000</color>
+    <color name="nav_bar">#FFFFFF</color>
+
+
+    <color name="gray">#B0B0B0</color>
+
+
+    <color name="primaryLight">#FF9800</color>
+
+    <color name="bgColor">#01101B</color>
+    <color name="bgLightColor">#1E1B1B</color>
+    <color name="statusBarColor">#403d39</color>
+    <!--    <color name="statusBarColor">#01182A</color>-->
+    <color name="iconColor">#FFFFFFFF</color>
+    <color name="bottomNavColor">#FF000000</color>
+    <!--    <color name="bottomNavColor">#01182A</color>-->
+    <color name="textColor">#FFFFFFFF</color>
+    <color name="textLightColor">#C6C5C5</color>
+    <color name="textErrorColor">#FF0000</color>
+    <color name="userHighlightColor">#4CAF50</color>
+
+    <color name="btnAlter">#000080</color>
+
+    <color name="material_dialog">#86052323</color>
+
+</resources>

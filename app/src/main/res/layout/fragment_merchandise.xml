@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.EventsFragment"
+    app:shapeAppearance="@style/ShapeAppearance.MyApp.MediumComponent.Rounded">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager_carousel_merch"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/nav_item_background"/>
+        <!--       <TextView-->
+        <!--           style="@style/h4"-->
+        <!--           android:layout_width="wrap_content"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:layout_gravity="start"-->
+        <!--           android:padding="5dp"-->
+        <!--           android:layout_marginTop="16dp"-->
+        <!--           android:text="Name"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           android:textStyle="bold" />-->
+
+        <!--       <EditText-->
+        <!--           android:id="@+id/etName"-->
+        <!--           android:layout_width="match_parent"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           style="@style/h4"-->
+        <!--           android:background="@drawable/border2"-->
+        <!--           android:inputType="text"-->
+        <!--           android:padding="10dp"/>-->
+        <!--       <TextView-->
+        <!--           style="@style/h4"-->
+        <!--           android:layout_width="wrap_content"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:layout_gravity="start"-->
+        <!--           android:padding="5dp"-->
+        <!--           android:layout_marginTop="16dp"-->
+        <!--           android:text="Email Id"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           android:textStyle="bold" />-->
+
+        <!--       <EditText-->
+        <!--           android:id="@+id/etEmail"-->
+        <!--           android:layout_width="match_parent"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           style="@style/h4"-->
+        <!--           android:background="@drawable/border2"-->
+        <!--           android:inputType="text"-->
+        <!--           android:padding="10dp"/>-->
+        <!--       <TextView-->
+        <!--           style="@style/h4"-->
+        <!--           android:layout_width="wrap_content"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:layout_gravity="start"-->
+        <!--           android:padding="5dp"-->
+        <!--           android:layout_marginTop="16dp"-->
+        <!--           android:text="Admission No."-->
+        <!--           android:textColor="@color/text"-->
+        <!--           android:textStyle="bold" />-->
+
+        <!--       <EditText-->
+        <!--           android:id="@+id/etAdm"-->
+        <!--           android:layout_width="match_parent"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           style="@style/h4"-->
+        <!--           android:background="@drawable/border2"-->
+        <!--           android:inputType="text"-->
+        <!--           android:padding="10dp"/>-->
+        <!--       <TextView-->
+        <!--           style="@style/h4"-->
+        <!--           android:layout_width="wrap_content"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:layout_gravity="start"-->
+        <!--           android:padding="5dp"-->
+        <!--           android:layout_marginTop="16dp"-->
+        <!--           android:text="Hostel"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           android:textStyle="bold" />-->
+        <!--       <Spinner-->
+        <!--           android:id="@+id/hostel_spinner"-->
+        <!--           android:layout_width="match_parent"-->
+        <!--           android:layout_height="40dp"-->
+        <!--           android:spinnerMode="dropdown"-->
+        <!--           android:background="@drawable/border2"/>-->
+        <!--       <TextView-->
+        <!--           style="@style/h4"-->
+        <!--           android:layout_width="wrap_content"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:layout_gravity="start"-->
+        <!--           android:padding="5dp"-->
+        <!--           android:layout_marginTop="16dp"-->
+        <!--           android:text="Room Number"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           android:textStyle="bold" />-->
+
+        <!--       <EditText-->
+        <!--           android:id="@+id/etRoom"-->
+        <!--           android:layout_width="match_parent"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           style="@style/h4"-->
+        <!--           android:background="@drawable/border2"-->
+        <!--           android:inputType="text"-->
+        <!--           android:padding="10dp"/>-->
+        <!--       <TextView-->
+        <!--           style="@style/h4"-->
+        <!--           android:layout_width="wrap_content"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:layout_gravity="start"-->
+        <!--           android:padding="5dp"-->
+        <!--           android:layout_marginTop="16dp"-->
+        <!--           android:text="contact Number"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           android:textStyle="bold" />-->
+
+        <!--       <EditText-->
+        <!--           android:id="@+id/etcontact"-->
+        <!--           android:layout_width="match_parent"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           style="@style/h4"-->
+        <!--           android:background="@drawable/border2"-->
+        <!--           android:inputType="text"-->
+        <!--           android:padding="10dp"/>-->
+
+        <!--       <TextView-->
+        <!--           style="@style/h4"-->
+        <!--           android:layout_width="wrap_content"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:layout_gravity="start"-->
+        <!--           android:padding="5dp"-->
+        <!--           android:layout_marginTop="16dp"-->
+        <!--           android:text="Size"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           android:textStyle="bold" />-->
+        <!--       <Spinner-->
+        <!--           android:id="@+id/size_spinner"-->
+        <!--           android:layout_width="match_parent"-->
+        <!--           android:layout_height="40dp"-->
+        <!--           android:spinnerMode="dropdown"-->
+        <!--           android:background="@drawable/border2" />-->
+        <!--       <TextView-->
+        <!--           style="@style/h4"-->
+        <!--           android:layout_width="wrap_content"-->
+        <!--           android:layout_height="wrap_content"-->
+        <!--           android:layout_gravity="start"-->
+        <!--           android:padding="5dp"-->
+        <!--           android:layout_marginTop="16dp"-->
+        <!--           android:text="Payment Screenshot with Transaction ID"-->
+        <!--           android:textColor="@color/text"-->
+        <!--           android:textStyle="bold" />-->
+        <!--       <ImageView-->
+        <!--           android:id="@+id/payment_screenshot"-->
+        <!--           android:layout_width="100dp"-->
+        <!--           android:layout_height="100dp"-->
+        <!--           android:src="@drawable/choose_img"-->
+        <!--           android:backgroundTint="@color/white"-->
+        <!--           android:layout_marginStart="8dp">-->
+
+        <!--       </ImageView>-->
+        <Button
+            android:id="@+id/PlaceOrder"
+            style="@style/btn"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:text="Place Order" />
+
+    </LinearLayout>
+
+</ScrollView>

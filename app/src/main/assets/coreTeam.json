@@ -1,0 +1,435 @@
+[
+  {
+    "name": "Prof. Ajit Kumar",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "",
+    "position": "Convenor",
+    "image": "https://res.cloudinary.com/dfk0pdfmo/image/upload/v1728897667/file_p2kkpn.jpg"
+  },
+  {
+    "name": "Prof. Himanshu Mishra",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "",
+    "position": "Co-convenor",
+    "image": "https://res.cloudinary.com/dfk0pdfmo/image/upload/v1728897675/file_2_plac2x.jpg"
+  },
+  {
+    "name": "Prof. Ashok Kumar",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "",
+    "position": "Treasurer",
+    "image": ""
+  },
+  {
+    "name": "Saurav Shakti",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "",
+    "position": "Advisor",
+    "image": "https://res.cloudinary.com/dfk0pdfmo/image/upload/v1728897841/eafe54a0-f9fc-4890-8d46-2a7a9c8578cb_qj0ny8.jpg"
+  },
+  {
+    "name": "Mohammed Sirajullah",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "",
+    "position": "Advisor",
+    "image": "https://res.cloudinary.com/dfk0pdfmo/image/upload/v1728898107/c57fa346-91ce-4cd0-bd8e-8a14f1cb906d_sdxjx7.jpg"
+  },
+  {
+    "name": "Divakar Trivedee",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "",
+    "position": "Advisor",
+    "image": "https://res.cloudinary.com/dfk0pdfmo/image/upload/v1728898034/2f66ed17-cb8b-4ed0-95b2-504b1553cc79_gy0las.jpg"
+  },
+  {
+    "name": "Shivamraj Chauhan ",
+    "instagram_url": "https://www.instagram.com/i_amshivamraj?igsh=a3d6NDdvZWI3aW5y&utm_source=qr",
+    "linkedIn_url": "https://www.linkedin.com/in/shivamraj-chauhan-652672223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "team": "Students Gymkhana ",
+    "position": "President ",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729118750/hivam_mc8hia.jpg"
+  },
+  {
+    "name": "Priyanka Meena",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "Gymkhana",
+    "position": "",
+    "image": "https://res.cloudinary.com/dfk0pdfmo/image/upload/v1728897914/aef364b7-8874-49e4-9dfa-eb2d2f1feabe_aqc0ub.jpg"
+  },
+  {
+    "name": "Pawan Prakash",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "Gymkhana",
+    "position": "",
+    "image": "https://res.cloudinary.com/dfk0pdfmo/image/upload/v1728897957/925e71f5-3deb-4e14-9b0d-e743d7254aa7_gqelrh.jpg"
+  },
+  {
+    "name": "Revant Vora",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "",
+    "position": "Coordinator",
+    "image": "https://res.cloudinary.com/dzmrngj31/image/upload/v1727556059/WhatsApp_Image_2024-09-28_at_15.38.28_elyxnh.jpg'"
+  },
+  {
+    "name": "Shreyansh Shandilya ",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "",
+    "position": "Co-Coordinator",
+    "image": "https://res.cloudinary.com/dzmrngj31/image/upload/v1728643427/SHREYANSH_SHANDILYA_ql97cb.jpg'"
+  },
+  {
+    "name": "Vaibhav Kashyap",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "",
+    "position": "Co-Coordinator",
+    "image": "https://res.cloudinary.com/dzmrngj31/image/upload/v1728643440/vaibhavkashyap_gi6pdp.jpg'"
+  },
+  {
+    "name": "Anand Kumar",
+    "instagram_url": "https://www.instagram.com/kumar_anand9934",
+    "linkedIn_url": "https://www.linkedin.com/in/anand-kumar-2a7564201?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Operations and Logistics",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727033936/xm8wvu1tf8qxh8n9puet.png"
+  },
+  {
+    "name": "Sandeep Chilwal",
+    "instagram_url": "https://www.instagram.com/sandeep_chilwal_144",
+    "linkedIn_url": "https://www.linkedin.com/in/sandeep-chilwal-7b2930218/",
+    "team": "Design",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727034154/i0exd9ivkvjw9lnwy5gm.jpg"
+  },
+  {
+    "name": "Aman Agarwal",
+    "instagram_url": "https://www.instagram.com/aman_agarwal68?igsh=eTB3cXpnMjFjdW45",
+    "linkedIn_url": "https://www.linkedin.com/in/aman-agarwal2003/",
+    "team": "Sponsorship",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727034269/psixsp5ampqt5e3sr3oe.jpg"
+  },
+  {
+    "name": "AMAN YADAV",
+    "instagram_url": null,
+    "linkedIn_url": "https://www.linkedin.com/in/aman-kumar-232795254?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BtiMSfl0pQlqBm6ijurTaLA%3D%3D",
+    "team": "Event Management",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727035269/ayccm5vefxhbprvkaqha.png"
+  },
+  {
+    "name": "ADITYA KUMAR BAITHA",
+    "instagram_url": "https://www.instagram.com/ab_a_d_i_0102_/",
+    "linkedIn_url": "https://www.linkedin.com/in/aditya-kumar-baitha-128931233/",
+    "team": "Security",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727035355/vtfqixgeaospbsrhex2h.jpg"
+  },
+  {
+    "name": "Sayantan Sengupta",
+    "instagram_url": "https://www.instagram.com/itz_.sayantan?igsh=Zzd3b3J0ZWh0aXp1&utm_source=qr",
+    "linkedIn_url": "https://www.linkedin.com/in/sayantan-sengupta-724822225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "team": "Design",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727035482/wkvrmrhnuwa2jjxsifsv.jpg"
+  },
+  {
+    "name": "Arkja",
+    "instagram_url": "https://www.instagram.com/arkja_11?igsh=cGN5bm96OXR5aTN4",
+    "linkedIn_url": "https://www.linkedin.com/in/arkja/",
+    "team": "Content and Documentation",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729115083/arkja_kgl6au.jpg"
+  },
+  {
+    "name": "Shreyansh Yadav",
+    "instagram_url": "https://www.instagram.com/shreyash3166?igsh=MWxlZmNnN3RzYjR4Zg==",
+    "linkedIn_url": "https://www.linkedin.com/in/shreyash-yadav-67405723a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Finance",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729115394/IMG-20230817-WA0019_1_-_Shreyash_Yadav_qvspkj.jpg"
+  },
+  {
+    "name": "Navjot Singh",
+    "instagram_url": "https://www.instagram.com/navjotsingh7075?igsh=MXRwMWlteGJxczc5bA==",
+    "linkedIn_url": "https://www.linkedin.com/in/navjot2002/",
+    "team": "Hospitality",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729115611/nav_rqql9x.jpg"
+  },
+  {
+    "name": "Raushan Ranjan",
+    "instagram_url": "https://www.instagram.com/im_raushan.07?igsh=MXI4bHhsY2xmbDh6ZA==",
+    "linkedIn_url": "https://www.linkedin.com/in/raushan-ranjan-28216a176?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Promotion",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729115839/ushan_fxngy9.jpg"
+  },
+  {
+    "name": "Rohit Raj",
+    "instagram_url": "https://www.instagram.com/raj_rohit_2110?igsh=MXUxNGNzcGlxMG50ZQ==",
+    "linkedIn_url": "https://www.linkedin.com/in/rohit-raj-1a2679170?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Public Relations",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729116038/hit_s1qb2l.jpg"
+  },
+  {
+    "name": "Raghav Prateek",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "Web Development",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729116090/rahagha_jl6pxs.jpg"
+  },
+  {
+    "name": "Karishmita Baishya",
+    "instagram_url": "https://www.instagram.com/kar_is_mita/?hl=en",
+    "linkedIn_url": "https://www.linkedin.com/in/karismita-baishya-64302a217?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Marketing",
+    "position": "Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729115760/baishya_nlipsu.jpg"
+  },
+  {
+    "name": "SUNIL KUMAR RAR",
+    "instagram_url": "https://www.instagram.com/8sunilchoudhary",
+    "linkedIn_url": "https://www.linkedin.com/in/sunil-choudhary-751874247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Operation and Logistics",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727034982/m0ssvzqvcziv9mabe29z.jpg"
+  },
+  {
+    "name": "Himangshu Kumar Gupta",
+    "instagram_url": "https://www.instagram.com/guptahimangshu004/?hl=en",
+    "linkedIn_url": "https://www.linkedin.com/in/anand-kumar-2a7564201?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Operation and Logistics",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729116629/hingshu_ehkgzq.jpg"
+  },
+  {
+    "name": "Kirtika Negi ",
+    "instagram_url": "https://www.instagram.com/thegirlgonevogue?igsh=dHB2aWUxNjJ3YmE4",
+    "linkedIn_url": "linkedin.com/in/kirtika-negi-3940101a9",
+    "team": "Sponsorship",
+    "position": "Co-Head ",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729117312/kritika_jengzl.jpg"
+  },
+  {
+    "name": "Rupal Bhartiya",
+    "instagram_url": null,
+    "linkedIn_url": "http://linkedin.com/in/rupal-bhartiya-52a22a223",
+    "team": "Sponsorship ",
+    "position": "Co-head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729117358/rupal_qiih6n.jpg"
+  },
+  {
+    "name": "Shashank Singh",
+    "instagram_url": "https://www.instagram.com/shashank_singh_026/",
+    "linkedIn_url": "https://www.linkedin.com/in/shashank-singh-26march?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Event",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727034205/tfugteowbmmgzgu6mykr.jpg"
+  },
+  {
+    "name": "Piyush Kumar",
+    "instagram_url": "https://www.instagram.com/piyush_7703/",
+    "linkedIn_url": "https://www.linkedin.com/in/piyush7703",
+    "team": "Event Management",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727035178/ud5jh9nj216ilfdzheua.jpg"
+  },
+  {
+    "name": "Sneha Barman ",
+    "instagram_url": "https://www.instagram.com/chocolate_husky1/",
+    "linkedIn_url": "https://www.linkedin.com/in/sneha-barman-1a523728a/",
+    "team": "Event management team ",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729117572/snha_qtunoy.jpg"
+  },
+  {
+    "name": "Yatharth Sharma",
+    "instagram_url": "https://www.instagram.com/yatharth3427?igsh=MXFhMG4xc2x1YWNpaw==",
+    "linkedIn_url": "https://www.linkedin.com/in/yatharth-sharma-1b21b2233/",
+    "team": "Security",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729117719/yhth_od4knd.jpg"
+  },
+  {
+    "name": "Adarsh Pandey ",
+    "instagram_url": "https://www.instagram.com/adarsh__2032/",
+    "linkedIn_url": "https://www.linkedin.com/in/adarsh-pandey-417677236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Security ",
+    "position": "Co- head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729117766/dardh_wlwsbk.jpg"
+  },
+  {
+    "name": "Aman Chaudhary ",
+    "instagram_url": "https://www.instagram.com/_itz_aman_14/",
+    "linkedIn_url": "https://www.linkedin.com/in/aman-chaudhary-401788227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Security team",
+    "position": "Co head ",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729117870/amnm_vnoslj.jpg"
+  },
+  {
+    "name": "Arghyadeep Kolay",
+    "instagram_url": "https://www.instagram.com/adk_arghya?igsh=MW9yOXBjdzJwYjN1bg==",
+    "linkedIn_url": "https://www.linkedin.com/in/arghyadeep-kolay-07418622b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Content and Documentation",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727033484/gop6pdjf0siylodanwlo.jpg"
+  },
+  {
+    "name": "Shrinath Dhumale",
+    "instagram_url": "Shrinath_26",
+    "linkedIn_url": "www.linkedin.com/in/shrinath-dhumale-",
+    "team": "Content and Documentation",
+    "position": "Co Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729118002/srinath_m85ygu.jpg"
+  },
+  {
+    "name": "Sumit Raj",
+    "instagram_url": "https://www.instagram.com/sumit_.raj17",
+    "linkedIn_url": "https://www.linkedin.com/in/sumit1702?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Finance",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729118116/umit_rmv6wz.jpg"
+  },
+  {
+    "name": "Harshit Kumar ",
+    "instagram_url": "https://www.instagram.com/harxhiit._?igsh=aGFmd2dtbDVvNTEz",
+    "linkedIn_url": "https://www.linkedin.com/in/harshit-kumar-ba9075226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Finance ",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729118151/gxgfx_bjdvzz.jpg"
+  },
+  {
+    "name": "L ANILKUMAR",
+    "instagram_url": "https://www.instagram.com/anil_kumar_1526?igsh=eGl3bGJmbG02OXdo",
+    "linkedIn_url": "www.linkedin.com/in/lanil",
+    "team": "hospitality",
+    "position": "co-Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729118253/anil_avxujq.jpg"
+  },
+  {
+    "name": "Aakash Raj",
+    "instagram_url": "https://www.instagram.com/aakash_kr0811/",
+    "linkedIn_url": "",
+    "team": "Promotion",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/demo/image/fetch/https://drive.google.com/uc?id=1Ax_pQzU3ixoV_yqQkBGddVih2ez62WA3"
+  },
+  {
+    "name": "Himanshu Kumar*",
+    "instagram_url": "https://www.instagram.com/thehimanshu_kumar",
+    "linkedIn_url": "http://linkedin.com/in/himanshu-kumar-11592a223",
+    "team": "Promotion",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729118464/inndhu_eklpos.jpg"
+  },
+  {
+    "name": "Rupa kumari",
+    "instagram_url": "https://www.instagram.com/rupakumari5860?igsh=MTdyNmpua3Rqa3VjcA==",
+    "linkedIn_url": "https://www.linkedin.com/in/rupa-kumari-053750252",
+    "team": "Promotion",
+    "position": "Co- head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729118510/upa_tvru0r.jpg"
+  },
+  {
+    "name": "Avinash Sahu",
+    "instagram_url": "https://www.instagram.com/sahu_avinash_07/",
+    "linkedIn_url": "https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile",
+    "team": "Public Relations",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727034048/qtnaze0l7bflhidv2nvd.jpg"
+  },
+  {
+    "name": "Amrit Raj Singh ",
+    "instagram_url": "https://www.instagram.com/singh_amrittt_?igsh=ejZ4cWl3cmRwMmRz",
+    "linkedIn_url": "https://www.linkedin.com/in/singh-amrit-raj?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Public Relations ",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dln8srfum/image/upload/v1729118630/amrit_jd6k2d.jpg"
+  },
+  {
+    "name": "Rashi Raj",
+    "instagram_url": "https://www.instagram.com/__rashhhiii?igsh=MTNyMno1anZ2cTBnZQ==",
+    "linkedIn_url": "https://www.linkedin.com/in/rashi-raj-23553a223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Hospitality",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727034433/ftvkdsczqnj9pwbmzkag.jpg"
+  },
+  {
+    "name": "Lakshay Garg",
+    "instagram_url": null,
+    "linkedIn_url": "https://www.linkedin.com/in/garg-lakshay/",
+    "team": "Web Development",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727034489/v997a7kv8rskkpjwx9iw.png"
+  },
+  {
+    "name": "Pritam Chakraborty",
+    "instagram_url": "",
+    "linkedIn_url": "",
+    "team": "Web Development",
+    "position": "Co-head",
+    "image": "https://res.cloudinary.com/dzmrngj31/image/upload/v1728643463/pritam_pu4xyq.jpg'"
+  },
+  {
+    "name": "Aditya Modi",
+    "instagram_url": "https://www.instagram.com/adityamodi05",
+    "linkedIn_url": "https://www.linkedin.com/in/aditya-modi-26ba92204?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "team": "Marketing",
+    "position": "Co-head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727034664/z95joqec9egplivkeg96.jpg"
+  },
+  {
+    "name": "Ayush Raj",
+    "instagram_url": "https://www.instagram.com/argupta_72?igsh=MTJoYTVtN3BoemNtbA==",
+    "linkedIn_url": null,
+    "team": "Marketing",
+    "position": "Co-head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727034707/sqtkzaabzi1danmbsyvm.jpg"
+  },
+  {
+    "name": "Aamiq Faiyaz Thokan",
+    "instagram_url": "https://www.instagram.com/aamiq.thokan_/",
+    "linkedIn_url": "https://www.linkedin.com/in/aamiq-thokan-651b2b248/",
+    "team": "App Development",
+    "position": "Co-head",
+    "image": "https://res.cloudinary.com/dvcji14nu/image/upload/v1727034927/qobsnex0ywexnd4zsm6b.jpg"
+  },
+
+  {
+    "name": "Siddharth Gorai",
+    "instagram_url": "https://www.instagram.com/siddharthgorai",
+    "linkedIn_url": "https://www.linkedin.com/in/siddharth-gorai-ab01a7254",
+    "team": "App Team",
+    "position": "Organiser",
+    "image": "https://res.cloudinary.com/dc3prss4c/image/upload/v1728456973/pol1a9hubj1ealdsjgb0.png"
+  },
+  {
+    "name": "Shubham Saurav",
+    "instagram_url": "https://www.instagram.com/me_shubhamsaurav",
+    "linkedIn_url": "https://www.linkedin.com/in/shubham-saurav-bab886255",
+    "team": "App Team",
+    "position": "Organiser",
+    "image": "https://res.cloudinary.com/dc3prss4c/image/upload/v1728459941/cwn6nfznjeuflisfjlpj.jpg"
+  },
+  {
+    "name": "Gande Bhargav",
+    "instagram_url": "https://www.instagram.com/gande_bhargav_",
+    "linkedIn_url": "https://www.linkedin.com/in/bhargavgande7/",
+    "team": "App Team",
+    "position": "Organiser",
+    "image": "https://media.licdn.com/dms/image/v2/D5603AQFhzU1PorvbFQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724241673018?e=1734566400&v=beta&t=0piBTjjkHTKmFvZ0yRUJEakkZ4IeyZRaiu8U21S-9AA"
+  }
+]
