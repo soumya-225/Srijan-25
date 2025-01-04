@@ -80,10 +80,11 @@ Anubhav Dubey is the co-founder of Chai Sutta Bar, a popular Indian tea chain kn
                 "deeply grateful to our dedicated team and sponsors, whose efforts " +
                 "have made this vision a reality.\n</string>
 
-    <string name="perks">Internship certificates to all \nperforming CAs.\n\n "+
-                "Letter of recommondation to best performing CA\'s.\n\n"+
-                "Free accommodation inside IIT ISM Dhanbad for top performing CA's during the fest.\n\n"+
-                "Exclusive Goodies for top performing CA's and a chance to win monetary rewards!</string>
+    <string name="perks">Perks</string>
+<!--    Internship certificates to all performing CAs.<br /><br />-->
+<!--    Letter of recommendation to best performing CAs.<br /><br />-->
+<!--    Free accommodation inside IIT ISM Dhanbad for top performing CA's during the fest.<br /><br />-->
+<!--    Exclusive Goodies for top performing CA's and a chance to win monetary rewards!</string>-->
 
     <string name="dept_events">Departmental Events</string>
     <string name="club_events">Club Events</string>
