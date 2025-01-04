@@ -1,18 +1,14 @@
 package com.iitism.srijan25.data.remote
 
-import com.iitism.srijan25.model.LeaderboardResponse
 import com.iitism.srijan25.model.LoginRequest
 import com.iitism.srijan25.model.LoginResponse
 import com.iitism.srijan25.model.OtpVerificationRequest
 import com.iitism.srijan25.model.OtpVerificationResponse
-import com.iitism.srijan25.model.RegisterAmbassadorRequest
-import com.iitism.srijan25.model.RegisterAmbassadorResponse
 import com.iitism.srijan25.model.RegisterRequest
 import com.iitism.srijan25.model.RegisterResponse
 import com.iitism.srijan25.model.ResendOtpRequest
 import retrofit2.Call
 import retrofit2.http.Body
-import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query
 
@@ -41,7 +37,7 @@ interface AuthService {
         @Query("source") source: String = "mobile"
     ): Call<Void>
 
-    @POST("/campus")
+    /*@POST("/campus")
     fun registerAmbassador(
         @Body request: RegisterAmbassadorRequest,
         @Query("source") source: String = "mobile"
@@ -50,6 +46,6 @@ interface AuthService {
     @GET("/leaderboard-mobile")
     fun getLeaderboard(
         @Query("source") source: String = "mobile"
-    ): Call<LeaderboardResponse>
+    ): Call<LeaderboardResponse>*/
 
 }

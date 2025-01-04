@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.res.Resources
 import android.os.Bundle
 import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,10 +12,10 @@ import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
-import androidx.navigation.fragment.findNavController
 import com.iitism.srijan25.R
 import com.iitism.srijan25.R.id.action_homeFragment_to_GalleryFragment
 import com.iitism.srijan25.R.id.action_homeFragment_to_main_stage
@@ -24,17 +23,16 @@ import com.iitism.srijan25.adapter.HomeCarouselAdapter
 import com.iitism.srijan25.databinding.FragmentHomeBinding
 import java.text.SimpleDateFormat
 import java.util.Date
-import java.util.Timer
-import java.util.TimerTask
+import java.util.Locale
 import kotlin.math.abs
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
-    private val autoScrollDelay: Long = 3000
-    private val totalPages = 6
+    //private val autoScrollDelay: Long = 3000
+    //private val totalPages = 6
     private var currentPage = 0
-    private var timer: Timer? = null
-    private val handler = Handler(Looper.getMainLooper())
+    //private var timer: Timer? = null
+    //private val handler = Handler(Looper.getMainLooper())
     private lateinit var navController: NavController
 
     override fun onCreateView(
@@ -130,8 +128,7 @@ class HomeFragment : Fragment() {
                     val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
                     val futureDate: Date = dateFormat.parse("2024-10-18 00:00:00")!!
                     if (!currentDate.after(futureDate)) {
-                        var diff: Long = (futureDate.time
-                                - currentDate.time)
+                        var diff: Long = (futureDate.time - currentDate.time)
                         val days = diff / (24 * 60 * 60 * 1000)
                         diff -= days * (24 * 60 * 60 * 1000)
                         val hours = diff / (60 * 60 * 1000)
@@ -139,10 +136,10 @@ class HomeFragment : Fragment() {
                         val minutes = diff / (60 * 1000)
                         diff -= minutes * (60 * 1000)
                         val seconds = diff / 1000
-                        binding.txtDay.text = "" + String.format("%02d", days)
-                        binding.txtHour.text = "" + String.format("%02d", hours)
-                        binding.txtMinute.text = "" + String.format("%02d", minutes)
-                        binding.txtSecond.text = "" + String.format("%02d",seconds)
+                        binding.txtDay.text = "" + String.format(Locale.getDefault(),"%02d", days)
+                        binding.txtHour.text = "" + String.format(Locale.getDefault(),"%02d", hours)
+                        binding.txtMinute.text = "" + String.format(Locale.getDefault(),"%02d", minutes)
+                        binding.txtSecond.text = "" + String.format(Locale.getDefault(),"%02d",seconds)
                     }
                     else {
                         countDownConcettoEnd()
@@ -171,8 +168,7 @@ class HomeFragment : Fragment() {
                     val futureDate: Date = dateFormat.parse("2024-10-20 00:00:00")!!
                     if (!currentDate.after(futureDate)) {
 
-                        var diff: Long = (futureDate.time
-                                - currentDate.time)
+                        var diff: Long = (futureDate.time - currentDate.time)
                         val days = diff / (24 * 60 * 60 * 1000)
                         diff -= days * (24 * 60 * 60 * 1000)
                         val hours = diff / (60 * 60 * 1000)
@@ -180,10 +176,10 @@ class HomeFragment : Fragment() {
                         val minutes = diff / (60 * 1000)
                         diff -= minutes * (60 * 1000)
                         val seconds = diff / 1000
-                        binding.txtDay.text = "" + String.format("%02d", days)
-                        binding.txtHour.text = "" + String.format("%02d", hours)
-                        binding.txtMinute.text = "" + String.format("%02d", minutes)
-                        binding.txtSecond.text = "" + String.format("%02d",seconds)
+                        binding.txtDay.text = "" + String.format(Locale.getDefault(),"%02d", days)
+                        binding.txtHour.text = "" + String.format(Locale.getDefault(),"%02d", hours)
+                        binding.txtMinute.text = "" + String.format(Locale.getDefault(),"%02d", minutes)
+                        binding.txtSecond.text = "" + String.format(Locale.getDefault(),"%02d",seconds)
                     }
                     else {
                         binding.textCounterDown.text = "Concetto'24 is Over"
@@ -227,7 +223,7 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun startAutoScroll() {
+    /*private fun startAutoScroll() {
         timer = Timer()
         timer?.schedule(object : TimerTask() {
             override fun run() {
@@ -252,5 +248,5 @@ class HomeFragment : Fragment() {
     private fun restartAutoScroll() {
         stopAutoScroll()
         handler.postDelayed({ startAutoScroll() }, autoScrollDelay)
-    }
+    }*/
 }

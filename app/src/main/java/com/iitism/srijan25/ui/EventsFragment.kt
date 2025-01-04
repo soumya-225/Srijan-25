@@ -35,7 +35,7 @@ class EventsFragment : Fragment() {
         viewPager.adapter = adapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            val customTabView = LayoutInflater.from(context).inflate(R.layout.custom_tab_layout, null)
+            val customTabView = LayoutInflater.from(context).inflate(R.layout.custom_tab_layout, tabLayout, false)
             val tabText = customTabView.findViewById<TextView>(R.id.tab_text)
 
             when (position) {

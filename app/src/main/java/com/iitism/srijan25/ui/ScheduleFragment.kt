@@ -1,5 +1,6 @@
 package com.iitism.srijan25.ui
 
+import android.app.Application
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.iitism.srijan25.MyApplication
 import com.iitism.srijan25.R
 import com.iitism.srijan25.adapter.ScheduleAdapter
 import com.iitism.srijan25.viewModel.ScheduleViewModel
@@ -17,11 +19,13 @@ import com.iitism.srijan25.viewModel.ScheduleViewModel
 class ScheduleFragment : Fragment() {
     private lateinit var viewModel: ScheduleViewModel
     private lateinit var recyclerView: RecyclerView
+    private lateinit var application: Application
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        application = MyApplication()
         return inflater.inflate(R.layout.fragment_schedule, container, false)
     }
 
@@ -32,7 +36,7 @@ class ScheduleFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(activity)
         recyclerView.setHasFixedSize(true)
 
-        viewModel = ScheduleViewModel(requireContext())
+        viewModel = ScheduleViewModel(application)
         viewModel.getScheduleList()
 
         val itemAdapter = ScheduleAdapter(viewModel.scheduleList)

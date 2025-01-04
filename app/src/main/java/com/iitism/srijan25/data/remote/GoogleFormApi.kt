@@ -1,12 +1,6 @@
 package com.iitism.srijan25.data.remote
 
-import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
-import java.io.File
-
-interface GoogleFormApi {
+/*interface GoogleFormApi {
     @FormUrlEncoded
     @POST("/forms/d/e/1FAIpQLSdzeskAtAzjFL5v5sU3O_DNr9EodeddQI5OhAC1tb-7cfbOig/formResponse")
     fun sendFormData(
@@ -19,4 +13,4 @@ interface GoogleFormApi {
         @Field("entry.887676747") size: String,
         @Field("entry.699952840") image: File?
     ): Call<Void>
-}
+}*/
