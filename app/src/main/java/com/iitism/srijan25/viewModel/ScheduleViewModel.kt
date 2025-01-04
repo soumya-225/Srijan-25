@@ -43,7 +43,6 @@ class ScheduleViewModel(private val application: Application) : ViewModel() {
                 error = e.toString()
                 _isDataLoaded.postValue(false)
             }
-
         }
     }
 
