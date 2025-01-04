@@ -12,11 +12,11 @@ import com.iitism.srijan25.R
 class GalleryAdapter(private val imageUrls: List<String>) : RecyclerView.Adapter<GalleryAdapter.GalleryViewHolder>() {
 
     inner class GalleryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView: ImageView = itemView.findViewById(R.id.imageView) // Ensure you have this ID in your item layout
+        val imageView: ImageView = itemView.findViewById(R.id.imageView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GalleryViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_gallery, parent, false) // Make sure this layout exists
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_gallery, parent, false)
         return GalleryViewHolder(view)
     }
 
@@ -24,8 +24,8 @@ class GalleryAdapter(private val imageUrls: List<String>) : RecyclerView.Adapter
         val imageUrl = imageUrls[position]
         Glide.with(holder.imageView.context)
             .load(imageUrl)
-            .placeholder(R.drawable.concetto) // Optional placeholder
-            .error(R.drawable.concetto) // Optional error image
+            .placeholder(R.drawable.concetto)
+            .error(R.drawable.concetto)
             .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
             .into(holder.imageView)
     }

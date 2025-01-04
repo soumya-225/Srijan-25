@@ -1,4 +1,4 @@
-package com.iitism.srijan25.ViewModel
+package com.iitism.srijan25.viewModel
 
 import android.app.Application
 import android.util.Log
@@ -7,7 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
-import com.iitism.srijan25.Data.SponsorData
+import com.iitism.srijan25.model.SponsorData
 import kotlinx.coroutines.launch
 import java.io.IOException
 import java.io.InputStream

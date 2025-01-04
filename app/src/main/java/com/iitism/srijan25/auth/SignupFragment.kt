@@ -5,20 +5,20 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.gson.Gson
 import com.iitism.srijan25.R
 import com.iitism.srijan25.databinding.FragmentSignupBinding
-import com.iitism.srijan25.models.RegisterRequest
-import com.iitism.srijan25.models.RegisterResponse
-import com.iitism.srijan25.services.AuthClient
+import com.iitism.srijan25.model.RegisterRequest
+import com.iitism.srijan25.model.RegisterResponse
+import com.iitism.srijan25.data.remote.AuthClient
 import com.iitism.srijan25.utils.SharedPrefsHelper
 import retrofit2.Call
 import retrofit2.Callback
@@ -27,8 +27,7 @@ import retrofit2.Response
 
 class SignupFragment : Fragment() {
 
-    private var _binding:FragmentSignupBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentSignupBinding
     private lateinit var prefsHelper: SharedPrefsHelper
     private lateinit var dialog: Dialog
 
@@ -37,7 +36,7 @@ class SignupFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         initializeDialog()
-        _binding = FragmentSignupBinding.inflate(layoutInflater)
+        binding = FragmentSignupBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -45,15 +44,6 @@ class SignupFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initializeDialog()
         binding.tvLogin.setOnClickListener {
-//            val navOptions = NavOptions.Builder()
-//                .setPopUpTo(R.id.onboardingFragment, false)
-//                .build()
-//
-//            findNavController().navigate(
-//                R.id.action_registerFragment_to_loginFragment,
-//                null,
-//                navOptions
-//            )
             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
 
@@ -80,12 +70,16 @@ class SignupFragment : Fragment() {
         val call = AuthClient.authService.register(registerRequest)
 
         call.enqueue(object : Callback<RegisterResponse> {
-            override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
+            override fun onResponse(
+                call: Call<RegisterResponse>,
+                response: Response<RegisterResponse>
+            ) {
                 dialog.dismiss()
                 when (response.code()) {
                     200 -> {
                         dialog.dismiss()
-                        Toast.makeText(context, "Account Created Successfully!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Account Created Successfully!", Toast.LENGTH_SHORT)
+                            .show()
 
                         val registerResponse = response.body()
                         if (registerResponse?.user != null && registerResponse.accessToken != null && registerResponse.refreshToken != null) {
@@ -101,11 +95,13 @@ class SignupFragment : Fragment() {
                             prefsHelper.saveAccessToken(accessToken)
                             prefsHelper.saveRefreshToken(refreshToken)
 
-                            val action = SignupFragmentDirections.actionRegisterFragmentToOtpFragment(user.email)
+                            val action =
+                                SignupFragmentDirections.actionRegisterFragmentToOtpFragment(user.email)
                             findNavController().navigate(action)
                         } else {
                             dialog.dismiss()
-                            Toast.makeText(context, "Something went wrong!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "Something went wrong!", Toast.LENGTH_SHORT)
+                                .show()
                         }
                     }
 
@@ -115,17 +111,23 @@ class SignupFragment : Fragment() {
                             val errorBodyString = errorBody.string()
                             Log.d("Register", "Error Body: $errorBodyString")
 
-                            val registerResponse = Gson().fromJson(errorBodyString, RegisterResponse::class.java)
+                            val registerResponse =
+                                Gson().fromJson(errorBodyString, RegisterResponse::class.java)
                             val errorMessage = registerResponse.message ?: registerResponse.error
 
                             errorMessage?.let { message ->
                                 Log.d("Register", message)
                                 Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
                             } ?: run {
-                                Toast.makeText(context, "Conflict Error Occurred...", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(
+                                    context,
+                                    "Conflict Error Occurred...",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                             }
                         } ?: run {
-                            Toast.makeText(context, "Conflict Error Occurred..", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "Conflict Error Occurred..", Toast.LENGTH_SHORT)
+                                .show()
                         }
                     }
 
@@ -252,6 +254,7 @@ class SignupFragment : Fragment() {
         var error: String? = null
         val password = binding.etPassword.text.toString().trim()
         val confirmPassword = binding.etConfirmPassword.text.toString().trim()
+
         if (password != confirmPassword) {
             error = "Passwords do not match."
         }
@@ -265,27 +268,20 @@ class SignupFragment : Fragment() {
         return error == null
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
     private fun initializeDialog() {
         dialog = Dialog(requireContext())
         dialog.setContentView(R.layout.progress_bar)
         dialog.setCancelable(false)
+
         val layoutParams = WindowManager.LayoutParams().apply {
             width = WindowManager.LayoutParams.MATCH_PARENT
             height = WindowManager.LayoutParams.MATCH_PARENT
         }
+
         dialog.window?.attributes = layoutParams
         if (dialog.window != null) {
             dialog.window!!.setBackgroundDrawable(
-                ColorDrawable(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.progress_bar
-                    )
-                )
+                ColorDrawable(ContextCompat.getColor(requireContext(), R.color.progress_bar))
             )
         }
     }

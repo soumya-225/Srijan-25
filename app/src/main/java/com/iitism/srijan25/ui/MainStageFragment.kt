@@ -19,15 +19,13 @@ import kotlin.math.abs
 
 
 class MainStageFragment : Fragment() {
-
-    private var _binding: FragmentMainStageBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentMainStageBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentMainStageBinding.inflate(layoutInflater)
+    ): View {
+        binding = FragmentMainStageBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -110,25 +108,6 @@ class MainStageFragment : Fragment() {
                 updateDots(position,binding.dotLayout2024)
             }
         })
-
-
-
-//        val dotsIndicator2024 = view.findViewById<WormDotsIndicator>(R.id.dotsIndicator2024)
-//        dotsIndicator2024.setViewPager2(viewPager2024)
-
-//
-//        // Set up ViewPager for 2023
-//
-//
-
-//        // Set up dots indicators for 2023
-//        val dotsIndicator2023 = view.findViewById<WormDotsIndicator>(R.id.dotsIndicator2023)
-//        dotsIndicator2023.setViewPager2(viewPager2023)
-//
-//// Set up dots indicators for 2022
-//        val dotsIndicator2022 = view.findViewById<WormDotsIndicator>(R.id.dotsIndicator2022)
-//        dotsIndicator2022.setViewPager2(viewPager2022)
-
     }
 
     private fun addDotsIndicator(size: Int,dotLayout: LinearLayout) {
@@ -165,5 +144,4 @@ class MainStageFragment : Fragment() {
             dot.setImageDrawable(ContextCompat.getDrawable(requireContext(), drawableId))
         }
     }
-
 }

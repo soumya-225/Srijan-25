@@ -1,15 +1,15 @@
-package com.iitism.srijan25.services
+package com.iitism.srijan25.data.remote
 
-import com.iitism.srijan25.models.LeaderboardResponse
-import com.iitism.srijan25.models.LoginRequest
-import com.iitism.srijan25.models.LoginResponse
-import com.iitism.srijan25.models.OtpVerificationRequest
-import com.iitism.srijan25.models.OtpVerificationResponse
-import com.iitism.srijan25.models.RegisterAmbassadorRequest
-import com.iitism.srijan25.models.RegisterAmbassadorResponse
-import com.iitism.srijan25.models.RegisterRequest
-import com.iitism.srijan25.models.RegisterResponse
-import com.iitism.srijan25.models.ResendOtpRequest
+import com.iitism.srijan25.model.LeaderboardResponse
+import com.iitism.srijan25.model.LoginRequest
+import com.iitism.srijan25.model.LoginResponse
+import com.iitism.srijan25.model.OtpVerificationRequest
+import com.iitism.srijan25.model.OtpVerificationResponse
+import com.iitism.srijan25.model.RegisterAmbassadorRequest
+import com.iitism.srijan25.model.RegisterAmbassadorResponse
+import com.iitism.srijan25.model.RegisterRequest
+import com.iitism.srijan25.model.RegisterResponse
+import com.iitism.srijan25.model.ResendOtpRequest
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET

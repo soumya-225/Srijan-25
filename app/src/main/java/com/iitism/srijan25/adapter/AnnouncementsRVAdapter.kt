@@ -6,14 +6,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.iitism.srijan25.R
-import com.iitism.srijan25.models.Announcement
+import com.iitism.srijan25.model.Announcement
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.TimeZone
 
-class AnnouncementsRVAdapter(
-    private val onTimestampUpdateListener: OnTimestampUpdateListener
-) : RecyclerView.Adapter<AnnouncementsRVAdapter.AnnouncementsViewHolder>() {
+class AnnouncementsRVAdapter(private val onTimestampUpdateListener: OnTimestampUpdateListener) :
+    RecyclerView.Adapter<AnnouncementsRVAdapter.AnnouncementsViewHolder>() {
 
     interface OnTimestampUpdateListener {
         fun onUpdateTimestamp(position: Int, timeAgo: String)
@@ -28,7 +27,6 @@ class AnnouncementsRVAdapter(
     }
 
     fun refreshAnnouncements(newAnnouncements: List<Announcement>) {
-        //setAnnouncements(newAnnouncements)
         announcements = newAnnouncements
         notifyDataSetChanged()
     }
@@ -39,29 +37,12 @@ class AnnouncementsRVAdapter(
             val localTimestamp = convertUtcToLocal(currentAnnouncement.timestamp)
             val timeAgo = getTimeAgo(localTimestamp)
 
-            // Notify the listener to update timestamp
             onTimestampUpdateListener.onUpdateTimestamp(i, timeAgo)
         }
     }
 
-    /*private fun setAnnouncements(newAnnouncements: List<Announcement>) {
-        val diffResult = DiffUtil.calculateDiff(object : DiffUtil.Callback() {
-            override fun getOldListSize(): Int = announcements.size
-            override fun getNewListSize(): Int = newAnnouncements.size
-            override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                return announcements[oldItemPosition].id == newAnnouncements[newItemPosition].id
-            }
-            override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-                return announcements[oldItemPosition] == newAnnouncements[newItemPosition]
-            }
-        })
-        announcements = newAnnouncements
-        diffResult.dispatchUpdatesTo(this)
-    }*/
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnnouncementsViewHolder {
-        val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_rv_announcement, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_rv_announcement, parent, false)
         return AnnouncementsViewHolder(itemView)
     }
 
@@ -118,7 +99,7 @@ class AnnouncementsRVAdapter(
             hours > 1 -> "${hours.toInt()} hours ago"
             minutes.toInt() == 1 -> "1 minute ago"
             minutes > 1 -> "${minutes.toInt()} minutes ago"
-            else -> "Less than a minute ago"
+            else -> "Now"
         }
     }
 }

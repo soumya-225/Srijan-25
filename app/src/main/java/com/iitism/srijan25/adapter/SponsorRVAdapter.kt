@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
-import com.iitism.srijan25.Data.SponsorData
+import com.iitism.srijan25.model.SponsorData
 
 
 import com.iitism.srijan25.R
@@ -19,13 +19,13 @@ class SponsorRVAdapter(
     private var dataList: List<SponsorData>,
     private val onItemClick: (String) -> Unit
 ) : RecyclerView.Adapter<SponsorRVAdapter.ViewHolder>() {
+
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val ivSponsor: ImageView = view.findViewById(R.id.ivSponsor)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.layout_rv_sponsors, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.layout_rv_sponsors, parent, false)
         return ViewHolder(itemView)
     }
 
@@ -36,7 +36,7 @@ class SponsorRVAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentData = dataList[position]
 
-        if (currentData.img != "") {
+        if (currentData.img.isNotEmpty()) {
             Glide.with(holder.ivSponsor.context)
                 .load(currentData.img)
                 .apply(
@@ -49,7 +49,7 @@ class SponsorRVAdapter(
         }
 
         holder.ivSponsor.setOnClickListener {
-            if (currentData.link != "") {
+            if (currentData.link.isNotEmpty()) {
                 onItemClick.invoke(currentData.link)
             }
         }
@@ -60,7 +60,13 @@ class SponsorRVAdapter(
         dataList = newData
         val sizeAfter = newData.size
         notifyItemRangeChanged(0, min(sizeBefore, sizeAfter))
-        notifyItemRangeInserted(min(sizeBefore, sizeAfter), max(sizeBefore, sizeAfter) - min(sizeBefore, sizeAfter))
-        notifyItemRangeRemoved(max(sizeBefore, sizeAfter), max(sizeBefore, sizeAfter) - min(sizeBefore, sizeAfter))
+        notifyItemRangeInserted(
+            min(sizeBefore, sizeAfter),
+            max(sizeBefore, sizeAfter) - min(sizeBefore, sizeAfter)
+        )
+        notifyItemRangeRemoved(
+            max(sizeBefore, sizeAfter),
+            max(sizeBefore, sizeAfter) - min(sizeBefore, sizeAfter)
+        )
     }
 }

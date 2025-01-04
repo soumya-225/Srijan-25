@@ -15,13 +15,11 @@ import com.google.gson.Gson
 import com.iitism.srijan25.R
 import com.iitism.srijan25.adapter.EventAdapter
 import com.iitism.srijan25.databinding.FragmentClubEventsBinding
-import com.iitism.srijan25.models.EventsData
+import com.iitism.srijan25.model.EventsData
 import java.io.InputStream
 
 class ClubEventsFragment : Fragment() {
-
-    private var _binding: FragmentClubEventsBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentClubEventsBinding
     private lateinit var adapter: EventAdapter
     private lateinit var dialog: Dialog
 
@@ -29,24 +27,22 @@ class ClubEventsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        binding = FragmentClubEventsBinding.inflate(inflater, container, false)
 
-        _binding = FragmentClubEventsBinding.inflate(inflater, container, false)
         dialog = Dialog(requireActivity())
         dialog.setContentView(R.layout.progress_bar)
         dialog.setCancelable(false)
+
         val layoutParams = WindowManager.LayoutParams().apply {
             width = WindowManager.LayoutParams.MATCH_PARENT
             height = WindowManager.LayoutParams.MATCH_PARENT
         }
+
         dialog.window?.attributes = layoutParams
+
         if (dialog.window != null) {
             dialog.window!!.setBackgroundDrawable(
-                ColorDrawable(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.bg
-                    )
-                )
+                ColorDrawable(ContextCompat.getColor(requireContext(), R.color.bg))
             )
             dialog.window!!.setBackgroundDrawableResource(R.color.transparent)
 
@@ -61,7 +57,6 @@ class ClubEventsFragment : Fragment() {
     }
 
     private fun getClubEventData(): Array<EventsData> {
-
         val assetManager = requireContext().assets
         val inputStream: InputStream = assetManager.open("club_events.json")
         val size = inputStream.available()

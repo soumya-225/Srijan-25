@@ -1,4 +1,4 @@
-package com.iitism.srijan25.Data
+package com.iitism.srijan25.model
 
 data class GuestTalkData(
     val guestName: String,

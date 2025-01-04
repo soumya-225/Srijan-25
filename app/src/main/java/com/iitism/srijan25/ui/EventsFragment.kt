@@ -1,16 +1,17 @@
 package com.iitism.srijan25.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.iitism.srijan25.R
 import com.iitism.srijan25.adapter.EventsTabAdapter
+
 class EventsFragment : Fragment() {
 
     private lateinit var viewPager: ViewPager2
@@ -30,39 +31,30 @@ class EventsFragment : Fragment() {
     }
 
     private fun setupViewPager() {
-        // Initialize the adapter and set it to ViewPager
         adapter = EventsTabAdapter(childFragmentManager, lifecycle)
         viewPager.adapter = adapter
 
-        // Attach TabLayout with ViewPager and set custom views for tabs
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             val customTabView = LayoutInflater.from(context).inflate(R.layout.custom_tab_layout, null)
             val tabText = customTabView.findViewById<TextView>(R.id.tab_text)
 
             when (position) {
-                0 -> {
-                    tabText.text = "Club Events"
-                }
-                1 -> {
-                    tabText.text = "Departmental Events"
-                }
+                0 -> tabText.text = requireContext().getString(R.string.club_events)
+                1 -> tabText.text = requireContext().getString(R.string.dept_events)
             }
             tab.customView = customTabView
         }.attach()
 
-        // Set tab state listener to change appearance when selected or unselected
         handleTabSelection()
     }
 
     private fun handleTabSelection() {
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
-                // Set tab as selected (will change background to filled)
                 tab.customView?.isSelected = true
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {
-                // Set tab as unselected (will change background to outlined)
                 tab.customView?.isSelected = false
             }
 

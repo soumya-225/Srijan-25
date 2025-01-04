@@ -15,15 +15,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.iitism.srijan25.R
-import com.iitism.srijan25.ViewModel.SponsorViewModel
+import com.iitism.srijan25.viewModel.SponsorViewModel
 import com.iitism.srijan25.adapter.SponsorRVAdapter
 import com.iitism.srijan25.databinding.FragmentSponsorsBinding
 
 
 class SponsorsFragment : Fragment() {
-    private var _binding: FragmentSponsorsBinding? = null
-    private val binding get() = _binding!!
-
+    private lateinit var binding: FragmentSponsorsBinding
     private lateinit var viewModel: SponsorViewModel
     private lateinit var adapter: SponsorRVAdapter
     private lateinit var dialog: Dialog
@@ -32,7 +30,7 @@ class SponsorsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSponsorsBinding.inflate(inflater, container, false)
+        binding = FragmentSponsorsBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(
             requireActivity(),
             ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
@@ -62,11 +60,10 @@ class SponsorsFragment : Fragment() {
         binding.rvSponsors.layoutManager = LinearLayoutManager(context)
         binding.rvSponsors.setHasFixedSize(true)
 
-        // Initialize the adapter with an empty list
         adapter = SponsorRVAdapter(emptyList()) { redirectURL ->
             openUrlInBrowser(redirectURL)
         }
-        // Set the adapter to the RecyclerView
+
         binding.rvSponsors.adapter = adapter
 
         viewModel.showLoading.observe(viewLifecycleOwner) { showLoading ->
@@ -78,11 +75,9 @@ class SponsorsFragment : Fragment() {
         }
 
         viewModel.sponsorData.observe(viewLifecycleOwner) { data ->
-            // Update the adapter data and notify the changes
             adapter.setData(data)
         }
 
-        // Trigger the data fetching when the fragment is created
         viewModel.fetchSponsorData()
 
         return binding.root
@@ -93,14 +88,7 @@ class SponsorsFragment : Fragment() {
         if (browserIntent.resolveActivity(requireActivity().packageManager) != null) {
             startActivity(browserIntent)
         } else {
-            // Handle the case where no activity can handle the intent
-            // For example, display a message to the user or log a warning
             Toast.makeText(context, url, Toast.LENGTH_SHORT).show()
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

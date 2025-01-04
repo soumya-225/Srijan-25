@@ -17,9 +17,9 @@ import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import com.iitism.srijan25.R
 import com.iitism.srijan25.databinding.FragmentLoginBinding
-import com.iitism.srijan25.models.LoginRequest
-import com.iitism.srijan25.models.LoginResponse
-import com.iitism.srijan25.services.AuthClient
+import com.iitism.srijan25.model.LoginRequest
+import com.iitism.srijan25.model.LoginResponse
+import com.iitism.srijan25.data.remote.AuthClient
 import com.iitism.srijan25.ui.MainActivity
 import com.iitism.srijan25.utils.SharedPrefsHelper
 import retrofit2.Call
@@ -29,25 +29,23 @@ import java.util.regex.Pattern
 
 
 class LoginFragment : Fragment() {
-
-    private var _binding: FragmentLoginBinding? = null
-    private val binding get() = _binding!!
-    //private lateinit var viewModel: LoginViewModel
+    private lateinit var binding: FragmentLoginBinding
     private lateinit var dialog: Dialog
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         initializeDialog()
-        _binding = FragmentLoginBinding.inflate(inflater)
+        binding = FragmentLoginBinding.inflate(inflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         initializeDialog()
+
         binding.registerTextView.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
 
@@ -57,11 +55,11 @@ class LoginFragment : Fragment() {
             if (checkForm())
                 login()
         }
-
     }
 
     private fun login() {
         dialog.show()
+
         val email = binding.etEmail.text.toString().trim()
         val password = binding.etPassword.text.toString().trim()
 
@@ -77,14 +75,13 @@ class LoginFragment : Fragment() {
                         dialog.dismiss()
                         Toast.makeText(context, "Logged In Successfully!", Toast.LENGTH_SHORT).show()
 
-                        val response = response.body()
-                        if(response?.user != null && response.accessToken != null && response.refreshToken != null) {
-                            val user = response.user
-                            val accessToken = response.accessToken
-                            val refreshToken = response.refreshToken
+                        val responseBody = response.body()
+                            val user = responseBody?.user
+                            val accessToken = responseBody?.accessToken
+                            val refreshToken = responseBody?.refreshToken
 
-                            Log.d("Login AT", accessToken)
-                            Log.d("Login RT", refreshToken)
+                            Log.d("Login AT", accessToken.toString())
+                            Log.d("Login RT", refreshToken.toString())
 
                             val prefsHelper = SharedPrefsHelper(requireContext())
                             prefsHelper.saveUser(user)
@@ -94,9 +91,6 @@ class LoginFragment : Fragment() {
                             val intent = Intent(requireContext(), MainActivity::class.java)
                             startActivity(intent)
                             requireActivity().finish()
-                        } else {
-                            Toast.makeText(context, "Something went wrong!", Toast.LENGTH_SHORT).show()
-                        }
                     }
 
                     401 -> {
@@ -108,17 +102,14 @@ class LoginFragment : Fragment() {
                         dialog.dismiss()
                         Toast.makeText(context, "Please verify your account first", Toast.LENGTH_SHORT).show()
 
-                        // Attempt to retrieve the body
                         val responseData = response.body()
 
-                        // If responseData is null, try to parse the error body
                         if (responseData == null) {
                             dialog.dismiss()
                             response.errorBody()?.let { errorBody ->
                                 val errorBodyString = errorBody.string()
                                 Log.d("Login", "Error Body: $errorBodyString")
 
-                                // Parse the error body string into LoginResponse (if structured as JSON)
                                 try {
                                     dialog.dismiss()
                                     val parsedErrorResponse = Gson().fromJson(errorBodyString, LoginResponse::class.java)
@@ -131,15 +122,12 @@ class LoginFragment : Fragment() {
                                         Log.d("Login AT", accessToken)
                                         Log.d("Login RT", refreshToken)
 
-                                        // Save the user and tokens to SharedPreferences
                                         val prefsHelper = SharedPrefsHelper(requireContext())
                                         prefsHelper.saveUser(user)
                                         prefsHelper.saveAccessToken(accessToken)
                                         prefsHelper.saveRefreshToken(refreshToken)
 
-                                        // Navigate to OTP verification screen
-                                        val action =
-                                            LoginFragmentDirections.actionLoginFragmentToOtpFragment(user.email)
+                                        val action = LoginFragmentDirections.actionLoginFragmentToOtpFragment(user.email)
                                         findNavController().navigate(action)
                                     } else {
                                         dialog.dismiss()
@@ -155,19 +143,16 @@ class LoginFragment : Fragment() {
                             }
                         } else {
                             dialog.dismiss()
-                            // Handle responseData as needed
                             val user = responseData.user
                             val accessToken = responseData.accessToken
                             val refreshToken = responseData.refreshToken
 
                             if (user != null && accessToken != null && refreshToken != null) {
-                                // Save to SharedPreferences
                                 val prefsHelper = SharedPrefsHelper(requireContext())
                                 prefsHelper.saveUser(user)
                                 prefsHelper.saveAccessToken(accessToken)
                                 prefsHelper.saveRefreshToken(refreshToken)
 
-                                // Navigate to OTP verification screen
                                 val action = LoginFragmentDirections.actionLoginFragmentToOtpFragment(user.email)
                                 findNavController().navigate(action)
                             } else {
@@ -177,11 +162,9 @@ class LoginFragment : Fragment() {
                         }
                     }
 
-
                     else -> {
                         dialog.dismiss()
-                        Toast.makeText(context, "Unexpected Error Occurred", Toast.LENGTH_SHORT)
-                            .show()
+                        Toast.makeText(context, "Unexpected Error Occurred", Toast.LENGTH_SHORT).show()
                         Log.d("Register", "Unexpected Error Occurred ${response.code()}")
                     }
                 }
@@ -215,29 +198,20 @@ class LoginFragment : Fragment() {
         return Pattern.matches(baseRegex, email)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
     private fun initializeDialog() {
         dialog = Dialog(requireContext())
         dialog.setContentView(R.layout.progress_bar)
         dialog.setCancelable(false)
+
         val layoutParams = WindowManager.LayoutParams().apply {
             width = WindowManager.LayoutParams.MATCH_PARENT
             height = WindowManager.LayoutParams.MATCH_PARENT
         }
+
         dialog.window?.attributes = layoutParams
+
         if (dialog.window != null) {
-            dialog.window!!.setBackgroundDrawable(
-                ColorDrawable(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.progress_bar
-                    )
-                )
-            )
+            dialog.window!!.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(requireContext(), R.color.progress_bar)))
         }
     }
-
 }

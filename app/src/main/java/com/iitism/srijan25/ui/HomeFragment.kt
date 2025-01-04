@@ -1,4 +1,5 @@
 package com.iitism.srijan25.ui
+
 import android.annotation.SuppressLint
 import android.content.res.Resources
 import android.os.Bundle
@@ -11,30 +12,24 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
-import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.iitism.srijan25.R
 import com.iitism.srijan25.R.id.action_homeFragment_to_GalleryFragment
 import com.iitism.srijan25.R.id.action_homeFragment_to_main_stage
 import com.iitism.srijan25.adapter.HomeCarouselAdapter
 import com.iitism.srijan25.databinding.FragmentHomeBinding
-import com.iitism.srijan25.utils.SharedPrefsHelper
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Timer
 import java.util.TimerTask
 import kotlin.math.abs
 
-
-private lateinit var navController: NavController
-
 class HomeFragment : Fragment() {
-    private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
-
+    private lateinit var binding: FragmentHomeBinding
     private val autoScrollDelay: Long = 3000
     private val totalPages = 6
     private var currentPage = 0
@@ -46,43 +41,39 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(layoutInflater)
+        binding = FragmentHomeBinding.inflate(layoutInflater)
+        navController = findNavController()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         countDownConcettoStart()
-        val sharedPref= SharedPrefsHelper(requireContext())
-        val user=sharedPref.getUser()
-        val name=user?.username.toString()
 
-
-
-        val lecture_btn = binding.lecturesIcon
+        val lectureBtn = binding.lecturesIcon
         val scheduleBtn = binding.scheduleIcon
         val competitionBtn = binding.compIcon
         val caBtn = binding.caIcon
         val mainStageBtn = binding.mainstageIcon
         val galleryBtn = binding.galleryIcon
 
-        lecture_btn.setOnClickListener {
-            findNavController().navigate(R.id.guestTalkFragment)
+        lectureBtn.setOnClickListener {
+           navController.navigate(R.id.guestTalkFragment)
         }
         scheduleBtn.setOnClickListener {
-            findNavController().navigate(R.id.ScheduleFragment)
+            navController.navigate(R.id.ScheduleFragment)
         }
         galleryBtn.setOnClickListener {
-            findNavController().navigate(R.id.GalleryFragment)
+            navController.navigate(R.id.GalleryFragment)
         }
         mainStageBtn.setOnClickListener {
-            findNavController().navigate(R.id.mainStageFragment)
+            navController.navigate(R.id.mainStageFragment)
         }
         caBtn.setOnClickListener {
-            findNavController().navigate(R.id.campusAmbassadorFragment)
+            navController.navigate(R.id.campusAmbassadorFragment)
         }
         competitionBtn.setOnClickListener {
-            findNavController().navigate(R.id.eventsFragment)
+            navController.navigate(R.id.eventsFragment)
         }
 
         val images = arrayOf(
@@ -94,6 +85,7 @@ class HomeFragment : Fragment() {
             "https://res.cloudinary.com/dnywj3xrl/image/upload/v1725973121/IMG-20240910-WA0051_gfdou9.jpg",
             "https://res.cloudinary.com/dnywj3xrl/image/upload/v1725973562/IMG-20240910-WA0060_nsplld.jpg"
         )
+
         binding.viewPagerCarousel.adapter = HomeCarouselAdapter(images)
 
         val compositePageTransformer = CompositePageTransformer()
@@ -113,8 +105,6 @@ class HomeFragment : Fragment() {
             }
         })
 
-//        startAutoScroll()
-
         binding.viewPagerCarousel.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 currentPage = position
@@ -127,16 +117,6 @@ class HomeFragment : Fragment() {
         binding.mainstageIcon.setOnClickListener {
             findNavController().navigate(action_homeFragment_to_main_stage)
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
-//        restartAutoScroll()
-    }
-
-    override fun onPause() {
-        super.onPause()
-//        stopAutoScroll()
     }
 
     private fun countDownConcettoStart() {

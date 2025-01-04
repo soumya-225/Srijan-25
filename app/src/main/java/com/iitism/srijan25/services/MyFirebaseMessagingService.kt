@@ -8,7 +8,6 @@ import android.app.PendingIntent.FLAG_ONE_SHOT
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.FirebaseMessagingService
@@ -23,7 +22,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     override fun onNewToken(token: String) {
         super.onNewToken(token)
         Log.d("fcm", token)
-        //Firebase.messaging.subscribeToTopic("all_users")
         subscribeToTopic()
     }
 
@@ -35,7 +33,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                     msg = "Subscription failed"
                 }
                 Log.d("FCM", msg)
-                Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
             }
     }
 

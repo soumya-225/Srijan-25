@@ -14,13 +14,11 @@ import com.google.gson.Gson
 import com.iitism.srijan25.R
 import com.iitism.srijan25.adapter.EventAdapter
 import com.iitism.srijan25.databinding.FragmentDepartmentalEventsBinding
-import com.iitism.srijan25.models.EventsData
+import com.iitism.srijan25.model.EventsData
 import java.io.InputStream
 
 class DepartmentalEventsFragment : Fragment() {
-
-    private var _binding: FragmentDepartmentalEventsBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentDepartmentalEventsBinding
     private lateinit var adapter: EventAdapter
     private lateinit var dialog: Dialog
 
@@ -28,7 +26,7 @@ class DepartmentalEventsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentDepartmentalEventsBinding.inflate(inflater, container, false)
+        binding = FragmentDepartmentalEventsBinding.inflate(inflater, container, false)
         dialog = Dialog(requireActivity())
         dialog.setContentView(R.layout.progress_bar)
         dialog.setCancelable(false)

@@ -5,30 +5,21 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.Spinner
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.iitism.srijan25.R
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 
 class MerchandiseFragment : Fragment() {
-    private var imagePager: ViewPager2?=null
-    private lateinit var hostelSpinner:Spinner
-    private lateinit var sizeSpinner: Spinner
-    private lateinit var imageView: ImageView
-    private val retrofit = Retrofit.Builder()
-        .baseUrl("https://docs.google.com/")
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
+    private var imagePager: ViewPager2? = null
+
     var imageList = listOf(
         R.drawable.tshirt,
         R.drawable.tshirt_front,
@@ -36,22 +27,17 @@ class MerchandiseFragment : Fragment() {
         R.drawable.measurement_chart,
     )
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view= inflater.inflate(R.layout.fragment_merchandise, container, false)
-        imagePager = view.findViewById<ViewPager2>(R.id.view_pager_carousel_merch)
+        val view = inflater.inflate(R.layout.fragment_merchandise, container, false)
+        imagePager = view.findViewById(R.id.view_pager_carousel_merch)
         val adapter = ImagePagerAdapter(imageList)
         imagePager?.adapter = adapter
         startImageSliderTimer()
-        val btnPlace=view.findViewById<Button>(R.id.PlaceOrder)
+        val btnPlace = view.findViewById<Button>(R.id.PlaceOrder)
         btnPlace.setOnClickListener {
             openGoogleForm()
         }
@@ -64,6 +50,7 @@ class MerchandiseFragment : Fragment() {
         intent.data = Uri.parse(formUrl)
         startActivity(intent)
     }
+
     private fun startImageSliderTimer() {
         val handler = Handler()
         val updateImageSliderTask = object : Runnable {
@@ -83,6 +70,7 @@ class MerchandiseFragment : Fragment() {
         }
         handler.postDelayed(updateImageSliderTask, 4000)
     }
+
     class ImagePagerAdapter(private val imageList: List<Int>) :
         RecyclerView.Adapter<ImagePagerAdapter.ImagePagerViewHolder>() {
 
@@ -102,7 +90,7 @@ class MerchandiseFragment : Fragment() {
         }
 
         inner class ImagePagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            val imageView: ImageView = itemView.findViewById(R.id.pageImage)
+            private val imageView: ImageView = itemView.findViewById(R.id.pageImage)
 
             fun bind(imageRes: Int) {
                 Glide.with(itemView.context)

@@ -1,10 +1,10 @@
-package com.iitism.srijan25.ViewModel
+package com.iitism.srijan25.viewModel
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
-import com.iitism.srijan25.Data.CoreTeamDataModel
+import com.iitism.srijan25.model.CoreTeamDataModel
 import kotlinx.coroutines.launch
 import java.io.InputStream
 

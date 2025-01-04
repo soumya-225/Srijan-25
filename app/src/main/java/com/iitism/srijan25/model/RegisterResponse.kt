@@ -1,4 +1,4 @@
-package com.iitism.srijan25.models
+package com.iitism.srijan25.model
 
 data class RegisterResponse(
     val user: User? = null,

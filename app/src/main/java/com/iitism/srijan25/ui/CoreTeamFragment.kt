@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.iitism.srijan25.ViewModel.CoreTeamViewModel
+import com.iitism.srijan25.viewModel.CoreTeamViewModel
 import com.iitism.srijan25.adapter.CoreTeamAdapter
 import com.iitism.srijan25.databinding.FragmentCoreTeamBinding
 

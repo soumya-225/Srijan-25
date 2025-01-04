@@ -11,13 +11,13 @@ class EventsTabAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {
 
     override fun getItemCount(): Int {
-        return 2 // Number of tabs
+        return 2
     }
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> ClubEventsFragment()  // First tab fragment
-            1 -> DepartmentalEventsFragment()  // Second tab fragment
+            0 -> ClubEventsFragment()
+            1 -> DepartmentalEventsFragment()
             else -> ClubEventsFragment()
         }
     }

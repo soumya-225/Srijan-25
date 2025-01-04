@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
 import com.google.gson.Gson
-import com.iitism.srijan25.models.User
+import com.iitism.srijan25.model.User
 
 class SharedPrefsHelper(context: Context) {
     private val masterKeyAlias = MasterKey.Builder(context)
@@ -29,7 +29,7 @@ class SharedPrefsHelper(context: Context) {
         private const val KEY_REFERRAL = "refCode"
     }
 
-    fun saveUser(user: User) {
+    fun saveUser(user: User?) {
         val userJson = gson.toJson(user)
         prefs.edit().putString(KEY_USER, userJson).apply()
     }
@@ -39,25 +39,25 @@ class SharedPrefsHelper(context: Context) {
         return gson.fromJson(userJson, User::class.java)
     }
 
-    fun saveAccessToken(token: String) {
+    fun saveAccessToken(token: String?) {
         prefs.edit().putString(KEY_ACCESS_TOKEN, token).apply()
     }
 
-    fun getAccessToken(): String? {
-        return prefs.getString(KEY_ACCESS_TOKEN, null)
-    }
+//    fun getAccessToken(): String? {
+//        return prefs.getString(KEY_ACCESS_TOKEN, null)
+//    }
 
-    fun saveRefreshToken(token: String) {
+    fun saveRefreshToken(token: String?) {
         prefs.edit().putString(KEY_REFRESH_TOKEN, token).apply()
     }
 
-    fun getRefreshToken(): String? {
-        return prefs.getString(KEY_REFRESH_TOKEN, null)
-    }
-
-    fun saveReferral(code: String) {
-        prefs.edit().putString(KEY_REFERRAL, code).apply()
-    }
+//    fun getRefreshToken(): String? {
+//        return prefs.getString(KEY_REFRESH_TOKEN, null)
+//    }
+//
+//    fun saveReferral(code: String) {
+//        prefs.edit().putString(KEY_REFERRAL, code).apply()
+//    }
 
     fun getReferral(): String? {
         return prefs.getString(KEY_REFERRAL, null)

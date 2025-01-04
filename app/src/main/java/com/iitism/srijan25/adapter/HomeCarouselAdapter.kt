@@ -9,11 +9,13 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.iitism.srijan25.R
 
-class HomeCarouselAdapter(private val dataList: Array<String>): RecyclerView.Adapter<HomeCarouselAdapter.HomeCarouselViewHolder>() {
-    inner class HomeCarouselViewHolder(view: View): RecyclerView.ViewHolder(view)
+class HomeCarouselAdapter(private val dataList: Array<String>) :
+    RecyclerView.Adapter<HomeCarouselAdapter.HomeCarouselViewHolder>() {
+
+    inner class HomeCarouselViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeCarouselViewHolder {
-        val viewHolder = LayoutInflater.from(parent.context).inflate(R.layout.item_corousel,parent,false)
+        val viewHolder = LayoutInflater.from(parent.context).inflate(R.layout.item_corousel, parent, false)
         return HomeCarouselViewHolder(viewHolder)
     }
 

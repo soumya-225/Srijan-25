@@ -17,10 +17,10 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.iitism.srijan25.R
 import com.iitism.srijan25.databinding.FragmentOtpBinding
-import com.iitism.srijan25.models.OtpVerificationRequest
-import com.iitism.srijan25.models.OtpVerificationResponse
-import com.iitism.srijan25.models.ResendOtpRequest
-import com.iitism.srijan25.services.AuthClient
+import com.iitism.srijan25.model.OtpVerificationRequest
+import com.iitism.srijan25.model.OtpVerificationResponse
+import com.iitism.srijan25.model.ResendOtpRequest
+import com.iitism.srijan25.data.remote.AuthClient
 import com.iitism.srijan25.ui.MainActivity
 import com.iitism.srijan25.utils.SharedPrefsHelper
 import retrofit2.Call
@@ -28,17 +28,14 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class OtpFragment : Fragment() {
-
-    private var _binding: FragmentOtpBinding? = null
-    private val binding get() = _binding!!
-
+    private lateinit var binding: FragmentOtpBinding
     private lateinit var email: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentOtpBinding.inflate(inflater, container, false)
+    ): View {
+        binding = FragmentOtpBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -54,7 +51,7 @@ class OtpFragment : Fragment() {
         )
 
         email = arguments?.getString("email") ?: ""
-        binding.tvCollegeEmail.text = "Please enter the OTP sent to\n $email "
+        binding.tvCollegeEmail.text = requireContext().getString(R.string.otp_sent_email,email)
 
         binding.btnVerifyOtp.setOnClickListener {
             val otp = getOtpFromEditTexts(
@@ -100,19 +97,13 @@ class OtpFragment : Fragment() {
 
                         object : CountDownTimer(30000, 1000) {
                             override fun onTick(millisUntilFinished: Long) {
-                                binding.tvResendOtp.text =
-                                    "Resend OTP in ${millisUntilFinished / 1000} sec"
+                                binding.tvResendOtp.text = requireContext().getString(R.string.resend_otp,millisUntilFinished/1000)
                             }
 
                             override fun onFinish() {
                                 binding.tvResendOtp.isEnabled = true
-                                binding.tvResendOtp.text = "Resend OTP"
-                                binding.tvResendOtp.setTextColor(
-                                    ContextCompat.getColor(
-                                        requireContext(),
-                                        R.color.primaryDark
-                                    )
-                                )
+                                binding.tvResendOtp.text = requireContext().getString(R.string.resent_otp_msg)
+                                binding.tvResendOtp.setTextColor(ContextCompat.getColor(requireContext(), R.color.primaryDark))
                             }
                         }.start()
                     }
@@ -228,22 +219,17 @@ class OtpFragment : Fragment() {
     }
 
     private fun hideKeyboard() {
-        val inputMethodManager =
-            requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        val inputMethodManager = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(requireActivity().currentFocus?.windowToken, 0)
     }
 
     private fun getOtpFromEditTexts(vararg editTexts: EditText): String {
         val otpStringBuilder = StringBuilder()
+
         for (editText in editTexts) {
             otpStringBuilder.append(editText.text)
         }
+
         return otpStringBuilder.toString()
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
 }

@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Srijan 25</string>
 
+    <string name="prize_pool">Prize Pool: %1$s</string>
+    <string name="otp_sent_email">Please enter the OTP sent to %1$s</string>
+    <string name="resend_otp">Resend OTP in %1$d sec</string>
+    <string name="resent_otp_msg">Resend OTP</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Tanu_jain">Dr. Tanu Jain, an IAS officer and former dentist, gained recognition after clearing the
         UPSC Civil Services Examination. Known for her motivational talks, she shares insights on perseverance and
@@ -25,5 +30,61 @@ Anubhav Dubey is the co-founder of Chai Sutta Bar, a popular Indian tea chain kn
         <item>20th Oct</item>
     </string-array>
 
+    <string name="about_us">CONCETTO is the premier annual Techno-Management Fest hosted by the " +
+                "prestigious Indian Institute of Technology (Indian School of Mines), " +
+                "Dhanbad. It stands as a celebration of innovation and talent, merging " +
+                "technology and management prowess. With the largest participation in " +
+                "Eastern India, CONCETTO attracts over 20,000 enthusiasts each year." +
+                " More than just an event, CONCETTO is a dynamic platform where " +
+                "participants challenge their technical acumen, broaden their " +
+                "horizons through expert workshops, and enjoy electrifying " +
+                "performances as the sun sets." +
+                " This year, join us for CONCETTO \'24, where we invite you to explore new " +
+                "horizons from 4th to 6th October. Stay tuned as we unveil an exciting " +
+                "new theme: ‘VINTAGE VISIONS IN A MODERN MATRIX’ . The fest promises a " +
+                "diverse array of technical and managerial events that will leave you " +
+                "enthralled." +
+                " CONCETTO fuels the dreams of engineering enthusiasts, providing a " +
+                "launchpad for innovation and excellence. Participants stand to win " +
+                "certificates, exciting goodies, and prizes worth lakhs. Step into a " +
+                "world where technology meets creativity, where learning is a " +
+                "celebration, and every moment weaves unforgettable memories.\n</string>
 
+    <string name="convener_name">Prof. Ajit Kumar</string>
+
+    <string name="convener_message">As Edward Teller once said, \"The science of today is the technology of " +
+                "tomorrow.\" In an era where the future is constantly being reimagined, " +
+                "today\'s youth yearn for a stage to showcase their unique talents. " +
+                "CONCETTO\'24: Weaving Timeless Innovation offers such a stage, where " +
+                "tradition meets modernity. This year\'s theme, \"Vintage Vision in " +
+                "Modern Matrix,\" celebrates the harmony between classic ingenuity and " +
+                "contemporary technology. The fest pays tribute to the enduring " +
+                "legacy of vintage innovations while providing a platform for " +
+                "students to merge time-honored principles with cutting-edge ideas. " +
+                "This extraordinary event is a testament to the tireless efforts of " +
+                "our dedicated team and the generous support of our sponsors, who " +
+                "have made it all possible.\n</string>
+
+    <string name="co_convener_name">Prof. Himanshu Bhusan Mishra</string>
+
+    <string name="co_convener_message">Building tomorrow on the foundations of yesterday, CONCETTO\'24: " +
+                "Weaving Timeless Innovation provides a platform where the " +
+                "brilliance of young minds meets the wisdom of the past. Under this " +
+                "year\'s theme,\n \'Vintage Vision in Modern Matrix,\'\n we explore how the " +
+                "echoes of classic innovations can inspire and shape the cutting-edge " +
+                "technologies of today. This event is not just a celebration of " +
+                "creativity and ingenuity but also a convergence of tradition and " +
+                "modernity. As Co-Conveyor, it is a privilege to be part of this journey, " +
+                "ensuring that the fest remains a beacon of inspiration, where the " +
+                "legacies of yesterday fuel the breakthroughs of tomorrow. We are " +
+                "deeply grateful to our dedicated team and sponsors, whose efforts " +
+                "have made this vision a reality.\n</string>
+
+    <string name="perks">Internship certificates to all \nperforming CAs.\n\n "+
+                "Letter of recommondation to best performing CA\'s.\n\n"+
+                "Free accommodation inside IIT ISM Dhanbad for top performing CA's during the fest.\n\n"+
+                "Exclusive Goodies for top performing CA's and a chance to win monetary rewards!</string>
+
+    <string name="dept_events">Departmental Events</string>
+    <string name="club_events">Club Events</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.iitism.srijan25.models
+package com.iitism.srijan25.model
 
 data class User(
     val username: String,
@@ -9,5 +9,5 @@ data class User(
     val contact: Long?,
     val isISM: Boolean = false,
     var isAmbassador: Boolean = false,
-    val _id: String
+    val id: String
 )

@@ -1,4 +1,4 @@
-package com.iitism.srijan25.models
+package com.iitism.srijan25.model
 
 data class LoginRequest(
     val email: String,

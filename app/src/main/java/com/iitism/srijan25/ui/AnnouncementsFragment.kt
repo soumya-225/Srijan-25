@@ -10,15 +10,14 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.iitism.srijan25.adapter.AnnouncementsRVAdapter
 import com.iitism.srijan25.databinding.FragmentAnnouncementBinding
-import com.iitism.srijan25.models.Announcement
-import com.iitism.srijan25.retrofit.AnnouncementRetrofitInstance
+import com.iitism.srijan25.model.Announcement
+import com.iitism.srijan25.data.remote.AnnouncementRetrofitInstance
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class AnnouncementsFragment : Fragment(), AnnouncementsRVAdapter.OnTimestampUpdateListener {
     private lateinit var binding: FragmentAnnouncementBinding
-
     private lateinit var announcementsAdapter: AnnouncementsRVAdapter
 
     override fun onCreateView(
@@ -46,7 +45,7 @@ class AnnouncementsFragment : Fragment(), AnnouncementsRVAdapter.OnTimestampUpda
     }
 
     private fun fetchAnnouncements() {
-        val call = AnnouncementRetrofitInstance.announcementApi.getAnnouncements()
+        val call = AnnouncementRetrofitInstance.announcementService.getAnnouncements()
 
         call.enqueue(object : Callback<List<Announcement>> {
             override fun onResponse(

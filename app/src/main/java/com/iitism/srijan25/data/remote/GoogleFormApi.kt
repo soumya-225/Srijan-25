@@ -1,4 +1,4 @@
-package com.iitism.srijan25.services
+package com.iitism.srijan25.data.remote
 
 import retrofit2.Call
 import retrofit2.http.Field

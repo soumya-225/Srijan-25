@@ -1,10 +1,10 @@
-package com.iitism.srijan25.retrofit
+package com.iitism.srijan25.data.remote
 
-import com.iitism.srijan25.models.Announcement
+import com.iitism.srijan25.model.Announcement
 import retrofit2.Call
 import retrofit2.http.GET
 
-interface AnnouncementApi {
+interface AnnouncementService {
     @GET("/api/announcements")
     fun getAnnouncements(): Call<List<Announcement>>
 }

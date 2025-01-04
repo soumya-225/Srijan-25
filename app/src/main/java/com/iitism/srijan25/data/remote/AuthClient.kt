@@ -1,4 +1,4 @@
-package com.iitism.srijan25.services
+package com.iitism.srijan25.data.remote
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -14,15 +14,6 @@ object AuthClient {
         .writeTimeout(30, TimeUnit.SECONDS)
         .readTimeout(30, TimeUnit.SECONDS)
         .build()
-
-
-//    private val loggingInterceptor = HttpLoggingInterceptor().apply {
-//        level = HttpLoggingInterceptor.Level.BODY
-//    }
-//
-//    private val client = OkHttpClient.Builder()
-//        .addInterceptor(loggingInterceptor)
-//        .build()
 
     private val retrofit = Retrofit.Builder()
         .baseUrl(AUTH_BASE_URL)

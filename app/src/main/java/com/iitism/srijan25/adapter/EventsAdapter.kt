@@ -13,9 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.iitism.srijan25.R
-import com.iitism.srijan25.models.EventsData
+import com.iitism.srijan25.model.EventsData
 
-class EventAdapter(private val events: Array<EventsData>, private val context: Context) : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
+class EventAdapter(private val events: Array<EventsData>, private val context: Context) :
+    RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 
     class EventViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val eventName: TextView = view.findViewById(R.id.tvEventName)
@@ -35,7 +36,7 @@ class EventAdapter(private val events: Array<EventsData>, private val context: C
         val event = events[position]
         holder.eventName.text = event.eventName
         holder.club.text = event.organiser
-        holder.prizePool.text = "Prize Pool: ${event.prizePool}"
+        holder.prizePool.text = context.getString(R.string.prize_pool, event.prizePool)
         holder.registerButton.setOnClickListener {
             event.unstopLink?.let { link ->
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
