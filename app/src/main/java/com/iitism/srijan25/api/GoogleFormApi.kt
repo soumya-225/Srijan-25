@@ -1,4 +1,4 @@
-package com.iitism.srijan25.data.remote
+package com.iitism.srijan25.api
 
 /*interface GoogleFormApi {
     @FormUrlEncoded

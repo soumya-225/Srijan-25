@@ -20,7 +20,7 @@ import com.iitism.srijan25.databinding.FragmentOtpBinding
 import com.iitism.srijan25.model.OtpVerificationRequest
 import com.iitism.srijan25.model.OtpVerificationResponse
 import com.iitism.srijan25.model.ResendOtpRequest
-import com.iitism.srijan25.data.remote.AuthClient
+import com.iitism.srijan25.api.AuthClient
 import com.iitism.srijan25.ui.MainActivity
 import com.iitism.srijan25.utils.SharedPrefsHelper
 import retrofit2.Call

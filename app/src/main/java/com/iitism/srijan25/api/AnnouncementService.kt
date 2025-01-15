@@ -1,4 +1,4 @@
-package com.iitism.srijan25.data.remote
+package com.iitism.srijan25.api
 
 import com.iitism.srijan25.model.Announcement
 import retrofit2.Call

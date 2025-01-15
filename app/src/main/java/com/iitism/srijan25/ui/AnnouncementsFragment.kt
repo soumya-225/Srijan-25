@@ -9,9 +9,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.iitism.srijan25.adapter.AnnouncementsRVAdapter
+import com.iitism.srijan25.api.AnnouncementRetrofitInstance
 import com.iitism.srijan25.databinding.FragmentAnnouncementBinding
 import com.iitism.srijan25.model.Announcement
-import com.iitism.srijan25.data.remote.AnnouncementRetrofitInstance
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

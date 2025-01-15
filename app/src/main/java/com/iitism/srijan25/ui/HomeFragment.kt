@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.res.Resources
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,21 +25,24 @@ import com.iitism.srijan25.databinding.FragmentHomeBinding
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import java.util.Timer
+import java.util.TimerTask
 import kotlin.math.abs
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
-    //private val autoScrollDelay: Long = 3000
-    //private val totalPages = 6
+    private val autoScrollDelay: Long = 3000
+    private val totalPages = 6
     private var currentPage = 0
-    //private var timer: Timer? = null
-    //private val handler = Handler(Looper.getMainLooper())
+    private var timer: Timer? = null
+    private val handler = Handler(Looper.getMainLooper())
     private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View
+    {
         binding = FragmentHomeBinding.inflate(layoutInflater)
         navController = findNavController()
         return binding.root
@@ -47,31 +51,32 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         countDownConcettoStart()
+        startAutoScroll()
 
-        val lectureBtn = binding.lecturesIcon
-        val scheduleBtn = binding.scheduleIcon
-        val competitionBtn = binding.compIcon
+        val eventsBtn = binding.ivEvents
+        val merchBtn = binding.ivMerch
+        val sponsorsBtn = binding.ivSponsors
         val caBtn = binding.caIcon
-        val mainStageBtn = binding.mainstageIcon
+        val coreTeamBtn = binding.ivCoreTeam
         val galleryBtn = binding.galleryIcon
 
-        lectureBtn.setOnClickListener {
-           navController.navigate(R.id.guestTalkFragment)
+        eventsBtn.setOnClickListener {
+           navController.navigate(R.id.action_mainFragment_to_eventsFragment2)
         }
-        scheduleBtn.setOnClickListener {
-            navController.navigate(R.id.ScheduleFragment)
+        merchBtn.setOnClickListener {
+            navController.navigate(R.id.action_mainFragment_to_merchandiseFragment2)
         }
         galleryBtn.setOnClickListener {
-            navController.navigate(R.id.GalleryFragment)
+            navController.navigate(R.id.action_mainFragment_to_galleryFragment)
         }
-        mainStageBtn.setOnClickListener {
-            navController.navigate(R.id.mainStageFragment)
+        coreTeamBtn.setOnClickListener {
+            navController.navigate(R.id.action_mainFragment_to_coreTeamFragment2)
         }
         caBtn.setOnClickListener {
-            navController.navigate(R.id.campusAmbassadorFragment)
+            navController.navigate(R.id.action_mainFragment_to_campusAmbassadorFragment2)
         }
-        competitionBtn.setOnClickListener {
-            navController.navigate(R.id.eventsFragment)
+        sponsorsBtn.setOnClickListener {
+            navController.navigate(R.id.action_mainFragment_to_sponsorsFragment2)
         }
 
         val images = arrayOf(
@@ -108,13 +113,13 @@ class HomeFragment : Fragment() {
                 currentPage = position
             }
         })
-        binding.galleryIcon.setOnClickListener {
-            val nav=findNavController()
-            nav.navigate(action_homeFragment_to_GalleryFragment)
-        }
-        binding.mainstageIcon.setOnClickListener {
-            findNavController().navigate(action_homeFragment_to_main_stage)
-        }
+//        binding.galleryIcon.setOnClickListener {
+//            val nav=findNavController()
+//            nav.navigate(action_homeFragment_to_GalleryFragment)
+//        }
+//        binding.mainstageIcon.setOnClickListener {
+//            findNavController().navigate(action_homeFragment_to_main_stage)
+//        }
     }
 
     private fun countDownConcettoStart() {
@@ -126,7 +131,7 @@ class HomeFragment : Fragment() {
                 try {
                     val currentDate = Date()
                     val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-                    val futureDate: Date = dateFormat.parse("2024-10-18 00:00:00")!!
+                    val futureDate: Date = dateFormat.parse("2025-01-31 00:00:00")!!
                     if (!currentDate.after(futureDate)) {
                         var diff: Long = (futureDate.time - currentDate.time)
                         val days = diff / (24 * 60 * 60 * 1000)
@@ -165,7 +170,7 @@ class HomeFragment : Fragment() {
                 try {
                     val currentDate = Date()
                     val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-                    val futureDate: Date = dateFormat.parse("2024-10-20 00:00:00")!!
+                    val futureDate: Date = dateFormat.parse("2025-02-02 00:00:00")!!
                     if (!currentDate.after(futureDate)) {
 
                         var diff: Long = (futureDate.time - currentDate.time)
@@ -223,7 +228,7 @@ class HomeFragment : Fragment() {
         }
     }
 
-    /*private fun startAutoScroll() {
+    private fun startAutoScroll() {
         timer = Timer()
         timer?.schedule(object : TimerTask() {
             override fun run() {
@@ -248,5 +253,5 @@ class HomeFragment : Fragment() {
     private fun restartAutoScroll() {
         stopAutoScroll()
         handler.postDelayed({ startAutoScroll() }, autoScrollDelay)
-    }*/
+    }
 }

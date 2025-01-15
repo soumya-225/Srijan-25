@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@drawable/login"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".auth.LoginSignup">
-
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
@@ -17,6 +16,5 @@
         android:layout_height="wrap_content"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_login_signup" />
-
 
 </LinearLayout>

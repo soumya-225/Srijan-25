@@ -18,7 +18,7 @@ import com.iitism.srijan25.R
 import com.iitism.srijan25.databinding.FragmentSignupBinding
 import com.iitism.srijan25.model.RegisterRequest
 import com.iitism.srijan25.model.RegisterResponse
-import com.iitism.srijan25.data.remote.AuthClient
+import com.iitism.srijan25.api.AuthClient
 import com.iitism.srijan25.utils.SharedPrefsHelper
 import retrofit2.Call
 import retrofit2.Callback

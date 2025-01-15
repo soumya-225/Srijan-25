@@ -1,4 +1,4 @@
-package com.iitism.srijan25.data.remote
+package com.iitism.srijan25.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

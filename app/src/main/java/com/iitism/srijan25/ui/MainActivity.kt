@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupWithNavController
@@ -25,7 +26,6 @@ import com.iitism.srijan25.R
 import com.iitism.srijan25.auth.LoginSignup
 import com.iitism.srijan25.databinding.ActivityMainBinding
 import com.iitism.srijan25.utils.SharedPrefsHelper
-
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -38,107 +38,114 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        initializeDialog()
+        //initializeDialog()
         askNotificationAndSmsPermission()
 
-        sharedPrefsHelper = SharedPrefsHelper(this)
-        val user = sharedPrefsHelper.getUser()
+       // navController = findNavController(R.id.fragment_container)
+        //val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
+        //val navController = navHostFragment.navController
 
-        binding.appBar.btnProfilehome.setOnClickListener {
-            if (user == null) {
-                startActivity(Intent(this, LoginSignup::class.java))
-            } else {
-                findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.profileFragment)
-            }
-        }
 
-        dialog.show()
+        //sharedPrefsHelper = SharedPrefsHelper(this)
+        //val user = sharedPrefsHelper.getUser()
 
-        dismissDialogAfterDelay()
+//        binding.appBar.btnProfilehome.setOnClickListener {
+//            if (user == null) {
+//                startActivity(Intent(this, LoginSignup::class.java))
+//            } else {
+//                findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.profileFragment)
+//            }
+//        }
+        //navController = findNavController(R.id.fragment_container)
+        //binding.bottomNav.setupWithNavController(navController)
 
-        navController = findNavController(R.id.nav_host_fragment_content_main)
+        //dialog.show()
 
-        appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.homeFragment,
-                R.id.eventsFragment,
-                R.id.singleEventFragment,
-                R.id.announcementsFragment,
-                R.id.merchandiseFragment,
-                R.id.sponsorsFragment,
-                R.id.profileFragment,
-                R.id.aboutUsFragment,
-                R.id.coreTeamFragment,
-                R.id.contactFragment,
-                R.id.campusAmbassadorFragment
-            ), binding.drawerLayout
-        )
+        //dismissDialogAfterDelay()
 
-        binding.appBar.btnMenu.setOnClickListener {
-            binding.drawerLayout.openDrawer(GravityCompat.START)
-        }
 
-        navController.addOnDestinationChangedListener { _, destination, _ ->
 
-            when (destination.id) {
-                R.id.homeFragment -> binding.navView.setCheckedItem(R.id.homeFragment)
-                R.id.eventsFragment -> binding.navView.setCheckedItem(R.id.eventsFragment)
-                R.id.singleEventFragment -> binding.navView.setCheckedItem(R.id.eventsFragment)
-                R.id.announcementsFragment -> binding.navView.setCheckedItem(R.id.announcementsFragment)
-                R.id.merchandiseFragment -> binding.navView.setCheckedItem(R.id.merchandiseFragment)
-                R.id.sponsorsFragment -> binding.navView.setCheckedItem(R.id.sponsorsFragment)
-                R.id.profileFragment -> {
-                    if (user == null) {
-                        finish()
-                        startActivity(Intent(this, MainActivity::class.java))
-                        Toast.makeText(this, "Login First", Toast.LENGTH_LONG).show()
-                        startActivity(Intent(this, LoginSignup::class.java))
-                    } else {
-                        binding.navView.setCheckedItem(R.id.profileFragment)
-                    }
-                }
-
-                R.id.aboutUsFragment -> binding.navView.setCheckedItem(R.id.aboutUsFragment)
-                R.id.coreTeamFragment -> binding.navView.setCheckedItem(R.id.coreTeamFragment)
-                R.id.contactFragment -> binding.navView.setCheckedItem(R.id.contactFragment)
-                R.id.campusAmbassadorFragment -> binding.navView.setCheckedItem(R.id.campusAmbassadorFragment)
-                else -> binding.navView.setCheckedItem(R.id.homeFragment)
-            }
-            binding.appBar.tvTitle.text = when (destination.id) {
-                R.id.homeFragment -> "Home"
-                R.id.eventsFragment -> "Events"
-                R.id.announcementsFragment -> "Announcements"
-                R.id.merchandiseFragment -> "Merchandise"
-                R.id.sponsorsFragment -> "Past Sponsors"
-                R.id.profileFragment -> "Profile"
-                R.id.aboutUsFragment -> "About Us"
-                R.id.coreTeamFragment -> "Core Team"
-                R.id.contactFragment -> "Contact Us"
-                R.id.singleEventFragment -> "Events"
-                R.id.campusAmbassadorFragment -> "Campus Ambassador"
-                R.id.guestTalkFragment -> "Guest Talks"
-                R.id.GalleryFragment -> "Gallery"
-                R.id.mainStageFragment -> "Main Stage"
-                R.id.ScheduleFragment -> "Schedule"
-                else -> "Concetto 24"
-            }
-
-            if (destination.id != R.id.homeFragment) {
-                binding.appBar.btnProfilehome.visibility = View.GONE
-                binding.appBar.btnLogOut.visibility = View.GONE
-            } else {
-                if (user == null) {
-                    binding.appBar.btnLogOut.visibility = View.GONE
-                    binding.appBar.btnProfilehome.visibility = View.VISIBLE
-                } else {
-                    binding.appBar.btnLogOut.visibility = View.GONE
-                    binding.appBar.btnProfilehome.visibility = View.VISIBLE
-                }
-            }
-        }
-
-        binding.navView.setupWithNavController(navController)
-        binding.navView.setCheckedItem(R.id.homeFragment)
+//        appBarConfiguration = AppBarConfiguration(
+//            setOf(
+//                R.id.homeFragment,
+//                R.id.eventsFragment,
+//                R.id.singleEventFragment,
+//                R.id.announcementsFragment,
+//                R.id.merchandiseFragment,
+//                R.id.sponsorsFragment,
+//                R.id.profileFragment,
+//                R.id.aboutUsFragment,
+//                R.id.coreTeamFragment,
+//                R.id.contactFragment,
+//                R.id.campusAmbassadorFragment
+//            ), binding.drawerLayout
+//        )
+//
+//        binding.appBar.btnMenu.setOnClickListener {
+//            binding.drawerLayout.openDrawer(GravityCompat.START)
+//        }
+//
+//        navController.addOnDestinationChangedListener { _, destination, _ ->
+//
+//            when (destination.id) {
+//                R.id.homeFragment -> binding.navView.setCheckedItem(R.id.homeFragment)
+//                R.id.eventsFragment -> binding.navView.setCheckedItem(R.id.eventsFragment)
+//                R.id.singleEventFragment -> binding.navView.setCheckedItem(R.id.eventsFragment)
+//                R.id.announcementsFragment -> binding.navView.setCheckedItem(R.id.announcementsFragment)
+//                R.id.merchandiseFragment -> binding.navView.setCheckedItem(R.id.merchandiseFragment)
+//                R.id.sponsorsFragment -> binding.navView.setCheckedItem(R.id.sponsorsFragment)
+//                R.id.profileFragment -> {
+//                    if (user == null) {
+//                        finish()
+//                        startActivity(Intent(this, MainActivity::class.java))
+//                        Toast.makeText(this, "Login First", Toast.LENGTH_LONG).show()
+//                        startActivity(Intent(this, LoginSignup::class.java))
+//                    } else {
+//                        binding.navView.setCheckedItem(R.id.profileFragment)
+//                    }
+//                }
+//
+//                R.id.aboutUsFragment -> binding.navView.setCheckedItem(R.id.aboutUsFragment)
+//                R.id.coreTeamFragment -> binding.navView.setCheckedItem(R.id.coreTeamFragment)
+//                R.id.contactFragment -> binding.navView.setCheckedItem(R.id.contactFragment)
+//                R.id.campusAmbassadorFragment -> binding.navView.setCheckedItem(R.id.campusAmbassadorFragment)
+//                else -> binding.navView.setCheckedItem(R.id.homeFragment)
+//            }
+//            binding.appBar.tvTitle.text = when (destination.id) {
+//                R.id.homeFragment -> "Home"
+//                R.id.eventsFragment -> "Events"
+//                R.id.announcementsFragment -> "Announcements"
+//                R.id.merchandiseFragment -> "Merchandise"
+//                R.id.sponsorsFragment -> "Past Sponsors"
+//                R.id.profileFragment -> "Profile"
+//                R.id.aboutUsFragment -> "About Us"
+//                R.id.coreTeamFragment -> "Core Team"
+//                R.id.contactFragment -> "Contact Us"
+//                R.id.singleEventFragment -> "Events"
+//                R.id.campusAmbassadorFragment -> "Campus Ambassador"
+//                R.id.guestTalkFragment -> "Guest Talks"
+//                R.id.GalleryFragment -> "Gallery"
+//                R.id.mainStageFragment -> "Main Stage"
+//                R.id.ScheduleFragment -> "Schedule"
+//                else -> "Concetto 24"
+//            }
+//
+//            if (destination.id != R.id.homeFragment) {
+//                binding.appBar.btnProfilehome.visibility = View.GONE
+//                binding.appBar.btnLogOut.visibility = View.GONE
+//            } else {
+//                if (user == null) {
+//                    binding.appBar.btnLogOut.visibility = View.GONE
+//                    binding.appBar.btnProfilehome.visibility = View.VISIBLE
+//                } else {
+//                    binding.appBar.btnLogOut.visibility = View.GONE
+//                    binding.appBar.btnProfilehome.visibility = View.VISIBLE
+//                }
+//            }
+//        }
+//
+//        binding.navView.setupWithNavController(navController)
+//        binding.navView.setCheckedItem(R.id.homeFragment)
     }
 
     private fun dismissDialogAfterDelay() {
@@ -191,9 +198,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
+//    override fun onSupportNavigateUp(): Boolean {
+//        val navController = findNavController(R.id.nav_host_fragment_content_main)
+//        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+//    }
 }
 
