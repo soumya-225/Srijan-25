@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.iitism.srijan25.ui.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_mainStageFragment2"
+            app:destination="@id/mainStageFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_clubEventsFragment"
+            app:destination="@id/clubEventsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_campusAmbassadorFragment2"
+            app:destination="@id/campusAmbassadorFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_eventsFragment2"
+            app:destination="@id/eventsFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_merchandiseFragment2"
+            app:destination="@id/merchandiseFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_coreTeamFragment2"
+            app:destination="@id/coreTeamFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_sponsorsFragment2"
+            app:destination="@id/sponsorsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainStageFragment2"
+        android:name="com.iitism.srijan25.ui.MainStageFragment"
+        android:label="MainStageFragment" />
+    <fragment
+        android:id="@+id/clubEventsFragment"
+        android:name="com.iitism.srijan25.ui.ClubEventsFragment"
+        android:label="ClubEventsFragment" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.iitism.srijan25.ui.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/campusAmbassadorFragment2"
+        android:name="com.iitism.srijan25.ui.CampusAmbassadorFragment"
+        android:label="fragment_campus_ambassador"
+        tools:layout="@layout/fragment_campus_ambassador" />
+    <fragment
+        android:id="@+id/eventsFragment2"
+        android:name="com.iitism.srijan25.ui.EventsFragment"
+        android:label="fragment_merchandise"
+        tools:layout="@layout/fragment_merchandise" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.iitism.srijan25.ui.GalleryFragment"
+        android:label="GalleryFragment" />
+    <fragment
+        android:id="@+id/merchandiseFragment2"
+        android:name="com.iitism.srijan25.ui.MerchandiseFragment"
+        android:label="MerchandiseFragment" />
+    <fragment
+        android:id="@+id/coreTeamFragment2"
+        android:name="com.iitism.srijan25.ui.CoreTeamFragment"
+        android:label="fragment_core_team"
+        tools:layout="@layout/fragment_core_team" />
+    <fragment
+        android:id="@+id/sponsorsFragment2"
+        android:name="com.iitism.srijan25.ui.SponsorsFragment"
+        android:label="fragment_sponsors"
+        tools:layout="@layout/fragment_sponsors" />
+</navigation>
