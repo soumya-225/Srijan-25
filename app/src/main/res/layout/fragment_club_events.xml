@@ -1,14 +1,334 @@
-<!-- fragment_event_list.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:padding="5dp">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewClubEvents"
+    <!-- Parent container for the cards -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/event_card_view"
-        android:padding="16dp"/>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Cinema -->
+        <RelativeLayout
+            android:id="@+id/cinema"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_6"
+                android:scaleType="fitXY"
+                android:foreground="@drawable/item_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Cinema"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Explore →"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!-- Dance -->
+        <RelativeLayout
+            android:id="@+id/dance"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_7"
+                android:scaleType="fitXY"
+                android:foreground="@drawable/item_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Dance"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Explore →"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!-- Literary -->
+        <RelativeLayout
+            android:id="@+id/literary"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_9"
+                android:scaleType="fitXY"
+                android:foreground="@drawable/item_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Literary"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Explore →"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!-- Music -->
+        <RelativeLayout
+            android:id="@+id/music"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_8"
+                android:scaleType="fitXY"
+                android:foreground="@drawable/item_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Music"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Explore →"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/comedy"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_11"
+                android:scaleType="fitXY"
+                android:foreground="@drawable/item_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Comedy"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Explore →"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!-- Quiz Section -->
+        <RelativeLayout
+            android:id="@+id/quiz"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_10"
+                android:scaleType="fitXY"
+                android:foreground="@drawable/item_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Quiz"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Explore →"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!-- Drama Section -->
+        <RelativeLayout
+            android:id="@+id/drama"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/drama"
+                android:scaleType="fitXY"
+                android:foreground="@drawable/item_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Drama"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Explore →"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!-- Culinary Section -->
+        <RelativeLayout
+            android:id="@+id/culinary"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_12"
+                android:scaleType="fitXY"
+                android:foreground="@drawable/item_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Culinary"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Explore →"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <!-- Fashion Section -->
+        <RelativeLayout
+            android:id="@+id/fashion"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_13"
+                android:scaleType="fitXY"
+                android:foreground="@drawable/item_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Fashion"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Explore →"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/finearts"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_14"
+                android:scaleType="fitXY"
+                android:foreground="@drawable/item_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Fine Arts"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="Explore →"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
+

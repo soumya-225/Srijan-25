@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- Background image -->
+<!--    <item>-->
+<!--        <bitmap-->
+<!--            android:src="@drawable/home"-->
+<!--            android:gravity="fill" />-->
+<!--    </item>-->
+
+    <!-- Gradient overlay -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#000000"
+            android:endColor="#00000000"
+            android:angle="0" />
+            <corners android:radius="0dp" />
+        </shape>
+    </item>
+
+</layer-list>

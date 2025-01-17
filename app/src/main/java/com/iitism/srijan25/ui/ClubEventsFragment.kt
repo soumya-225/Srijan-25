@@ -49,10 +49,10 @@ class ClubEventsFragment : Fragment() {
         }
         val eventData = getClubEventData()
 
-        binding.recyclerViewClubEvents.layoutManager = LinearLayoutManager(context)
-        binding.recyclerViewClubEvents.setHasFixedSize(true)
-        adapter = EventAdapter(eventData, requireContext())
-        binding.recyclerViewClubEvents.adapter = adapter
+//        binding.recyclerViewClubEvents.layoutManager = LinearLayoutManager(context)
+//        binding.recyclerViewClubEvents.setHasFixedSize(true)
+//        adapter = EventAdapter(eventData, requireContext())
+//        binding.recyclerViewClubEvents.adapter = adapter
         return binding.root
     }
 
