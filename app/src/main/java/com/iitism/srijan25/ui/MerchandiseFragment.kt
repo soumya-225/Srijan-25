@@ -22,10 +22,8 @@ class MerchandiseFragment : Fragment() {
     private var imagePager: ViewPager2? = null
 
     var imageList = listOf(
-        R.drawable.tshirt,
-        R.drawable.tshirt_front,
-        R.drawable.tshirt_back,
-        R.drawable.measurement_chart,
+        R.drawable.tshirt25,
+        R.drawable.hoodie25,
     )
 
     @SuppressLint("MissingInflatedId")
@@ -34,10 +32,10 @@ class MerchandiseFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_merchandise, container, false)
-        imagePager = view.findViewById(R.id.view_pager_carousel_merch)
-        val adapter = ImagePagerAdapter(imageList)
-        imagePager?.adapter = adapter
-        startImageSliderTimer()
+//        imagePager = view.findViewById(R.id.view_pager_carousel_merch)
+//        val adapter = ImagePagerAdapter(imageList)
+//        imagePager?.adapter = adapter
+//        startImageSliderTimer()
         val btnPlace = view.findViewById<Button>(R.id.PlaceOrder)
         btnPlace.setOnClickListener {
             openGoogleForm()
@@ -46,7 +44,7 @@ class MerchandiseFragment : Fragment() {
     }
 
     private fun openGoogleForm() {
-        val formUrl = "https://forms.gle/nwcyLA5kh28teKN39"
+        val formUrl = "https://forms.gle/Lh8Divrwx2TbXpbQ6"
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = Uri.parse(formUrl)
         startActivity(intent)

@@ -1,96 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/transparent"
-    android:fillViewport="true"
     android:orientation="vertical"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
     tools:context=".ui.CampusAmbassadorFragment"
-    tools:ignore="hardcodedText"
-    android:scrollbars="none">
+    tools:ignore="hardcodedText">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="?attr/colorPrimaryVariant"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="10dp"
-            android:backgroundTint="@color/transparent"
-            android:elevation="10dp"
-            app:cardCornerRadius="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ca_poster"
-                android:gravity="center_horizontal"
-                android:orientation="vertical"
-                android:clickable="true">
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
+        <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:backgroundTint="@color/transparent"
-            android:elevation="10dp"
-            app:cardCornerRadius="20dp">
+            app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
+            app:navigationIconTint="?attr/colorOnPrimary"
+            app:title="Past Sponsors"
+            app:titleTextColor="?attr/colorOnPrimary" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-            <LinearLayout
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/transparent"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ca_poster"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/transparent"
+        android:elevation="10dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPerksHeader"
+                style="@style/h2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="PERKS"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/tvPerks"
+                style="@style/h5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
                 android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:justificationMode="inter_word"
+                android:padding="10dp"
+                android:text="Header"
+                android:textColor="@color/text"
+                tools:targetApi="o" />
 
-                <TextView
-                    android:id="@+id/tvPerksHeader"
-                    style="@style/h2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="PERKS"
-                    android:textColor="@color/text" />
-
-                <TextView
-                    android:id="@+id/tvPerks"
-                    style="@style/h5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="10dp"
-                    android:gravity="center_horizontal"
-                    android:justificationMode="inter_word"
-                    android:padding="10dp"
-                    android:text="Header"
-                    android:textColor="@color/text"
-                    tools:targetApi="o" />
-
-            </LinearLayout>
+        </LinearLayout>
 
 
-        </com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.card.MaterialCardView>
 
-        <Button
-            android:id="@+id/BtnRegister_campusAmb"
-            style="@style/btn"
-            android:layout_width="match_parent"
-            android:layout_margin="10dp"
-            android:layout_height="wrap_content"
-            android:text="Register" />
+    <Button
+        android:id="@+id/BtnRegister_campusAmb"
+        style="@style/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Register" />
 
-    </LinearLayout>
-
-
-</ScrollView>
+</LinearLayout>

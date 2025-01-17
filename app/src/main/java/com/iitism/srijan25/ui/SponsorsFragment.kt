@@ -13,12 +13,11 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.iitism.srijan25.R
-import com.iitism.srijan25.viewModel.SponsorViewModel
 import com.iitism.srijan25.adapter.SponsorRVAdapter
 import com.iitism.srijan25.databinding.FragmentSponsorsBinding
-
+import com.iitism.srijan25.viewModel.SponsorViewModel
 
 class SponsorsFragment : Fragment() {
     private lateinit var binding: FragmentSponsorsBinding
@@ -31,6 +30,7 @@ class SponsorsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentSponsorsBinding.inflate(inflater, container, false)
+
         viewModel = ViewModelProvider(
             requireActivity(),
             ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
@@ -39,10 +39,12 @@ class SponsorsFragment : Fragment() {
         dialog = Dialog(requireActivity())
         dialog.setContentView(R.layout.progress_bar)
         dialog.setCancelable(false)
+
         val layoutParams = WindowManager.LayoutParams().apply {
             width = WindowManager.LayoutParams.MATCH_PARENT
             height = WindowManager.LayoutParams.MATCH_PARENT
         }
+
         dialog.window?.attributes = layoutParams
         if (dialog.window != null) {
             dialog.window!!.setBackgroundDrawable(
@@ -57,7 +59,7 @@ class SponsorsFragment : Fragment() {
 
         }
 
-        binding.rvSponsors.layoutManager = LinearLayoutManager(context)
+        binding.rvSponsors.layoutManager = GridLayoutManager(context, 2)
         binding.rvSponsors.setHasFixedSize(true)
 
         adapter = SponsorRVAdapter(emptyList()) { redirectURL ->

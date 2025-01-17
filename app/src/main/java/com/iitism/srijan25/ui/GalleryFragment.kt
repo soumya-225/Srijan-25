@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.iitism.srijan25.R
@@ -17,6 +18,7 @@ class GalleryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_gallery, container, false)
+        val navController = findNavController()
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.galleryRecyclerView)
 
@@ -43,7 +45,7 @@ class GalleryFragment : Fragment() {
             "https://res.cloudinary.com/dimf24hn7/image/upload/v1727112098/Here_are_some_glimpses_of_EDM_night_conducted_under__concetto.iitism_2023._._._Ft.__progressivebrothers____kavyakhurana_._.__edmnight__edm__probros__sunburn__sunburncampus__kavyakhurana__iitism__3_jjwisf.jpg"
         )
 
-        recyclerView.adapter = GalleryAdapter(imageUrls)
+        recyclerView.adapter = GalleryAdapter(imageUrls,navController)
         recyclerView.layoutManager = GridLayoutManager(context, 2) // 2 columns
         return view
     }

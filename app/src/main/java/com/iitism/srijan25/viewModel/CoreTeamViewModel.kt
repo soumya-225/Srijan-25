@@ -1,27 +1,33 @@
 package com.iitism.srijan25.viewModel
 
 import android.app.Application
+import android.content.Context
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
+import com.iitism.srijan25.model.CoreTeam
 import com.iitism.srijan25.model.CoreTeamDataModel
 import kotlinx.coroutines.launch
 import java.io.InputStream
 
-class CoreTeamViewModel(private val application: Application) : ViewModel() {
+class CoreTeamViewModel(private val application: Context) : ViewModel() {
 
-    private val _coreTeamList = mutableListOf<CoreTeamDataModel>()
-    val coreTeamList: List<CoreTeamDataModel>
-        get() = _coreTeamList
+//    private val _coreTeamList = mutableListOf<CoreTeamDataModel>()
+//    val coreTeamList: List<CoreTeamDataModel>
+//        get() = _coreTeamList
+
+    private var _coreTeam: CoreTeam? = null
+    val coreTeam:CoreTeam?
+        get() = _coreTeam
 
     private var error: String? = null
 
     fun getCoreTeamList() {
         viewModelScope.launch {
             try {
-                _coreTeamList.clear()
-                val inputStream: InputStream =
-                    application.applicationContext.assets.open("coreTeam.json")
+                //_coreTeamList.clear()
+                val inputStream: InputStream = application.assets.open("coreTeam.json")
                 val size = inputStream.available()
                 val buffer = ByteArray(size)
                 inputStream.read(buffer)
@@ -30,10 +36,14 @@ class CoreTeamViewModel(private val application: Application) : ViewModel() {
                 val json = String(buffer, Charsets.UTF_8)
                 val gson = Gson()
 
-                val coreTeam = gson.fromJson(json, Array<CoreTeamDataModel>::class.java)
-                _coreTeamList.addAll(coreTeam)
+                val coreTeamGet = gson.fromJson(json, CoreTeam::class.java)
+                _coreTeam=coreTeamGet
+                //_coreTeamList.addAll(coreTeam)
+                //_coreTeamList
+
             } catch (e: Exception) {
                 error = e.toString()
+                Log.d("error", error!!)
             }
         }
     }

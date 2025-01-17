@@ -1,6 +1,7 @@
 package com.iitism.srijan25.ui
 
 import android.app.Application
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,14 +16,14 @@ import com.iitism.srijan25.databinding.FragmentCoreTeamBinding
 class CoreTeamFragment : Fragment() {
     private lateinit var viewModel: CoreTeamViewModel
     private lateinit var binding: FragmentCoreTeamBinding
-    private lateinit var application: Application
+    private lateinit var application: Context
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentCoreTeamBinding.inflate(layoutInflater, container, false)
-        application = MyApplication()
+        application = requireContext()
         return binding.root
     }
 
@@ -35,7 +36,8 @@ class CoreTeamFragment : Fragment() {
         viewModel = CoreTeamViewModel(application)
         viewModel.getCoreTeamList()
 
-        val itemAdapter = CoreTeamAdapter(viewModel.coreTeamList)
-        binding.rvCoreTeam.adapter = itemAdapter
+        //val itemAdapter = CoreTeamAdapter(viewModel.coreTeamList)
+        //val itemAdapter = CoreTeamAdapter(viewModel.coreTeam)
+        //binding.rvCoreTeam.adapter = itemAdapter
     }
 }

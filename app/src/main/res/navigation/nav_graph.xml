@@ -63,7 +63,11 @@
     <fragment
         android:id="@+id/galleryFragment"
         android:name="com.iitism.srijan25.ui.GalleryFragment"
-        android:label="GalleryFragment" />
+        android:label="GalleryFragment" >
+        <action
+            android:id="@+id/action_galleryFragment_to_imageViewFragment"
+            app:destination="@id/imageViewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/merchandiseFragment2"
         android:name="com.iitism.srijan25.ui.MerchandiseFragment"
@@ -78,4 +82,12 @@
         android:name="com.iitism.srijan25.ui.SponsorsFragment"
         android:label="fragment_sponsors"
         tools:layout="@layout/fragment_sponsors" />
+    <fragment
+        android:id="@+id/imageViewFragment"
+        android:name="com.iitism.srijan25.ui.ImageViewFragment"
+        android:label="ImageViewFragment" >
+        <argument
+            android:name="image"
+            app:argType="string" />
+    </fragment>
 </navigation>

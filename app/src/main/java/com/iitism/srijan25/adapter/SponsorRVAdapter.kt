@@ -25,7 +25,7 @@ class SponsorRVAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.layout_rv_sponsors, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_sponsors, parent, false)
         return ViewHolder(itemView)
     }
 
