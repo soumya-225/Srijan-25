@@ -18,6 +18,8 @@
     <color name="bgAlternate">#919191</color>
     <color name="dotColor">#F4DA02</color>
 
+    <color name="home_text">#fef3c7</color>
+
     <color name="primary">#5B463C</color>
     <color name="primary2">#5B463C</color>
     <color name="secondary">#FF000000</color>

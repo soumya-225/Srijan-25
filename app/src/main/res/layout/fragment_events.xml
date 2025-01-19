@@ -9,6 +9,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:tabGravity="fill"
+        android:visibility="gone"
         app:tabRippleColor="@color/transparent"
         app:tabMode="fixed"
         style="@style/CustomTabLayout"
