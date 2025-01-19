@@ -89,7 +89,7 @@ class HomeFragment : Fragment() {
             "https://res.cloudinary.com/dnywj3xrl/image/upload/v1725973562/IMG-20240910-WA0060_nsplld.jpg"
         )
 
-        binding.viewPagerCarousel.adapter = HomeCarouselAdapter(images)
+        //binding.viewPagerCarousel.adapter = HomeCarouselAdapter(images)
 
         val compositePageTransformer = CompositePageTransformer()
         compositePageTransformer.addTransformer(MarginPageTransformer((40 * Resources.getSystem().displayMetrics.density).toInt()))
@@ -97,22 +97,22 @@ class HomeFragment : Fragment() {
             val r = 1 - abs(position)
             page.scaleY = (0.80f + r * 0.20f)
         }
-        binding.viewPagerCarousel.setPageTransformer(compositePageTransformer)
+        //binding.viewPagerCarousel.setPageTransformer(compositePageTransformer)
 
         addDotsIndicator(images.size)
-        binding.viewPagerCarousel.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback()
-        {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                updateDots(position)
-            }
-        })
-
-        binding.viewPagerCarousel.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                currentPage = position
-            }
-        })
+//        binding.viewPagerCarousel.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback()
+//        {
+//            override fun onPageSelected(position: Int) {
+//                super.onPageSelected(position)
+//                updateDots(position)
+//            }
+//        })
+//
+//        binding.viewPagerCarousel.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+//            override fun onPageSelected(position: Int) {
+//                currentPage = position
+//            }
+//        })
 //        binding.galleryIcon.setOnClickListener {
 //            val nav=findNavController()
 //            nav.navigate(action_homeFragment_to_GalleryFragment)
@@ -238,7 +238,7 @@ class HomeFragment : Fragment() {
                     } else {
                         currentPage++
                     }
-                    binding.viewPagerCarousel.setCurrentItem(currentPage, true)
+                    //binding.viewPagerCarousel.setCurrentItem(currentPage, true)
                 }
             }
         }, 0, autoScrollDelay)
