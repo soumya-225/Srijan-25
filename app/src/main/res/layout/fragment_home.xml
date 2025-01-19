@@ -17,23 +17,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/grunge">
+        android:background="@drawable/bg_sr25"
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:src="@drawable/srijan_logo"
-            android:background="@drawable/background_gradient" />
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/view_pager_carousel"
-            android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:paddingHorizontal="10dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="0dp"
-            android:layout_gravity="center_horizontal" />
+            android:src="@drawable/srijan_logo" />
+
+        <!--        <androidx.viewpager2.widget.ViewPager2-->
+        <!--            android:id="@+id/view_pager_carousel"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="200dp"-->
+        <!--            android:layout_gravity="center_horizontal"-->
+        <!--            android:layout_marginHorizontal="10dp"-->
+        <!--            android:layout_marginTop="0dp"-->
+        <!--            android:paddingHorizontal="10dp" />-->
 
         <LinearLayout
             android:id="@+id/dotLayout"
@@ -46,6 +45,7 @@
 
         <LinearLayout
             android:id="@+id/timer"
+            android:paddingBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -57,8 +57,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Time Left"
-                android:textColor="@color/primary" />
+                android:fontFamily="@font/med_reg"
+                android:shadowColor="#80000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4"
+                android:text="Countdown to the Roman Revelry"
+                android:textColor="#fef3c7"
+                android:textFontWeight="700" />
 
             <TextView
                 android:id="@+id/finished_id"
@@ -82,9 +88,10 @@
 
                 <LinearLayout
                     android:id="@+id/LinearLayout1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="72dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
+                    android:background="@drawable/time_card_bg"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="10dp">
@@ -94,9 +101,10 @@
                         style="@style/h3"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/med_reg"
                         android:gravity="center"
                         android:text="00"
-                        android:textColor="@color/primary"
+                        android:textColor="@color/home_text"
                         android:textStyle="bold" />
 
                     <TextView
@@ -104,17 +112,19 @@
                         style="@style/h5"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/med_reg"
                         android:gravity="center_horizontal"
                         android:text="Days"
-                        android:textColor="@color/primary"
+                        android:textColor="@color/home_text"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/LinearLayout2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="72dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
+                    android:background="@drawable/time_card_bg"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="10dp">
@@ -124,9 +134,10 @@
                         style="@style/h3"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/med_reg"
                         android:gravity="center"
                         android:text="00"
-                        android:textColor="@color/primary"
+                        android:textColor="@color/home_text"
                         android:textStyle="bold" />
 
                     <TextView
@@ -135,18 +146,20 @@
                         android:layout_width="fill_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/med_reg"
                         android:gravity="center_horizontal"
                         android:text="Hours"
-                        android:textColor="@color/primary"
+                        android:textColor="@color/home_text"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
 
                     android:id="@+id/LinearLayout3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="72dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
+                    android:background="@drawable/time_card_bg"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="10dp">
@@ -156,9 +169,10 @@
                         style="@style/h3"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/med_reg"
                         android:gravity="center"
                         android:text="00"
-                        android:textColor="@color/primary"
+                        android:textColor="@color/home_text"
                         android:textStyle="bold" />
 
                     <TextView
@@ -166,18 +180,20 @@
                         android:layout_width="fill_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/med_reg"
                         android:gravity="center_horizontal"
                         android:text="Minutes"
-                        android:textColor="@color/primary"
+                        android:textColor="@color/home_text"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
 
                     android:id="@+id/LinearLayout4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="74dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
+                    android:background="@drawable/time_card_bg"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="10dp">
@@ -187,9 +203,10 @@
                         style="@style/h3"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/med_reg"
                         android:gravity="center"
                         android:text="00"
-                        android:textColor="@color/primary"
+                        android:textColor="@color/home_text"
                         android:textStyle="bold" />
 
                     <TextView
@@ -198,9 +215,10 @@
                         android:layout_width="fill_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/med_reg"
                         android:gravity="center_horizontal"
                         android:text="Seconds"
-                        android:textColor="@color/primary"
+                        android:textColor="@color/home_text"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -236,6 +254,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/med_reg"
+                    android:textStyle="bold"
+                    android:textColor="@color/home_text"
                     android:text="Events" />
             </LinearLayout>
 
@@ -257,6 +279,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
+                    android:fontFamily="@font/med_reg"
+                    android:textColor="@color/home_text"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
                     android:text="Merchandise" />
             </LinearLayout>
 
@@ -277,6 +303,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/med_reg"
+                    android:textColor="@color/home_text"
+                    android:textSize="14sp"
                     android:paddingVertical="10dp"
                     android:text="Sponsors" />
             </LinearLayout>
@@ -300,6 +330,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
+                    android:fontFamily="@font/med_reg"
+                    android:textColor="@color/home_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
                     android:text="CA Portal" />
             </LinearLayout>
 
@@ -322,6 +356,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
+                    android:fontFamily="@font/med_reg"
+                    android:textColor="@color/home_text"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
                     android:text="Core Team" />
             </LinearLayout>
 
@@ -345,6 +383,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
+                    android:fontFamily="@font/med_reg"
+                    android:textColor="@color/home_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
                     android:text="Gallery" />
             </LinearLayout>
 
@@ -352,27 +394,27 @@
 
         </GridLayout>
 
-<!--        <com.google.android.material.card.MaterialCardView-->
-<!--            android:id="@+id/materialcardview"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="180dp"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:backgroundTint="@color/transparent"-->
-<!--            android:elevation="10dp"-->
-<!--            app:cardCornerRadius="10dp">-->
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/materialcardview"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="180dp"-->
+        <!--            android:layout_margin="10dp"-->
+        <!--            android:backgroundTint="@color/transparent"-->
+        <!--            android:elevation="10dp"-->
+        <!--            app:cardCornerRadius="10dp">-->
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/ca_poster"-->
-<!--                android:clickable="true"-->
-<!--                android:gravity="center_horizontal"-->
-<!--                android:orientation="vertical">-->
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:background="@drawable/ca_poster"-->
+        <!--                android:clickable="true"-->
+        <!--                android:gravity="center_horizontal"-->
+        <!--                android:orientation="vertical">-->
 
-<!--            </LinearLayout>-->
+        <!--            </LinearLayout>-->
 
 
-<!--        </com.google.android.material.card.MaterialCardView>-->
+        <!--        </com.google.android.material.card.MaterialCardView>-->
 
     </LinearLayout>
 </ScrollView>
