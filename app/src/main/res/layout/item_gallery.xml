@@ -14,10 +14,12 @@
 
         <ImageView
             android:id="@+id/imageView"
+            android:layout_gravity="center"
+            android:background="#000000"
             android:layout_width="200dp"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/concetto" />
+            android:src="@drawable/srijan_logo" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

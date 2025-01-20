@@ -54,6 +54,7 @@
             <TextView
                 android:id="@+id/textCounterDown"
                 style="@style/h2"
+                android:gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -242,14 +243,19 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
-
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_grid">
                 <ImageView
                     android:id="@+id/iv_events"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
+                    android:layout_width="40dp"
+                    android:layout_gravity="center"
+                    android:layout_height="60dp"
                     android:clickable="true"
-                    android:src="@drawable/lecture" />
-
+                    android:src="@drawable/event" />
+                </FrameLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -268,12 +274,19 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
-
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_grid">
                 <ImageView
                     android:id="@+id/iv_merch"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:src="@drawable/schedule" />
+                    android:layout_width="52dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="center"
+                    android:layout_height="55dp"
+                    android:src="@drawable/tshirt" />
+                </FrameLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -293,13 +306,18 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
-
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_grid">
                 <ImageView
                     android:id="@+id/iv_sponsors"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:src="@drawable/competitions" />
-
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/sponsor" />
+                </FrameLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -318,14 +336,18 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
-
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_grid">
                 <ImageView
                     android:id="@+id/caIcon"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:background="@drawable/round_grid"
-                    android:src="@drawable/events" />
-
+                    android:layout_width="45dp"
+                    android:layout_gravity="center"
+                    android:layout_height="45dp"
+                    android:src="@drawable/leadership" />
+                </FrameLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -344,14 +366,19 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
-
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_grid">
                 <ImageView
                     android:id="@+id/iv_core_team"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:background="@drawable/round_grid"
-                    android:src="@drawable/mainstage" />
-
+                    android:layout_width="45dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/teamwork" />
+                </FrameLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -370,15 +397,19 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
-
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_grid">
                 <ImageView
                     android:id="@+id/galleryIcon"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:background="@drawable/round_grid"
+                    android:layout_gravity="center"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:clickable="true"
-                    android:src="@drawable/gallery" />
-
+                    android:src="@drawable/img_gallery" />
+                </FrameLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
