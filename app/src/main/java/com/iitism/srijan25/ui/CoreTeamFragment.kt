@@ -36,8 +36,8 @@ class CoreTeamFragment : Fragment() {
         viewModel = CoreTeamViewModel(application)
         viewModel.getCoreTeamList()
 
-        //val itemAdapter = CoreTeamAdapter(viewModel.coreTeamList)
+        val itemAdapter = CoreTeamAdapter(viewModel.coreTeamList)
         //val itemAdapter = CoreTeamAdapter(viewModel.coreTeam)
-        //binding.rvCoreTeam.adapter = itemAdapter
+        binding.rvCoreTeam.adapter = itemAdapter
     }
 }
