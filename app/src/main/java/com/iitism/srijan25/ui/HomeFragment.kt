@@ -37,7 +37,6 @@ class HomeFragment : Fragment() {
     private var timer: Timer? = null
     private val handler = Handler(Looper.getMainLooper())
     private lateinit var navController: NavController
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

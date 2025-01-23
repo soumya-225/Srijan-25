@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_15"
+        android:src="@drawable/gradient1"
         android:alpha="0.9"
         android:contentDescription="@null" />
 
@@ -27,11 +25,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_sr25"
         android:orientation="vertical">
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
             android:layout_gravity="center"
@@ -244,268 +241,321 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:columnCount="3"
+            android:columnCount="2"
             android:paddingTop="10dp"
-            android:rowCount="2">
+            android:rowCount="3">
 
             <!-- Grid Items -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/round_grid">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ivEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/white">
 
-                    <ImageView
-                        android:id="@+id/iv_events"
-                        android:layout_width="40dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:clickable="true"
-                        android:src="@drawable/event" />
-                </FrameLayout>
+                    <!-- Content inside the CardView -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/eventsimage"
+                        >
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/med_reg"
+                            android:padding="2dp"
+                            android:text="Events"
+                            android:gravity="center"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="3"
+                            android:shadowDy="3"
+                            android:shadowRadius="4"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/home_text"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/med_reg"
-                    android:padding="10dp"
-                    android:text="Events"
-                    android:textStyle="bold"
-                    android:shadowColor="@color/black"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="4"
-                    android:layout_gravity="center"
-                    android:textColor="@color/home_text"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/round_grid">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ivMerch"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/white">
 
-                    <ImageView
-                        android:id="@+id/iv_merch"
-                        android:layout_width="52dp"
-                        android:layout_height="55dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="2dp"
-                        android:src="@drawable/tshirt" />
-                </FrameLayout>
+                    <!-- Content inside the CardView -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/merchimage"
+                        >
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/med_reg"
+                            android:padding="2dp"
+                            android:text="Merch"
+                            android:gravity="center"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="3"
+                            android:shadowDy="3"
+                            android:shadowRadius="4"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/home_text"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/med_reg"
-                    android:padding="10dp"
-                    android:text="Merchandise"
-                    android:textColor="@color/home_text"
-                    android:shadowColor="@color/black"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="4"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
-
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/round_grid">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ivSponsors"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/white">
 
-                    <ImageView
-                        android:id="@+id/iv_sponsors"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/sponsor" />
-                </FrameLayout>
+                    <!-- Content inside the CardView -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/sponserimage"
+                        >
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/med_reg"
+                            android:padding="2dp"
+                            android:text="Past Sponsers"
+                            android:gravity="center"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="3"
+                            android:shadowDy="3"
+                            android:shadowRadius="4"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/home_text"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/med_reg"
-                    android:paddingVertical="10dp"
-                    android:text="Sponsors"
-                    android:textColor="@color/home_text"
-                    android:shadowColor="@color/black"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="4"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
-
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/round_grid">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/caIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/white">
 
-                    <ImageView
-                        android:id="@+id/caIcon"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/leadership" />
-                </FrameLayout>
+                    <!-- Content inside the CardView -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/aboutusimage"
+                        >
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/med_reg"
+                            android:padding="2dp"
+                            android:text="About Us"
+                            android:gravity="center"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="3"
+                            android:shadowDy="3"
+                            android:shadowRadius="4"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/home_text"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/med_reg"
-                    android:padding="10dp"
-                    android:text="About Us"
-                    android:shadowColor="@color/black"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="4"
-                    android:textColor="@color/home_text"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
-
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/round_grid">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ivCoreTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/white">
 
-                    <ImageView
-                        android:id="@+id/iv_core_team"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="3dp"
-                        android:src="@drawable/teamwork" />
-                </FrameLayout>
+                    <!-- Content inside the CardView -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/coreteam"
+                        >
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/med_reg"
+                            android:padding="2dp"
+                            android:text="Core Team"
+                            android:gravity="center"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="3"
+                            android:shadowDy="3"
+                            android:shadowRadius="4"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="2dp"
+                            android:textColor="@color/home_text"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/med_reg"
-                    android:padding="10dp"
-                    android:text="Core Team"
-                    android:textColor="@color/home_text"
-                    android:shadowColor="@color/black"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="4"
-                    android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/round_grid">
-
-                    <ImageView
-                        android:id="@+id/galleryIcon"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:clickable="true"
-                        android:src="@drawable/img_gallery" />
-                </FrameLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/med_reg"
-                    android:padding="10dp"
-                    android:text="Gallery"
-                    android:textColor="@color/home_text"
-                    android:shadowColor="@color/black"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
-                    android:shadowRadius="4"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
             <!-- Repeat above LinearLayout for other buttons -->
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/galleryIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <!-- Content inside the CardView -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="@drawable/galleryimage"
+                        >
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/med_reg"
+                            android:padding="2dp"
+                            android:text="Gallery"
+                            android:gravity="center"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="3"
+                            android:shadowDy="3"
+                            android:shadowRadius="4"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/home_text"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
         </GridLayout>
 
-        <!--        <com.google.android.material.card.MaterialCardView-->
-        <!--            android:id="@+id/materialcardview"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="180dp"-->
-        <!--            android:layout_margin="10dp"-->
-        <!--            android:backgroundTint="@color/transparent"-->
-        <!--            android:elevation="10dp"-->
-        <!--            app:cardCornerRadius="10dp">-->
-
-        <!--            <LinearLayout-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:background="@drawable/ca_poster"-->
-        <!--                android:clickable="true"-->
-        <!--                android:gravity="center_horizontal"-->
-        <!--                android:orientation="vertical">-->
-
-        <!--            </LinearLayout>-->
-
-
-        <!--        </com.google.android.material.card.MaterialCardView>-->
-
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 </FrameLayout>
