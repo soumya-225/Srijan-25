@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/transparent"
-    android:fillViewport="true"
-    android:orientation="vertical"
-    android:scrollbars="none"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:context=".ui.HomeFragment"
-    tools:ignore="hardcodedText">
+    tools:context=".ui.HomeFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_15"
+        android:alpha="0.9"
+        android:contentDescription="@null" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_sr25"
         android:orientation="vertical">
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center"
             android:src="@drawable/srijan_logo" />
 
         <!--        <androidx.viewpager2.widget.ViewPager2-->
@@ -36,6 +48,7 @@
 
         <LinearLayout
             android:id="@+id/dotLayout"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -265,6 +278,12 @@
                     android:fontFamily="@font/med_reg"
                     android:padding="10dp"
                     android:text="Events"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
+                    android:layout_gravity="center"
                     android:textColor="@color/home_text"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -300,6 +319,11 @@
                     android:padding="10dp"
                     android:text="Merchandise"
                     android:textColor="@color/home_text"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
+                    android:textStyle="bold"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -333,6 +357,10 @@
                     android:paddingVertical="10dp"
                     android:text="Sponsors"
                     android:textColor="@color/home_text"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -365,6 +393,10 @@
                     android:fontFamily="@font/med_reg"
                     android:padding="10dp"
                     android:text="About Us"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
                     android:textColor="@color/home_text"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -400,6 +432,11 @@
                     android:padding="10dp"
                     android:text="Core Team"
                     android:textColor="@color/home_text"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
+                    android:textStyle="bold"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -434,6 +471,10 @@
                     android:padding="10dp"
                     android:text="Gallery"
                     android:textColor="@color/home_text"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -466,3 +507,5 @@
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</FrameLayout>
