@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/transparent"
-    android:fillViewport="true"
-    android:orientation="vertical"
-    android:scrollbars="none"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:context=".ui.HomeFragment"
-    tools:ignore="hardcodedText">
+    tools:context=".ui.HomeFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_15"
+        android:alpha="0.9"
+        android:contentDescription="@null" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_sr25"
         android:orientation="vertical">
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center"
             android:src="@drawable/srijan_logo" />
 
         <!--        <androidx.viewpager2.widget.ViewPager2-->
@@ -36,6 +45,7 @@
 
         <LinearLayout
             android:id="@+id/dotLayout"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -48,7 +58,6 @@
             android:paddingBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
             <TextView
@@ -263,6 +272,11 @@
                     android:textSize="14sp"
                     android:fontFamily="@font/med_reg"
                     android:textStyle="bold"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
+                    android:layout_gravity="center"
                     android:textColor="@color/home_text"
                     android:text="Events" />
             </LinearLayout>
@@ -294,6 +308,10 @@
                     android:padding="10dp"
                     android:fontFamily="@font/med_reg"
                     android:textColor="@color/home_text"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:text="Merchandise" />
@@ -324,6 +342,10 @@
                     android:textStyle="bold"
                     android:fontFamily="@font/med_reg"
                     android:textColor="@color/home_text"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
                     android:textSize="14sp"
                     android:paddingVertical="10dp"
                     android:text="Sponsors" />
@@ -353,6 +375,10 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:fontFamily="@font/med_reg"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
                     android:textColor="@color/home_text"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -385,6 +411,10 @@
                     android:padding="10dp"
                     android:fontFamily="@font/med_reg"
                     android:textColor="@color/home_text"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:text="Core Team" />
@@ -416,6 +446,10 @@
                     android:padding="10dp"
                     android:fontFamily="@font/med_reg"
                     android:textColor="@color/home_text"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="4"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:text="Gallery" />
@@ -449,3 +483,4 @@
 
     </LinearLayout>
 </ScrollView>
+</FrameLayout>

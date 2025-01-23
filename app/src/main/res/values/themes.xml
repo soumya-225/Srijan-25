@@ -8,6 +8,12 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/bgAlternate</item>
     </style>
+    <style name="CustomBottomNavTheme" parent="Theme.MaterialComponents">
+        <item name="selectableItemBackground">@color/home_text</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="colorPrimary">@color/primary</item>
+    </style>
+
     <style name="btnRegular">
         <item name="cornerRadius">2dp</item>
         <item name="android:textColor">@color/white</item>
@@ -29,8 +35,9 @@
         <item name="cornerSizeTopLeft">20dp</item>
         <item name="cornerSizeBottomRight">20dp</item>
     </style>
-    <style name="Theme.Concetto24" parent="Base.Theme.Concetto24" />
-
+    <style name="Theme.Concetto24" parent="Base.Theme.Concetto24">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
     <style name="ProgressBarTheme">
         <item name="colorSecondary">@color/primary</item>
 

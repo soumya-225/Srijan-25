@@ -15,7 +15,7 @@ import com.iitism.srijan25.adapter.EventsTabAdapter
 class EventsFragment : Fragment() {
 
     private lateinit var viewPager: ViewPager2
-    private lateinit var tabLayout: TabLayout
+//    private lateinit var tabLayout: TabLayout
     private lateinit var adapter: EventsTabAdapter
 
     override fun onCreateView(
@@ -25,7 +25,7 @@ class EventsFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_events, container, false)
 
         viewPager = view.findViewById(R.id.viewPager)
-        tabLayout = view.findViewById(R.id.tabLayout)
+//        tabLayout = view.findViewById(R.id.tabLayout)
         setupViewPager()
         return view
     }
@@ -34,33 +34,33 @@ class EventsFragment : Fragment() {
         adapter = EventsTabAdapter(childFragmentManager, lifecycle)
         viewPager.adapter = adapter
 
-        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            val customTabView = LayoutInflater.from(context).inflate(R.layout.custom_tab_layout, tabLayout, false)
-            val tabText = customTabView.findViewById<TextView>(R.id.tab_text)
-
-            when (position) {
-                0 -> tabText.text = requireContext().getString(R.string.club_events)
-                1 -> tabText.text = requireContext().getString(R.string.dept_events)
-            }
-            tab.customView = customTabView
-        }.attach()
-
-        handleTabSelection()
+//        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+//            val customTabView = LayoutInflater.from(context).inflate(R.layout.custom_tab_layout, tabLayout, false)
+//            val tabText = customTabView.findViewById<TextView>(R.id.tab_text)
+//
+//            when (position) {
+//                0 -> tabText.text = requireContext().getString(R.string.club_events)
+//                1 -> tabText.text = requireContext().getString(R.string.dept_events)
+//            }
+//            tab.customView = customTabView
+//        }.attach()
+//
+//        handleTabSelection()
     }
 
-    private fun handleTabSelection() {
-        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab) {
-                tab.customView?.isSelected = true
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab) {
-                tab.customView?.isSelected = false
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab) {
-                // No special behavior needed for reselected tabs
-            }
-        })
-    }
+//    private fun handleTabSelection() {
+//        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+//            override fun onTabSelected(tab: TabLayout.Tab) {
+//                tab.customView?.isSelected = true
+//            }
+//
+//            override fun onTabUnselected(tab: TabLayout.Tab) {
+//                tab.customView?.isSelected = false
+//            }
+//
+//            override fun onTabReselected(tab: TabLayout.Tab) {
+//                // No special behavior needed for reselected tabs
+//            }
+//        })
+//    }
 }

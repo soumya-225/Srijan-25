@@ -59,7 +59,7 @@ class SponsorsFragment : Fragment() {
 
         }
 
-        binding.rvSponsors.layoutManager = GridLayoutManager(context, 2)
+        binding.rvSponsors.layoutManager = GridLayoutManager(context, 1)
         binding.rvSponsors.setHasFixedSize(true)
 
         adapter = SponsorRVAdapter(emptyList()) { redirectURL ->
