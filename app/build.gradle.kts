@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
-    //id("com.google.gms.google-services")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -85,8 +85,9 @@ dependencies {
     //Announcements and Notifications
     implementation(libs.firebase.messaging.ktx)
     implementation (libs.androidx.swiperefreshlayout)
-    //implementation (libs.firebase.messaging)
-    //implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
     implementation(platform(libs.firebase.bom))
+
+    implementation(libs.firebase.database)
 
 }

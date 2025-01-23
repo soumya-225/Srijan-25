@@ -19,9 +19,6 @@
             android:id="@+id/action_mainFragment_to_scheduleFragment"
             app:destination="@id/scheduleFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_campusAmbassadorFragment2"
-            app:destination="@id/campusAmbassadorFragment2" />
-        <action
             android:id="@+id/action_mainFragment_to_eventsFragment2"
             app:destination="@id/eventsFragment2" />
         <action
@@ -36,6 +33,9 @@
         <action
             android:id="@+id/action_mainFragment_to_sponsorsFragment2"
             app:destination="@id/sponsorsFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainStageFragment2"
@@ -50,11 +50,6 @@
         android:name="com.iitism.srijan25.ui.ScheduleFragment"
         android:label="fragment_schedule"
         tools:layout="@layout/fragment_schedule" />
-    <fragment
-        android:id="@+id/campusAmbassadorFragment2"
-        android:name="com.iitism.srijan25.ui.CampusAmbassadorFragment"
-        android:label="fragment_campus_ambassador"
-        tools:layout="@layout/fragment_campus_ambassador" />
     <fragment
         android:id="@+id/eventsFragment2"
         android:name="com.iitism.srijan25.ui.EventsFragment"
@@ -90,4 +85,9 @@
             android:name="image"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.iitism.srijan25.ui.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>

@@ -1,17 +1,16 @@
 package com.iitism.srijan25.ui
 
-import android.app.Application
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.iitism.srijan25.MyApplication
-import com.iitism.srijan25.viewModel.CoreTeamViewModel
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.iitism.srijan25.adapter.CoreTeamAdapter
 import com.iitism.srijan25.databinding.FragmentCoreTeamBinding
+import com.iitism.srijan25.viewModel.CoreTeamViewModel
 
 class CoreTeamFragment : Fragment() {
     private lateinit var viewModel: CoreTeamViewModel
@@ -30,7 +29,11 @@ class CoreTeamFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.rvCoreTeam.layoutManager = LinearLayoutManager(context)
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
+        }
+
+        binding.rvCoreTeam.layoutManager = GridLayoutManager(context, 2)
         binding.rvCoreTeam.setHasFixedSize(true)
 
         viewModel = CoreTeamViewModel(application)

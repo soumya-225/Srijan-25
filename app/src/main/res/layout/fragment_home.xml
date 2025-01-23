@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,7 +16,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@drawable/bg_sr25"
         android:orientation="vertical">
 
@@ -45,20 +45,20 @@
 
         <LinearLayout
             android:id="@+id/timer"
-            android:paddingBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
 
             <TextView
                 android:id="@+id/textCounterDown"
                 style="@style/h2"
-                android:gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/med_reg"
+                android:gravity="center_horizontal"
                 android:shadowColor="#80000000"
                 android:shadowDx="2"
                 android:shadowDy="2"
@@ -243,28 +243,31 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
+
                 <FrameLayout
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/round_grid">
-                <ImageView
-                    android:id="@+id/iv_events"
-                    android:layout_width="40dp"
-                    android:layout_gravity="center"
-                    android:layout_height="60dp"
-                    android:clickable="true"
-                    android:src="@drawable/event" />
+
+                    <ImageView
+                        android:id="@+id/iv_events"
+                        android:layout_width="40dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:src="@drawable/event" />
                 </FrameLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:textSize="14sp"
                     android:fontFamily="@font/med_reg"
-                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:text="Events"
                     android:textColor="@color/home_text"
-                    android:text="Events" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -274,29 +277,31 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
+
                 <FrameLayout
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/round_grid">
-                <ImageView
-                    android:id="@+id/iv_merch"
-                    android:layout_width="52dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_gravity="center"
-                    android:layout_height="55dp"
-                    android:src="@drawable/tshirt" />
+
+                    <ImageView
+                        android:id="@+id/iv_merch"
+                        android:layout_width="52dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/tshirt" />
                 </FrameLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
                     android:fontFamily="@font/med_reg"
+                    android:padding="10dp"
+                    android:text="Merchandise"
                     android:textColor="@color/home_text"
-                    android:textStyle="bold"
                     android:textSize="14sp"
-                    android:text="Merchandise" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -306,27 +311,30 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
+
                 <FrameLayout
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/round_grid">
-                <ImageView
-                    android:id="@+id/iv_sponsors"
-                    android:layout_gravity="center"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/sponsor" />
+
+                    <ImageView
+                        android:id="@+id/iv_sponsors"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/sponsor" />
                 </FrameLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:fontFamily="@font/med_reg"
-                    android:textColor="@color/home_text"
-                    android:textSize="14sp"
                     android:paddingVertical="10dp"
-                    android:text="Sponsors" />
+                    android:text="Sponsors"
+                    android:textColor="@color/home_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -336,27 +344,30 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
+
                 <FrameLayout
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/round_grid">
-                <ImageView
-                    android:id="@+id/caIcon"
-                    android:layout_width="45dp"
-                    android:layout_gravity="center"
-                    android:layout_height="45dp"
-                    android:src="@drawable/leadership" />
+
+                    <ImageView
+                        android:id="@+id/caIcon"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/leadership" />
                 </FrameLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
                     android:fontFamily="@font/med_reg"
+                    android:padding="10dp"
+                    android:text="About Us"
                     android:textColor="@color/home_text"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:text="CA Portal" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -366,28 +377,31 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
+
                 <FrameLayout
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/round_grid">
-                <ImageView
-                    android:id="@+id/iv_core_team"
-                    android:layout_width="45dp"
-                    android:layout_marginBottom="3dp"
-                    android:layout_height="45dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/teamwork" />
+
+                    <ImageView
+                        android:id="@+id/iv_core_team"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/teamwork" />
                 </FrameLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
                     android:fontFamily="@font/med_reg"
+                    android:padding="10dp"
+                    android:text="Core Team"
                     android:textColor="@color/home_text"
-                    android:textStyle="bold"
                     android:textSize="14sp"
-                    android:text="Core Team" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -397,28 +411,31 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
+
                 <FrameLayout
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/round_grid">
-                <ImageView
-                    android:id="@+id/galleryIcon"
-                    android:layout_gravity="center"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:clickable="true"
-                    android:src="@drawable/img_gallery" />
+
+                    <ImageView
+                        android:id="@+id/galleryIcon"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:src="@drawable/img_gallery" />
                 </FrameLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
                     android:fontFamily="@font/med_reg"
+                    android:padding="10dp"
+                    android:text="Gallery"
                     android:textColor="@color/home_text"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:text="Gallery" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <!-- Repeat above LinearLayout for other buttons -->
@@ -448,4 +465,4 @@
         <!--        </com.google.android.material.card.MaterialCardView>-->
 
     </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,7 +29,7 @@ class GalleryAdapter(
         val imageUrl = imageUrls[position]
         Glide.with(holder.imageView.context)
             .load(imageUrl)
-            .placeholder(R.drawable.srijan_logo)
+            //.placeholder(R.drawable.srijan_logo)
             .error(R.drawable.srijan_logo)
             .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
             .into(holder.imageView)

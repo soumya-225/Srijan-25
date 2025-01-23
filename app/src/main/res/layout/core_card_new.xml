@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="360dp"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/core_card_bg"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            style="@style/CircularImageView"
+            android:layout_width="180dp"
+            android:layout_height="240dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/srijan_logo"
+            app:shapeAppearance="@style/CircularImageView" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:text="Name"
+            android:textColor="@color/home_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_position"
+            style="@style/h4"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Position"
+            android:textColor="@color/text" />
+
+        <TextView
+            android:id="@+id/tv_team"
+            style="@style/h4"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Team"
+            android:textColor="@color/text" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
