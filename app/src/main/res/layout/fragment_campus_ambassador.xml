@@ -21,7 +21,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
+
             app:navigationIconTint="@color/primary"
+
             app:title="Campus Ambassador"
             app:titleTextColor="?attr/colorOnPrimary" />
     </com.google.android.material.appbar.AppBarLayout>
@@ -42,7 +44,6 @@
             android:clickable="true"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
@@ -58,7 +59,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/border"
+            android:background="?attr/colorPrimary"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -90,12 +91,13 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/BtnRegister_campusAmb"
-        style="@style/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Register" />
+        android:background="@color/primary"
+        android:text="Register"
+        android:textColor="?attr/colorOnPrimary" />
 
 </LinearLayout>

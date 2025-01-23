@@ -14,6 +14,7 @@
 <!--        android:background="?attr/colorPrimaryVariant"-->
 <!--        app:layout_constraintTop_toTopOf="parent">-->
 
+
 <!--        <com.google.android.material.appbar.MaterialToolbar-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
@@ -22,6 +23,7 @@
 <!--            app:title="Past Sponsors"-->
 <!--            app:titleTextColor="?attr/colorOnPrimary" />-->
 <!--    </com.google.android.material.appbar.AppBarLayout>-->
+
 
     <ProgressBar
         android:id="@+id/progress_bar"
