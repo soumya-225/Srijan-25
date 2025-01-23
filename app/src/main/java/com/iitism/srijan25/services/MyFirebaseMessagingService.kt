@@ -16,7 +16,7 @@ import com.iitism.srijan25.R
 import com.iitism.srijan25.ui.MainActivity
 import kotlin.random.Random
 
-private const val CHANNEL_ID = "my_channel"
+private const val CHANNEL_ID = "srijan_25_main_channel"
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
     override fun onNewToken(token: String) {
@@ -56,7 +56,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(message.data["title"])
             .setContentText(message.data["body"])
-            .setSmallIcon(R.drawable.concetto_wbg)
+            .setSmallIcon(R.drawable.srijan_logowbg)
             .setAutoCancel(true)
             .setContentIntent(pendingIntent)
             .build()
@@ -65,9 +65,9 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     }
 
     private fun createNotificationChannel(notificationManager: NotificationManager) {
-        val channelName = "Concetto-24 Announcements"
+        val channelName = "Srijan-25 Announcements"
         val channel = NotificationChannel(CHANNEL_ID, channelName, IMPORTANCE_HIGH).apply {
-            description = "Concetto-24 Announcements"
+            description = "Srijan-25 Announcements"
             enableLights(true)
         }
         notificationManager.createNotificationChannel(channel)

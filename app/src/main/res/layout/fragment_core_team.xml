@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
@@ -28,9 +29,10 @@
         android:id="@+id/rv_core_team"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="4dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
-        tools:listitem="@layout/coreteam_card_view" />
+        tools:listitem="@layout/core_card_new" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/loading_card"

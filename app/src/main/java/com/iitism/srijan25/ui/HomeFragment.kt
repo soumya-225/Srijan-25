@@ -73,7 +73,7 @@ class HomeFragment : Fragment() {
             navController.navigate(R.id.action_mainFragment_to_coreTeamFragment2)
         }
         caBtn.setOnClickListener {
-            navController.navigate(R.id.action_mainFragment_to_campusAmbassadorFragment2)
+            navController.navigate(R.id.action_mainFragment_to_aboutFragment)
         }
         sponsorsBtn.setOnClickListener {
             navController.navigate(R.id.action_mainFragment_to_sponsorsFragment2)
@@ -91,15 +91,15 @@ class HomeFragment : Fragment() {
 
         //binding.viewPagerCarousel.adapter = HomeCarouselAdapter(images)
 
-        val compositePageTransformer = CompositePageTransformer()
-        compositePageTransformer.addTransformer(MarginPageTransformer((40 * Resources.getSystem().displayMetrics.density).toInt()))
-        compositePageTransformer.addTransformer { page, position ->
-            val r = 1 - abs(position)
-            page.scaleY = (0.80f + r * 0.20f)
-        }
+//        val compositePageTransformer = CompositePageTransformer()
+//        compositePageTransformer.addTransformer(MarginPageTransformer((40 * Resources.getSystem().displayMetrics.density).toInt()))
+//        compositePageTransformer.addTransformer { page, position ->
+//            val r = 1 - abs(position)
+//            page.scaleY = (0.80f + r * 0.20f)
+//        }
         //binding.viewPagerCarousel.setPageTransformer(compositePageTransformer)
 
-        addDotsIndicator(images.size)
+        //addDotsIndicator(images.size)
 //        binding.viewPagerCarousel.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback()
 //        {
 //            override fun onPageSelected(position: Int) {

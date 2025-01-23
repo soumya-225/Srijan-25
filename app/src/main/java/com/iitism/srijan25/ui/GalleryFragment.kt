@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
 import com.iitism.srijan25.R
 import com.iitism.srijan25.adapter.GalleryAdapter
 
@@ -21,6 +22,11 @@ class GalleryFragment : Fragment() {
         val navController = findNavController()
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.galleryRecyclerView)
+        val toolbar = view.findViewById<MaterialToolbar>(R.id.toolbar)
+
+        toolbar.setNavigationOnClickListener {
+            navController.navigateUp()
+        }
 
         val imageUrls = listOf(
             "https://res.cloudinary.com/dimf24hn7/image/upload/v1737383494/These_are_a_few_glances_of_thundering_EDM_night_organised_under_Srijan_23._._Featuring__vanmoonmusic__tracermusicofficial__ninasuerte_._.__fotofreaks_iitis_gfs6k5.jpg",

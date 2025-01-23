@@ -24,10 +24,10 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:enableOnBackInvokedCallback="true"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/concetto"
+        android:icon="@mipmap/app_icon"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/concetto"
         android:supportsRtl="true"
+        android:roundIcon="@mipmap/app_icon_round"
         android:theme="@style/Theme.Concetto24"
         tools:targetApi="tiramisu">
 

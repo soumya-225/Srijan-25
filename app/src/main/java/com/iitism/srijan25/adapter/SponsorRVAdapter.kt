@@ -36,9 +36,9 @@ class SponsorRVAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentData = dataList[position]
 
-        if (currentData.img.isNotEmpty()) {
+        if (currentData.image.isNotEmpty()) {
             Glide.with(holder.ivSponsor.context)
-                .load(currentData.img)
+                .load(currentData.image)
                 .apply(
                     RequestOptions()
                         .placeholder(R.drawable.progress_animation)
@@ -48,11 +48,11 @@ class SponsorRVAdapter(
                 .into(holder.ivSponsor)
         }
 
-        holder.ivSponsor.setOnClickListener {
-            if (currentData.link.isNotEmpty()) {
-                onItemClick.invoke(currentData.link)
-            }
-        }
+//        holder.ivSponsor.setOnClickListener {
+//            if (currentData.link.isNotEmpty()) {
+//                onItemClick.invoke(currentData.link)
+//            }
+//        }
     }
 
     fun setData(newData: List<SponsorData>) {

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:backgroundTint="@color/transparent"
     android:layout_margin="10dp"
     app:cardCornerRadius="10dp">
 
@@ -15,11 +16,11 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_gravity="center"
+            android:backgroundTint="@color/transparent"
             android:background="?attr/colorPrimaryVariant"
             android:layout_width="200dp"
             android:layout_height="150dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/srijan_logo" />
+            android:scaleType="centerCrop"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

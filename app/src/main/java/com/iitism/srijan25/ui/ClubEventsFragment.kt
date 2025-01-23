@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.iitism.srijan25.R
@@ -46,6 +47,10 @@ class ClubEventsFragment : Fragment() {
             )
             dialog.window!!.setBackgroundDrawableResource(R.color.transparent)
 
+        }
+
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
         }
         val eventData = getClubEventData()
 

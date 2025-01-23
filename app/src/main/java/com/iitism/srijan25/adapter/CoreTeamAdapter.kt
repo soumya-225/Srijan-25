@@ -1,20 +1,16 @@
 package com.iitism.srijan25.adapter
 
-import android.content.Intent
-import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
-import com.iitism.srijan25.model.CoreTeamDataModel
 import com.iitism.srijan25.R
+import com.iitism.srijan25.model.CoreTeamDataModel
 
 class CoreTeamAdapter(private val dataList: List<CoreTeamDataModel>) :
     RecyclerView.Adapter<CoreTeamAdapter.ViewHolder>() {
@@ -24,12 +20,13 @@ class CoreTeamAdapter(private val dataList: List<CoreTeamDataModel>) :
         val name: TextView = view.findViewById(R.id.tv_name)
         val position: TextView = view.findViewById(R.id.tv_position)
         val team: TextView = view.findViewById(R.id.tv_team)
-        val linkedInUrl: ImageView = view.findViewById(R.id.image_linkedIn)
-        val instagramUrl: ImageView = view.findViewById(R.id.image_instagram)
+        //val linkedInUrl: ImageView = view.findViewById(R.id.image_linkedIn)
+        //val instagramUrl: ImageView = view.findViewById(R.id.image_instagram)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.coreteam_card_view, parent, false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.core_card_new, parent, false)
         return ViewHolder(itemView)
     }
 
@@ -56,25 +53,25 @@ class CoreTeamAdapter(private val dataList: List<CoreTeamDataModel>) :
         holder.team.text = currentData.team
         holder.position.text = currentData.position
 
-        holder.linkedInUrl.setOnClickListener {
-            val url = currentData.linkedinUrl
-            if (!url.isNullOrEmpty()) {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                ContextCompat.startActivity(it.context, intent, null)
-            } else {
-                Log.d("LinkedIn URL", "URL is null or empty")
-            }
-        }
-
-        holder.instagramUrl.setOnClickListener {
-            val url = currentData.instagramUrl
-            if (!url.isNullOrEmpty()) {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                ContextCompat.startActivity(it.context, intent, null)
-            } else {
-                Log.d("Instagram URL", "URL is null or empty")
-            }
-        }
+//        holder.linkedInUrl.setOnClickListener {
+//            val url = currentData.linkedinUrl
+//            if (!url.isNullOrEmpty()) {
+//                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+//                ContextCompat.startActivity(it.context, intent, null)
+//            } else {
+//                Log.d("LinkedIn URL", "URL is null or empty")
+//            }
+//        }
+//
+//        holder.instagramUrl.setOnClickListener {
+//            val url = currentData.instagramUrl
+//            if (!url.isNullOrEmpty()) {
+//                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+//                ContextCompat.startActivity(it.context, intent, null)
+//            } else {
+//                Log.d("Instagram URL", "URL is null or empty")
+//            }
+//        }
     }
 
     override fun getItemCount(): Int {
