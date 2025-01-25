@@ -23,6 +23,7 @@
                 android:layout_height="60dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="-10dp"
+                android:contentDescription="@string/back_button"
                 android:padding="15dp"
                 android:src="@drawable/back_arrow_light" />
 
@@ -33,7 +34,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="14dp"
                 android:layout_toEndOf="@+id/backBtn"
-                android:text="Srijan Images"
+                android:text="@string/srijan_images"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </RelativeLayout>
@@ -44,6 +45,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:src="@drawable/srijan_logo" />
+        android:contentDescription="@string/image_in_fullscreen"
+        android:scaleType="fitCenter"/>
 </LinearLayout>

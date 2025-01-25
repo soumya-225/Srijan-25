@@ -20,13 +20,10 @@ class CoreTeamAdapter(private val dataList: List<CoreTeamDataModel>) :
         val name: TextView = view.findViewById(R.id.tv_name)
         val position: TextView = view.findViewById(R.id.tv_position)
         val team: TextView = view.findViewById(R.id.tv_team)
-        //val linkedInUrl: ImageView = view.findViewById(R.id.image_linkedIn)
-        //val instagramUrl: ImageView = view.findViewById(R.id.image_instagram)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.core_card_new, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.core_team_card, parent, false)
         return ViewHolder(itemView)
     }
 
@@ -39,7 +36,7 @@ class CoreTeamAdapter(private val dataList: List<CoreTeamDataModel>) :
                 .load(currentData.image)
                 .apply(
                     RequestOptions()
-                        .placeholder(R.drawable.ic_person)
+                        .placeholder(R.drawable.progress_animation)
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .error(R.drawable.ic_person)
                 )
@@ -52,26 +49,6 @@ class CoreTeamAdapter(private val dataList: List<CoreTeamDataModel>) :
         holder.name.text = currentData.name
         holder.team.text = currentData.team
         holder.position.text = currentData.position
-
-//        holder.linkedInUrl.setOnClickListener {
-//            val url = currentData.linkedinUrl
-//            if (!url.isNullOrEmpty()) {
-//                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-//                ContextCompat.startActivity(it.context, intent, null)
-//            } else {
-//                Log.d("LinkedIn URL", "URL is null or empty")
-//            }
-//        }
-//
-//        holder.instagramUrl.setOnClickListener {
-//            val url = currentData.instagramUrl
-//            if (!url.isNullOrEmpty()) {
-//                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-//                ContextCompat.startActivity(it.context, intent, null)
-//            } else {
-//                Log.d("Instagram URL", "URL is null or empty")
-//            }
-//        }
     }
 
     override fun getItemCount(): Int {

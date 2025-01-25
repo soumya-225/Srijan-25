@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.iitism.srijan25"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.iitism.srijan25"
         minSdk = 30
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 6
         versionName = "1.6"
 
@@ -41,9 +41,9 @@ android {
 }
 
 dependencies {
-    implementation (libs.okhttp.v4100)
+    implementation(libs.okhttp.v4100)
     implementation(libs.androidx.junit)
-    implementation (libs.gson)
+    implementation(libs.gson)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -63,31 +63,18 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
     implementation(libs.androidx.security.crypto)
-
-    // play store warning
     implementation(libs.soloader)
-
-
-    implementation (libs.cloudinary.android)
-
-// Download + Preprocess:
-    implementation (libs.cloudinary.android.download)
-    implementation (libs.cloudinary.android.preprocess)
-    implementation (libs.dotsindicator)
-
-
-    //Announcements and Notifications
+    implementation(libs.cloudinary.android)
+    implementation(libs.cloudinary.android.download)
+    implementation(libs.cloudinary.android.preprocess)
     implementation(libs.firebase.messaging.ktx)
-    implementation (libs.androidx.swiperefreshlayout)
+    implementation(libs.androidx.swiperefreshlayout)
     implementation(libs.firebase.analytics)
     implementation(platform(libs.firebase.bom))
-
     implementation(libs.firebase.database)
-
 }

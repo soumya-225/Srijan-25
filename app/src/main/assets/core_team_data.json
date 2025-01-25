@@ -1,0 +1,356 @@
+[
+  {
+    "name": "Prof. V. K. Rajak",
+    "position": "Convenor",
+    "team": "Dept. of Petroleum Eng",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708702/tndurhwxcbbttytnmlnr.png"
+  },
+  {
+    "name": "Prof. Rajashekhar Reddy",
+    "position": "Co-Convenor",
+    "team": "Dept. of Fuel, Mineral and Metallurgical Engineering",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708703/vksvr4xl67k3svx4lkqq.jpg"
+  },
+  {
+    "name": "Prof. Madhulika Gupta",
+    "position": "Co-Convenor",
+    "team": "Dept. of Chemical Eng",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736708700/aajajntlajkqycwq8k8b.png"
+  },
+  {
+    "name": "Prof. Ashok Kumar",
+    "position": "Treasurer",
+    "team": "Dept. of Electrical Eng",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737122320/arqps0eqwjvvvjveaxxy.jpg"
+  },
+  {
+    "name": "Shivamraj Chauhan",
+    "position": "President",
+    "team": "Dept. of Petroleum Engineering",
+    "image": "https://res.cloudinary.com/dwqgih2ka/image/upload/v1737132869/vizkxgzg2iuehkrwudh9.jpg"
+  },
+  {
+    "name": "Priyanka",
+    "position": "Chairperson",
+    "team": "Dept. of Electrical Eng",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736691655/hbel5vli2t3wdjw5ysxn.png"
+  },
+  {
+    "name": "Shubham Sarkar",
+    "position": "General Secretary",
+    "team": "Dept. of Mechanical Eng",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464790/ngsginpojcdrk5lvraub.jpg"
+  },
+  {
+    "name": "Avinash Sahu",
+    "position": "Advisor",
+    "team": "Advisory",
+    "image": "https://res.cloudinary.com/deukzdr70/image/upload/v1737577512/AvinashSahu_a7yodk.jpg"
+  },
+  {
+    "name": "Lakshya Garg",
+    "position": "Advisor",
+    "team": "Advisory",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736618571/kvkffp9mi7ueco7gqzja.jpg"
+  },
+  {
+    "name": "Aman Chaudhary",
+    "position": "Advisor",
+    "team": "Advisory",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464781/gehvuewy9glbo8ldnn0n.jpg"
+  },
+  {
+    "name": "Aditya",
+    "position": "Coordinator",
+    "team": "Coordination",
+    "image": "https://res.cloudinary.com/dtqazflod/image/upload/v1737475876/WhatsApp_Image_2025-01-21_at_21.39.00_z5nq2k.jpg"
+  },
+  {
+    "name": "Naramdas Shiva",
+    "position": "Co-Coordinator",
+    "team": "Coordination",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619183/tz4d043u0cghog0azx4u.jpg"
+  },
+  {
+    "name": "Tanush Nimbawat",
+    "position": "Co-Coordinator",
+    "team": "Coordination",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736691167/w491e0syicpmk9x4pubi.jpg"
+  },
+  {
+    "name": "Manav Sharma",
+    "position": "Head",
+    "team": "Technical Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736772607/oo8bvgmvgzhup0ed1v7k.jpg"
+  },
+  {
+    "name": "Upkar Bharti",
+    "position": "Head",
+    "team": "Finance Team",
+    "image": "https://res.cloudinary.com/dtqazflod/image/upload/v1737475995/WhatsApp_Image_2025-01-21_at_21.40.58_uz5uda.jpg"
+  },
+  {
+    "name": "Shubham Saurav",
+    "position": "Head",
+    "team": "Technical Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620461/flc0zraard9sc9vvz6qs.jpg"
+  },
+  {
+    "name": "Shreya Shradha",
+    "position": "Head",
+    "team": "Content Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619441/rhvswo06qrp2d7va5cry.jpg"
+  },
+  {
+    "name": "Raghav Kansal",
+    "position": "Head",
+    "team": "Design Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619516/lopyknf6i0ubgcycryno.jpg"
+  },
+  {
+    "name": "Vikash Kumar",
+    "position": "Head",
+    "team": "Security Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620329/nsmkq2cdzg7joo9tbmz6.jpg"
+  },
+  {
+    "name": "Sunny Kumar",
+    "position": "Head",
+    "team": "Event Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464791/lkiwxhwomchovovlu0mo.jpg"
+  },
+  {
+    "name": "Sumit Manchanda",
+    "position": "Head",
+    "team": "Marketing Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619865/sish4xzxuutbunoi2dh6.jpg"
+  },
+  {
+    "name": "Anant Sagar",
+    "position": "Head",
+    "team": "Operations and Logistics Team",
+    "image": "https://res.cloudinary.com/dtqazflod/image/upload/v1737478842/IMG_0412_fzeenv.jpg"
+  },
+  {
+    "name": "Manish Kumar",
+    "position": "Head",
+    "team": "Hospitality Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464783/ywqttbuaxwuysta3y9xc.jpg"
+  },
+  {
+    "name": "Aditya Jaiswal",
+    "position": "Head",
+    "team": "Public Relation Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464780/nfn8uw0evvisgqc3g8hb.jpg"
+  },
+  {
+    "name": "Rishabh Raj",
+    "position": "Head",
+    "team": "Sponsorship Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620384/g03d8jo7xm8h6jtajm6j.jpg"
+  },
+  {
+    "name": "Jatin Kumar",
+    "position": "Head",
+    "team": "Media Team",
+    "image": "https://res.cloudinary.com/deukzdr70/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1737577511/jatin_idgryy.jpg"
+  },
+  {
+    "name": "Siddharth Aggrawal",
+    "position": "Co-Head",
+    "team": "Technical Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736707406/g4kufwfd4ubuwttbtu3d.jpg"
+  },
+  {
+    "name": "Divya Gupta",
+    "position": "Co-Head",
+    "team": "Technical Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620457/zdkp2uvyhosodedbjgxd.jpg"
+  },
+  {
+    "name": "Dheeraj",
+    "position": "Co-Head",
+    "team": "Content Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619432/yuv7ukrg36mskyrlogyd.jpg"
+  },
+  {
+    "name": "Sona Kumari",
+    "position": "Co-Head",
+    "team": "Content Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619444/bdlaatw2wiqzf4wa7d1g.jpg"
+  },
+  {
+    "name": "Shayamal Tirkey",
+    "position": "Co-Head",
+    "team": "Design Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619522/mee2k3z4rd0f5ik2ffee.jpg"
+  },
+  {
+    "name": "Kumar Daksh",
+    "position": "Co-Head",
+    "team": "Event Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619608/bcod6vm0p2enncntqbsh.webp"
+  },
+  {
+    "name": "Ayush Babukumar",
+    "position": "Co-Head",
+    "team": "Event Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737462552/x0wfa1bziegxzszjwuza.jpg"
+  },
+  {
+    "name": "Karan Negi",
+    "position": "Co-Head",
+    "team": "Finance Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619704/j5z4wttssv00n2fkrgaq.webp"
+  },
+  {
+    "name": "Adib Nawaz",
+    "position": "Co-Head",
+    "team": "Finance Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619702/pe2rlczfu50po26rcpl4.webp"
+  },
+  {
+    "name": "Sachin Parmar",
+    "position": "Co-Head",
+    "team": "Finance Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619709/audroso3kkmmp1d4uenq.jpg"
+  },
+  {
+    "name": "Gayatree Behera",
+    "position": "Co-Head",
+    "team": "Hospitality Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619791/yqiai0c4vop6cioqjo8s.jpg"
+  },
+  {
+    "name": "Riyanshi Gupta",
+    "position": "Co-Head",
+    "team": "Hospitality Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619798/m6hzgtqjcbouucjonorr.jpg"
+  },
+  {
+    "name": "Sarvesh Bhatia",
+    "position": "Co-Head",
+    "team": "Hospitality Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737462556/qz7ffs9fbb51qtrwavpc.jpg"
+  },
+  {
+    "name": "Mohit Gupta",
+    "position": "Co-Head",
+    "team": "Marketing Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619859/salcfakonnwce0chcwyu.jpg"
+  },
+  {
+    "name": "Pragati Jangir",
+    "position": "Co-Head",
+    "team": "Marketing Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736619863/a3ckh9qmezkinrkbrrux.jpg"
+  },
+  {
+    "name": "Tuntun Ganjhu",
+    "position": "Co-Head",
+    "team": "Operations and Logistics Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620096/yovudaa8tzpzx1p2iion.jpg"
+  },
+  {
+    "name": "Prajesh Anand",
+    "position": "Co-Head",
+    "team": "Operations and Logistics Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464785/qiznj6sgfm5r0sznlzof.jpg"
+  },
+  {
+    "name": "Animesh",
+    "position": "Co-Head",
+    "team": "Promotion Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620197/lgbgyv3jewcqjg5nucsc.jpg"
+  },
+  {
+    "name": "Ankan Biswas",
+    "position": "Co-Head",
+    "team": "Promotion Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1737464782/gpigyuodo2vgkpifuo1d.jpg"
+  },
+  {
+    "name": "Abhinav Aditya",
+    "position": "Co-Head",
+    "team": "Public Relation Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620261/qvbabiu3ebppxwdsr77p.jpg"
+  },
+  {
+    "name": "Manthanraj",
+    "position": "Co-Head",
+    "team": "Public Relation Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620267/oglg1frqjcixa7fzcgy3.jpg"
+  },
+  {
+    "name": "Tejas",
+    "position": "Co-Head",
+    "team": "Security Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736707414/d3daasso9wpcpxrlajsr.jpg"
+  },
+  {
+    "name": "Geetanjali",
+    "position": "Co-Head",
+    "team": "Sponsorship Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736696751/dshtlvgxghcf32i0oimw.jpg"
+  },
+  {
+    "name": "Kartik Rahi",
+    "position": "Co-Head",
+    "team": "Sponsorship Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620378/gnyupfr5ym0iybkzc7bh.jpg"
+  },
+  {
+    "name": "Manjeet",
+    "position": "Co-Head",
+    "team": "Sponsorship Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736620383/hrostggueo3few8yohsu.jpg"
+  },
+  {
+    "name": "Dhruv Agrawal",
+    "position": "Frontend Developer",
+    "team": "Development Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736696750/qrgtuzc2xgozjurwothx.jpg"
+  },
+  {
+    "name": "Hrishabh Patel",
+    "position": "Frontend Developer",
+    "team": "Development Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736696752/z2xxxfnbmgumzswxxnlx.jpg"
+  },
+  {
+    "name": "Ayush Raj Baranwal",
+    "position": "Frontend Developer",
+    "team": "Development Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736696749/lc6fsrdudjwzbu3vxua1.jpg"
+  },
+  {
+    "name": "Yug Kaliraman",
+    "position": "Frontend Developer",
+    "team": "Development Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736700743/tyvgurspkf1wskssihco.jpg"
+  },
+  {
+    "name": "Samarth Jindal",
+    "position": "Frontend Developer",
+    "team": "Development Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736696754/xz6o3qdrme4vj2t9bpko.jpg"
+  },
+  {
+    "name": "Aaradhy jain",
+    "position": "Frontend Developer",
+    "team": "Development Team",
+    "image": "https://res.cloudinary.com/dfczrbv7b/image/upload/v1736772822/m0ltyinckju9ksti1sbj.jpg"
+  },
+  {
+    "name": "Soumya Kr. Singh",
+    "position": "App Developer",
+    "team": "Development Team",
+    "image": "https://res.cloudinary.com/deukzdr70/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1737577511/pic2_iyajxn.jpg"
+  },
+  {
+    "name": "Khusbu Khemchandani",
+    "position": "App Developer",
+    "team": "Development Team",
+    "image": "https://res.cloudinary.com/dimf24hn7/image/upload/v1737663367/WhatsApp_Image_2025-01-24_at_01.39.01_8aed22b9_achxee.jpg"
+  }
+]

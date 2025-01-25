@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/grunge"
+    android:background="@drawable/background_2"
     android:orientation="vertical"
     android:padding="0dp">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimaryVariant"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/background_3"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -28,14 +28,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
-        <!-- Parent container for the cards -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Cinema -->
             <RelativeLayout
                 android:id="@+id/cinema"
                 android:layout_width="match_parent"
@@ -45,6 +42,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/cinema_background"
                     android:foreground="@drawable/item_background"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_6" />
@@ -55,21 +53,21 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="40dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Cinema"
+                    android:fontFamily="@font/knights_quest"
+                    android:text="@string/cinema"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_margin="40dp"
-                    android:text="Explore →"
+                    android:text="@string/explore"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </RelativeLayout>
 
-            <!-- Dance -->
             <RelativeLayout
                 android:id="@+id/dance"
                 android:layout_width="match_parent"
@@ -79,6 +77,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/dance_background"
                     android:foreground="@drawable/item_background"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_7" />
@@ -89,21 +88,21 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="40dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Dance"
+                    android:fontFamily="@font/knights_quest"
+                    android:text="@string/dance"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_margin="40dp"
-                    android:text="Explore →"
+                    android:text="@string/explore"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </RelativeLayout>
 
-            <!-- Literary -->
             <RelativeLayout
                 android:id="@+id/literary"
                 android:layout_width="match_parent"
@@ -114,6 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="2dp"
+                    android:contentDescription="@string/literary_background"
                     android:foreground="@drawable/item_background"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_9" />
@@ -124,21 +124,21 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="40dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Literary"
+                    android:fontFamily="@font/knights_quest"
+                    android:text="@string/literary"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_margin="40dp"
-                    android:text="Explore →"
+                    android:text="@string/explore"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </RelativeLayout>
 
-            <!-- Music -->
             <RelativeLayout
                 android:id="@+id/music"
                 android:layout_width="match_parent"
@@ -148,6 +148,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/music_background"
                     android:foreground="@drawable/item_background"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_8" />
@@ -158,16 +159,17 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="40dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Music"
+                    android:fontFamily="@font/knights_quest"
+                    android:text="@string/music"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_margin="40dp"
-                    android:text="Explore →"
+                    android:text="@string/explore"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </RelativeLayout>
@@ -181,6 +183,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/comedy_background"
                     android:foreground="@drawable/item_background"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_11" />
@@ -191,23 +194,23 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="40dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Comedy"
+                    android:fontFamily="@font/knights_quest"
+                    android:text="@string/comedy"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_margin="40dp"
-                    android:text="Explore →"
+                    android:text="@string/explore"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </RelativeLayout>
 
-            <!-- Quiz Section -->
             <RelativeLayout
-                android:id="@+id/quiz"
+                android:id="@+id/trivia"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginBottom="2dp">
@@ -215,6 +218,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/trivia_background"
                     android:foreground="@drawable/item_background"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_10" />
@@ -225,21 +229,21 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="40dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Quiz"
+                    android:fontFamily="@font/knights_quest"
+                    android:text="@string/trivia"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_margin="40dp"
-                    android:text="Explore →"
+                    android:text="@string/explore"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </RelativeLayout>
 
-            <!-- Drama Section -->
             <RelativeLayout
                 android:id="@+id/drama"
                 android:layout_width="match_parent"
@@ -249,6 +253,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/drama_background"
                     android:foreground="@drawable/item_background"
                     android:scaleType="fitXY"
                     android:src="@drawable/drama" />
@@ -259,21 +264,21 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="40dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Drama"
+                    android:fontFamily="@font/knights_quest"
+                    android:text="@string/drama"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_margin="40dp"
-                    android:text="Explore →"
+                    android:text="@string/explore"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </RelativeLayout>
 
-            <!-- Culinary Section -->
             <RelativeLayout
                 android:id="@+id/culinary"
                 android:layout_width="match_parent"
@@ -283,6 +288,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/culinary_background"
                     android:foreground="@drawable/item_background"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_12" />
@@ -293,21 +299,21 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="40dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Culinary"
+                    android:fontFamily="@font/knights_quest"
+                    android:text="@string/culinary"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_margin="40dp"
-                    android:text="Explore →"
+                    android:text="@string/explore"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </RelativeLayout>
 
-            <!-- Fashion Section -->
             <RelativeLayout
                 android:id="@+id/fashion"
                 android:layout_width="match_parent"
@@ -317,6 +323,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/fashion_background"
                     android:foreground="@drawable/item_background"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_13" />
@@ -327,16 +334,17 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="40dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Fashion"
+                    android:fontFamily="@font/knights_quest"
+                    android:text="@string/fashion"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_margin="40dp"
-                    android:text="Explore →"
+                    android:text="@string/explore"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </RelativeLayout>
@@ -350,6 +358,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/fine_arts_background"
                     android:foreground="@drawable/item_background"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_14" />
@@ -360,20 +369,20 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="40dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Fine Arts"
+                    android:fontFamily="@font/knights_quest"
+                    android:text="@string/fine_arts"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_margin="40dp"
-                    android:text="Explore →"
+                    android:text="@string/explore"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </RelativeLayout>
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

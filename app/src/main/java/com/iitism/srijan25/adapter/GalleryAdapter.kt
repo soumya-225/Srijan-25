@@ -29,16 +29,14 @@ class GalleryAdapter(
         val imageUrl = imageUrls[position]
         Glide.with(holder.imageView.context)
             .load(imageUrl)
-            //.placeholder(R.drawable.srijan_logo)
-            .error(R.drawable.srijan_logo)
+            .placeholder(R.drawable.progress_animation)
+            .error(R.drawable.srijan25_logo_blackbg)
             .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
             .into(holder.imageView)
 
         holder.imageView.setOnClickListener {
-            val action =
-                GalleryFragmentDirections.actionGalleryFragmentToImageViewFragment(imageUrl)
+            val action = GalleryFragmentDirections.actionGalleryFragmentToImageViewFragment(imageUrl)
             navController.navigate(action)
-
         }
     }
 

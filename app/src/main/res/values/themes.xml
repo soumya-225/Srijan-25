@@ -1,13 +1,13 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Concetto24" parent="Theme.Material3.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/primary</item>
+<resources>
+    <style name="Base.Theme.Srijan25" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/black</item>
         <item name="android:windowContentTransitions">true</item>
         <item name="colorAccent">@color/text</item>
         <item name="android:navigationBarColor">@color/black</item>
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/bgAlternate</item>
     </style>
+
     <style name="CustomBottomNavTheme" parent="Theme.MaterialComponents">
         <item name="selectableItemBackground">@color/home_text</item>
         <item name="colorControlHighlight">@android:color/transparent</item>
@@ -29,18 +29,20 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="ShapeAppearance.MyApp.MediumComponent.Rounded" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="cornerFamilyTopLeft">rounded</item>
         <item name="cornerFamilyBottomRight">rounded</item>
         <item name="cornerSizeTopLeft">20dp</item>
         <item name="cornerSizeBottomRight">20dp</item>
     </style>
-    <style name="Theme.Concetto24" parent="Base.Theme.Concetto24">
+
+    <style name="Theme.Srijan25" parent="Base.Theme.Srijan25">
         <item name="android:windowIsTranslucent">true</item>
     </style>
+
     <style name="ProgressBarTheme">
         <item name="colorSecondary">@color/primary</item>
-
     </style>
 
     <style name="h0">
@@ -76,18 +78,5 @@
     <style name="h6">
         <item name="android:textSize">12sp</item>
         <item name="android:fontFamily">@font/futura_medium</item>
-    </style>
-        <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
-            <item name="tabIndicatorHeight">0dp</item> <!-- Remove tab indicator height -->
-            <item name="tabIndicatorColor">@android:color/transparent</item> <!-- Set indicator color to transparent -->
-            <item name="tabBackground">@android:color/transparent</item> <!-- Ensure no background for tabs -->
-        </style>
-
-    <style name="button1">
-        <item name="cornerSize">20%</item>
-    </style>
-
-    <style name="button2">
-        <item name="cornerSize">50%</item>
     </style>
 </resources>

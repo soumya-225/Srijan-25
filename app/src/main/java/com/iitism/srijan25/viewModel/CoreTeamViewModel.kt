@@ -21,7 +21,7 @@ class CoreTeamViewModel(private val application: Context) : ViewModel() {
         viewModelScope.launch {
             try {
                 _coreTeamList.clear()
-                val inputStream: InputStream = application.assets.open("coreTeam25.json")
+                val inputStream: InputStream = application.assets.open("core_team_data.json")
                 val size = inputStream.available()
                 val buffer = ByteArray(size)
                 inputStream.read(buffer)

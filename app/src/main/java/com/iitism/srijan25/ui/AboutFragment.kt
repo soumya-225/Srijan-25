@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.MediaController
-import android.widget.Toolbar
 import android.widget.VideoView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -31,12 +29,8 @@ class AboutFragment : Fragment() {
             findNavController().navigateUp()
         }
 
-        val uri = Uri.parse(("android.resource://" + "com.iitism.srijan25") + "/" + R.raw.iitism)
+        val uri = Uri.parse(("android.resource://" + "com.iitism.srijan25") + "/" + R.raw.iitism_night_video)
         videoView.setVideoURI(uri)
-        val mediaController = MediaController(requireContext())
-        videoView.setMediaController(mediaController)
-
-        //mediaController.setAnchorView(videoView)
         return view
     }
 

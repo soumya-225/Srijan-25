@@ -17,7 +17,6 @@ import kotlin.math.min
 
 class SponsorRVAdapter(
     private var dataList: List<SponsorData>,
-    private val onItemClick: (String) -> Unit
 ) : RecyclerView.Adapter<SponsorRVAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -42,17 +41,10 @@ class SponsorRVAdapter(
                 .apply(
                     RequestOptions()
                         .placeholder(R.drawable.progress_animation)
-                        .error(R.drawable.try_later)
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
                 )
                 .into(holder.ivSponsor)
         }
-
-//        holder.ivSponsor.setOnClickListener {
-//            if (currentData.link.isNotEmpty()) {
-//                onItemClick.invoke(currentData.link)
-//            }
-//        }
     }
 
     fun setData(newData: List<SponsorData>) {

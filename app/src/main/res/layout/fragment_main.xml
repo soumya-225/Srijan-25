@@ -24,12 +24,11 @@
         android:backgroundTint="@color/transparent"
         android:theme="@style/CustomBottomNavTheme"
         app:itemBackground="@drawable/selected_icon_background"
+        app:itemIconTint="#7FFFFFFF"
         app:itemRippleColor="@color/black"
-        app:itemIconTint="@color/bgLight"
-        app:itemTextColor="@color/bgLight"
+        app:itemTextColor="#99FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

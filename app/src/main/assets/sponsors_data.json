@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Central Coalfields",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995308/bccl_w30lbh.jpg",
+    "tier": "Gold"
+  },
+  {
+    "name": "Adani",
+    "image": "https://res.cloudinary.com/deukzdr70/image/upload/v1737745931/adani_logo_dutcbj.png",
+    "tier": "Gold"
+  },
+  {
+    "name": "Jharkhand Tourism",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995310/jh_tourism_kshayx.jpg",
+    "tier": "Silver"
+  },
+  {
+    "name": "SBI",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/sbi_ord5zl.png",
+    "tier": "Silver"
+  },
+  {
+    "name": "SECL",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/secl_r1vmoe.png",
+    "tier": "Bronze"
+  },
+  {
+    "name": "Essar Oil",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/essar_oil_xok7pz.png",
+    "tier": "Bronze"
+  },
+  {
+    "name": "Tata Steel",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/tata_steel_s8nw20.png",
+    "tier": "Gold"
+  },
+  {
+    "name": "ONGC",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995310/ongc_lcwi8k.png",
+    "tier": "Gold"
+  },
+  {
+    "name": "Coal India",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/coal_india_eucoix.png",
+    "tier": "Silver"
+  },
+  {
+    "name": "Skoda",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/skoda_p0wqmu.png",
+    "tier": "Silver"
+  },
+  {
+    "name": "Canara Bank",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/canara_sye86r.png",
+    "tier": "Bronze"
+  },
+  {
+    "name": "SAIL",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995311/sail_rzbrgs.png",
+    "tier": "Bronze"
+  },
+  {
+    "name": "Power Grid",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995310/powergrid_ysetpi.png",
+    "tier": "Silver"
+  },
+  {
+    "name": "MG Motors",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995310/mg_xuoimg.png",
+    "tier": "Bronze"
+  },
+  {
+    "name": "DeHaat",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995310/dehaat_io8otn.png",
+    "tier": "Bronze"
+  },
+  {
+    "name": "Park Lane",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1703006562/parklane_n7rljx.jpg",
+    "tier": "Silver"
+  },
+  {
+    "name": "Lazzy Frog",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995310/lazzy_frog_wjwudq.jpg",
+    "tier": "Silver"
+  },
+  {
+    "name": "Coal Capital",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1703006562/coal_capital_jf6juf.png",
+    "tier": "Bronze"
+  },
+  {
+    "name": "Eng Parcel",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/eng_parcel_zdfb7v.png",
+    "tier": "Silver"
+  },
+  {
+    "name": "Realme",
+    "image": "https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995311/realme_cgy4n5.png",
+    "tier": "Silver"
+  }
+]

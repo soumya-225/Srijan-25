@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "517828604398",
-    "project_id": "srijan-25",
-    "storage_bucket": "srijan-25.firebasestorage.app"
+    "project_number": "354472601882",
+    "project_id": "srijan-25-7f3cd",
+    "storage_bucket": "srijan-25-7f3cd.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:517828604398:android:5d9f91e3c8319760b89eff",
+        "mobilesdk_app_id": "1:354472601882:android:b377fd9999bb038e0f24a3",
         "android_client_info": {
           "package_name": "com.iitism.srijan25"
         }
@@ -15,7 +15,26 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDh2WaNFH1qVcBD9nTqsuOTALkIecf1qqk"
+          "current_key": "AIzaSyB19X37D5Rjvwhkwk_hZ3QGYJUONcHklkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354472601882:android:88aef6f19998bd020f24a3",
+        "android_client_info": {
+          "package_name": "com.sks225.srijan_25admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB19X37D5Rjvwhkwk_hZ3QGYJUONcHklkU"
         }
       ],
       "services": {

@@ -1,10 +1,8 @@
 package com.iitism.srijan25.model
 
-import com.google.gson.annotations.SerializedName
-
 data class Announcement(
-    @SerializedName("_id") val id: String,
-    @SerializedName("title") val title: String,
-    @SerializedName("body") val body: String,
-    @SerializedName("timestamp") val timestamp: String
+    val id: String = "",
+    val title: String = "",
+    val body: String = "",
+    val timestamp: Long = 0
 )

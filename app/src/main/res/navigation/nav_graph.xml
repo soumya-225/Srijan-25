@@ -10,51 +10,24 @@
         android:name="com.iitism.srijan25.ui.MainFragment"
         android:label="MainFragment" >
         <action
-            android:id="@+id/action_mainFragment_to_mainStageFragment2"
-            app:destination="@id/mainStageFragment2" />
+            android:id="@+id/action_mainFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_clubEventsFragment"
-            app:destination="@id/clubEventsFragment" />
+            android:id="@+id/action_mainFragment_to_merchandiseFragment"
+            app:destination="@id/merchandiseFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_scheduleFragment"
-            app:destination="@id/scheduleFragment" />
+            android:id="@+id/action_mainFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_eventsFragment2"
-            app:destination="@id/eventsFragment2" />
+            android:id="@+id/action_mainFragment_to_sponsorsFragment"
+            app:destination="@id/sponsorsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_coreTeamFragment"
+            app:destination="@id/coreTeamFragment" />
         <action
             android:id="@+id/action_mainFragment_to_galleryFragment"
             app:destination="@id/galleryFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_merchandiseFragment2"
-            app:destination="@id/merchandiseFragment2" />
-        <action
-            android:id="@+id/action_mainFragment_to_coreTeamFragment2"
-            app:destination="@id/coreTeamFragment2" />
-        <action
-            android:id="@+id/action_mainFragment_to_sponsorsFragment2"
-            app:destination="@id/sponsorsFragment2" />
-        <action
-            android:id="@+id/action_mainFragment_to_aboutFragment"
-            app:destination="@id/aboutFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/mainStageFragment2"
-        android:name="com.iitism.srijan25.ui.MainStageFragment"
-        android:label="MainStageFragment" />
-    <fragment
-        android:id="@+id/clubEventsFragment"
-        android:name="com.iitism.srijan25.ui.ClubEventsFragment"
-        android:label="ClubEventsFragment" />
-    <fragment
-        android:id="@+id/scheduleFragment"
-        android:name="com.iitism.srijan25.ui.ScheduleFragment"
-        android:label="fragment_schedule"
-        tools:layout="@layout/fragment_schedule" />
-    <fragment
-        android:id="@+id/eventsFragment2"
-        android:name="com.iitism.srijan25.ui.EventsFragment"
-        android:label="fragment_merchandise"
-        tools:layout="@layout/fragment_merchandise" />
     <fragment
         android:id="@+id/galleryFragment"
         android:name="com.iitism.srijan25.ui.GalleryFragment"
@@ -63,20 +36,6 @@
             android:id="@+id/action_galleryFragment_to_imageViewFragment"
             app:destination="@id/imageViewFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/merchandiseFragment2"
-        android:name="com.iitism.srijan25.ui.MerchandiseFragment"
-        android:label="MerchandiseFragment" />
-    <fragment
-        android:id="@+id/coreTeamFragment2"
-        android:name="com.iitism.srijan25.ui.CoreTeamFragment"
-        android:label="fragment_core_team"
-        tools:layout="@layout/fragment_core_team" />
-    <fragment
-        android:id="@+id/sponsorsFragment2"
-        android:name="com.iitism.srijan25.ui.SponsorsFragment"
-        android:label="fragment_sponsors"
-        tools:layout="@layout/fragment_sponsors" />
     <fragment
         android:id="@+id/imageViewFragment"
         android:name="com.iitism.srijan25.ui.ImageViewFragment"
@@ -90,4 +49,31 @@
         android:name="com.iitism.srijan25.ui.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/merchandiseFragment"
+        android:name="com.iitism.srijan25.ui.MerchandiseFragment"
+        android:label="MerchandiseFragment" />
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.iitism.srijan25.ui.EventsFragment"
+        android:label="EventsFragment" >
+        <action
+            android:id="@+id/action_eventsFragment_to_eventsListFragment"
+            app:destination="@id/eventsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sponsorsFragment"
+        android:name="com.iitism.srijan25.ui.SponsorsFragment"
+        android:label="fragment_sponsors"
+        tools:layout="@layout/fragment_sponsors" />
+    <fragment
+        android:id="@+id/coreTeamFragment"
+        android:name="com.iitism.srijan25.ui.CoreTeamFragment"
+        android:label="fragment_core_team"
+        tools:layout="@layout/fragment_core_team" />
+    <fragment
+        android:id="@+id/eventsListFragment"
+        android:name="com.iitism.srijan25.ui.EventsListFragment"
+        android:label="fragment_events_list"
+        tools:layout="@layout/fragment_events_list" />
 </navigation>

@@ -1,30 +1,28 @@
 package com.iitism.srijan25.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.iitism.srijan25.adapter.AnnouncementsRVAdapter
-import com.iitism.srijan25.api.AnnouncementRetrofitInstance
+import com.iitism.srijan25.adapter.AnnouncementAdapter
 import com.iitism.srijan25.databinding.FragmentAnnouncementBinding
-import com.iitism.srijan25.model.Announcement
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.iitism.srijan25.viewModel.AnnouncementViewModel
 
-class AnnouncementsFragment : Fragment(), AnnouncementsRVAdapter.OnTimestampUpdateListener {
+class AnnouncementsFragment : Fragment(), AnnouncementAdapter.OnTimestampUpdateListener {
     private lateinit var binding: FragmentAnnouncementBinding
-    private lateinit var announcementsAdapter: AnnouncementsRVAdapter
+    private lateinit var announcementsAdapter: AnnouncementAdapter
+    private lateinit var viewModel: AnnouncementViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentAnnouncementBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(this)[AnnouncementViewModel::class.java]
         binding.progressBar.visibility = View.VISIBLE
         return binding.root
     }
@@ -32,50 +30,40 @@ class AnnouncementsFragment : Fragment(), AnnouncementsRVAdapter.OnTimestampUpda
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        announcementsAdapter = AnnouncementsRVAdapter(this)
+        announcementsAdapter = AnnouncementAdapter(this)
         binding.rvAnnouncements.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = announcementsAdapter
         }
         binding.swipeRefreshLayout.setOnRefreshListener {
-            fetchAnnouncements()
+            viewModel.fetchAnnouncements()
             binding.swipeRefreshLayout.isRefreshing = false
         }
-        fetchAnnouncements()
-    }
 
-    private fun fetchAnnouncements() {
-        val call = AnnouncementRetrofitInstance.announcementService.getAnnouncements()
-
-        call.enqueue(object : Callback<List<Announcement>> {
-            override fun onResponse(
-                call: Call<List<Announcement>>, response: Response<List<Announcement>>
-            ) {
-                if (response.isSuccessful) {
-                    val announcements = response.body()
-                    announcements?.let {
-                        announcementsAdapter.refreshAnnouncements(it)
-                        announcementsAdapter.updateTimestamps()
-                        binding.progressBar.visibility = View.GONE
-                    }
-                } else {
-                    Toast.makeText(context, "Failed to load data...", Toast.LENGTH_SHORT).show()
-                    binding.progressBar.visibility = View.GONE
-                }
-            }
-
-            override fun onFailure(call: Call<List<Announcement>>, t: Throwable) {
-                Log.e("FetchAnnouncements", "Network request failed", t)
+        viewModel.announcements.observe(viewLifecycleOwner) { announcements ->
+            announcements?.let {
+                announcementsAdapter.refreshAnnouncements(it)
+                announcementsAdapter.updateTimestamps()
                 binding.progressBar.visibility = View.GONE
             }
-        })
+        }
+
+        viewModel.fetchAnnouncements()
+        binding.progressBar.visibility = View.VISIBLE
+
+        viewModel.fetchError.observe(viewLifecycleOwner) { errorMessage ->
+            errorMessage?.let {
+                Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+                binding.progressBar.visibility = View.GONE
+            }
+        }
     }
 
     override fun onUpdateTimestamp(position: Int, timeAgo: String) {
         if (!this::binding.isInitialized)
             return
         binding.rvAnnouncements.findViewHolderForAdapterPosition(position)?.let { viewHolder ->
-            (viewHolder as? AnnouncementsRVAdapter.AnnouncementsViewHolder)?.tvTime?.text = timeAgo
+            (viewHolder as? AnnouncementAdapter.AnnouncementsViewHolder)?.tvTime?.text = timeAgo
         }
     }
 }

@@ -20,7 +20,6 @@ import kotlin.math.min
 class ImageViewFragment : Fragment() {
     private lateinit var image: String
     private lateinit var scaleGestureDetector: ScaleGestureDetector
-    private lateinit var title: String
     private lateinit var scaleListener: ScaleListener
     private lateinit var binding: FragmentImageViewBinding
     private lateinit var navController: NavController
@@ -28,11 +27,7 @@ class ImageViewFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-//        val intent: Intent = intent
-//        image = intent.getStringExtra("parseData")!!
-//        title = intent.getStringExtra("fileName")!!
-//        fileName.text = title
+    ): View {
         binding = FragmentImageViewBinding.inflate(layoutInflater, container, false)
 
         image = navArgs<ImageViewFragmentArgs>().value.image
@@ -43,11 +38,16 @@ class ImageViewFragment : Fragment() {
             navController.navigateUp()
         }
 
+        binding.fullImage.setOnTouchListener { view, event ->
+            scaleGestureDetector.onTouchEvent(event)
+            scaleListener.onTouchEvent(event)
+            true
+        }
+
         scaleListener = ScaleListener(binding.fullImage)
         scaleGestureDetector = ScaleGestureDetector(requireContext(), scaleListener)
 
         Glide.with(this).load(image).into(binding.fullImage)
-        //return inflater.inflate(R.layout.fragment_image_view, container, false)
         return binding.root
     }
 

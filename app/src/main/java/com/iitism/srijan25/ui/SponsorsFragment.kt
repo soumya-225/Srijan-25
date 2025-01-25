@@ -1,20 +1,13 @@
 package com.iitism.srijan25.ui
 
-import android.app.Dialog
-import android.content.Intent
-import android.graphics.drawable.ColorDrawable
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
-import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.iitism.srijan25.R
 import com.iitism.srijan25.adapter.SponsorRVAdapter
 import com.iitism.srijan25.databinding.FragmentSponsorsBinding
 import com.iitism.srijan25.viewModel.SponsorViewModel
@@ -23,7 +16,6 @@ class SponsorsFragment : Fragment() {
     private lateinit var binding: FragmentSponsorsBinding
     private lateinit var viewModel: SponsorViewModel
     private lateinit var adapter: SponsorRVAdapter
-    private lateinit var dialog: Dialog
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,44 +28,17 @@ class SponsorsFragment : Fragment() {
             ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
         )[SponsorViewModel::class.java]
 
-        dialog = Dialog(requireActivity())
-        dialog.setContentView(R.layout.progress_bar)
-        dialog.setCancelable(false)
+        adapter= SponsorRVAdapter(emptyList())
 
-        val layoutParams = WindowManager.LayoutParams().apply {
-            width = WindowManager.LayoutParams.MATCH_PARENT
-            height = WindowManager.LayoutParams.MATCH_PARENT
+
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
         }
 
-        dialog.window?.attributes = layoutParams
-        if (dialog.window != null) {
-            dialog.window!!.setBackgroundDrawable(
-                ColorDrawable(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        R.color.bg
-                    )
-                )
-            )
-            dialog.window!!.setBackgroundDrawableResource(R.color.transparent)
-        }
-
-        binding.rvSponsors.layoutManager = GridLayoutManager(context, 1)
+        binding.rvSponsors.layoutManager = GridLayoutManager(context, 2)
         binding.rvSponsors.setHasFixedSize(true)
 
-        adapter = SponsorRVAdapter(emptyList()) { redirectURL ->
-            openUrlInBrowser(redirectURL)
-        }
-
         binding.rvSponsors.adapter = adapter
-
-        viewModel.showLoading.observe(viewLifecycleOwner) { showLoading ->
-            if (showLoading) {
-                dialog.show()
-            } else {
-                dialog.dismiss()
-            }
-        }
 
         viewModel.sponsorData.observe(viewLifecycleOwner) { data ->
             adapter.setData(data)
@@ -82,14 +47,5 @@ class SponsorsFragment : Fragment() {
         viewModel.fetchSponsorData()
 
         return binding.root
-    }
-
-    private fun openUrlInBrowser(url: String) {
-        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-        if (browserIntent.resolveActivity(requireActivity().packageManager) != null) {
-            startActivity(browserIntent)
-        } else {
-            Toast.makeText(context, url, Toast.LENGTH_SHORT).show()
-        }
     }
 }

@@ -1,92 +1,51 @@
 <resources>
     <string name="app_name">Srijan 25</string>
-
-    <string name="prize_pool">Prize Pool: %1$s</string>
-    <string name="otp_sent_email">Please enter the OTP sent to %1$s</string>
-    <string name="resend_otp">Resend OTP in %1$d sec</string>
-    <string name="resent_otp_msg">Resend OTP</string>
-
+    <string name="about_institute_legacy">Established in 1926, the Indian Institute of Technology (Indian School of Mines) Dhanbad stands as a prestigious engineering and research institution in the heart of the Coal Capital of India, Dhanbad. Approaching its centenary, IIT (ISM) holds the esteemed Institute of National Importance and has evolved from its initial focus on Earth Sciences and Engineering to encompass 18 academic departments across various technical disciplines. Standing as the third oldest among IITs, IIT (ISM) has experienced significant growth beyond its roots in Earth Sciences. Notably, it achieved the 26th position in the World University Rankings for Mining and Mineral Engineering in 2022.\n\n</string>
+    <string name="iit_ism_logo">IIT (ISM) Dhanbad Logo</string>
+    <string name="institute_legacy">INSTITUTE LEGACY</string>
+    <string name="srijan_25_logo">Srijan-25 Logo</string>
+    <string name="countdown_text">Countdown to the Roman Revelry</string>
+    <string name="finished">Finished</string>
+    <string name="zero">00</string>
+    <string name="days">Days</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="events">Events</string>
+    <string name="merch">Merch</string>
+    <string name="sponsors">Sponsors</string>
+    <string name="about_us_text">About Us</string>
+    <string name="our_team">Our Team</string>
+    <string name="gallery">Gallery</string>
+    <string name="image_in_fullscreen">Image in Fullscreen</string>
+    <string name="back_button">Back Button</string>
+    <string name="srijan_images">Srijan Images</string>
+    <string name="srijan_25_tshirt">Srijan-25 Tshirt</string>
+    <string name="srijan_25_hoodie">Srijan-25 Hoodie</string>
+    <string name="srijan_25_size_chart">Srijan-25 Size Chart</string>
+    <string name="place_order">Place Order</string>
+    <string name="cinema">Cinema</string>
+    <string name="explore">Explore →</string>
+    <string name="dance">Dance</string>
+    <string name="literary">Literary</string>
+    <string name="cinema_background">Cinema Background</string>
+    <string name="dance_background">Dance Background</string>
+    <string name="literary_background">Literary Background</string>
+    <string name="music_background">Music Background</string>
+    <string name="music">Music</string>
+    <string name="comedy_background">Comedy Background</string>
+    <string name="comedy">Comedy</string>
+    <string name="trivia_background">Trivia Background</string>
+    <string name="drama">Drama</string>
+    <string name="drama_background">Drama Background</string>
+    <string name="culinary_background">Culinary Background</string>
+    <string name="culinary">Culinary</string>
+    <string name="fashion_background">Fashion Background</string>
+    <string name="fashion">Fashion</string>
+    <string name="fine_arts_background">Fine Arts Background</string>
+    <string name="fine_arts">Fine Arts</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="Tanu_jain">Dr. Tanu Jain, an IAS officer and former dentist, gained recognition after clearing the
-        UPSC Civil Services Examination. Known for her motivational talks, she shares insights on perseverance and
-        discipline, inspiring many civil service aspirants. Her journey from medicine to administration,
-        along with her service in the Armed Forces Headquarters, continues to motivate young professionals, especially women.</string>
-
-    <string name="anubhav_dubey">
-Anubhav Dubey is the co-founder of Chai Sutta Bar, a popular Indian tea chain known for serving tea in eco-friendly kulhads (clay cups).
-        His entrepreneurial journey is highly inspirational, as he started the venture with limited resources alongside his friend Anand
-        Nayak.
-        Initially from a small town in Madhya Pradesh, Anubhav moved to Indore, where the idea for Chai Sutta Bar was born.</string>
-
-    <string name="vijender_chauhan">Vijender Chauhan is a rising entrepreneur and motivational speaker from India,
-        renowned for his impactful speeches on personal development and leadership. He empowers youth through inspirational t
-        alks that emphasize self-confidence, perseverance, and goal-setting. His journey from humble beginnings to success resonates
-        with many aspiring professionals, as he highlights resilience in overcoming challenges. Through workshops and seminars,
-        Vijender encourages individuals to take charge of their lives and prioritize personal growth.</string>
-
-    <string-array name="date">
-        <item>18th Oct</item>
-        <item>19th Oct</item>
-        <item>20th Oct</item>
-    </string-array>
-
-    <string name="about_us">CONCETTO is the premier annual Techno-Management Fest hosted by the " +
-                "prestigious Indian Institute of Technology (Indian School of Mines), " +
-                "Dhanbad. It stands as a celebration of innovation and talent, merging " +
-                "technology and management prowess. With the largest participation in " +
-                "Eastern India, CONCETTO attracts over 20,000 enthusiasts each year." +
-                " More than just an event, CONCETTO is a dynamic platform where " +
-                "participants challenge their technical acumen, broaden their " +
-                "horizons through expert workshops, and enjoy electrifying " +
-                "performances as the sun sets." +
-                " This year, join us for CONCETTO \'24, where we invite you to explore new " +
-                "horizons from 4th to 6th October. Stay tuned as we unveil an exciting " +
-                "new theme: ‘VINTAGE VISIONS IN A MODERN MATRIX’ . The fest promises a " +
-                "diverse array of technical and managerial events that will leave you " +
-                "enthralled." +
-                " CONCETTO fuels the dreams of engineering enthusiasts, providing a " +
-                "launchpad for innovation and excellence. Participants stand to win " +
-                "certificates, exciting goodies, and prizes worth lakhs. Step into a " +
-                "world where technology meets creativity, where learning is a " +
-                "celebration, and every moment weaves unforgettable memories.\n</string>
-
-    <string name="convener_name">Prof. Ajit Kumar</string>
-
-    <string name="convener_message">As Edward Teller once said, \"The science of today is the technology of " +
-                "tomorrow.\" In an era where the future is constantly being reimagined, " +
-                "today\'s youth yearn for a stage to showcase their unique talents. " +
-                "CONCETTO\'24: Weaving Timeless Innovation offers such a stage, where " +
-                "tradition meets modernity. This year\'s theme, \"Vintage Vision in " +
-                "Modern Matrix,\" celebrates the harmony between classic ingenuity and " +
-                "contemporary technology. The fest pays tribute to the enduring " +
-                "legacy of vintage innovations while providing a platform for " +
-                "students to merge time-honored principles with cutting-edge ideas. " +
-                "This extraordinary event is a testament to the tireless efforts of " +
-                "our dedicated team and the generous support of our sponsors, who " +
-                "have made it all possible.\n</string>
-
-    <string name="co_convener_name">Prof. Himanshu Bhusan Mishra</string>
-
-    <string name="co_convener_message">Building tomorrow on the foundations of yesterday, CONCETTO\'24: " +
-                "Weaving Timeless Innovation provides a platform where the " +
-                "brilliance of young minds meets the wisdom of the past. Under this " +
-                "year\'s theme,\n \'Vintage Vision in Modern Matrix,\'\n we explore how the " +
-                "echoes of classic innovations can inspire and shape the cutting-edge " +
-                "technologies of today. This event is not just a celebration of " +
-                "creativity and ingenuity but also a convergence of tradition and " +
-                "modernity. As Co-Conveyor, it is a privilege to be part of this journey, " +
-                "ensuring that the fest remains a beacon of inspiration, where the " +
-                "legacies of yesterday fuel the breakthroughs of tomorrow. We are " +
-                "deeply grateful to our dedicated team and sponsors, whose efforts " +
-                "have made this vision a reality.\n</string>
-
-    <string name="perks">Perks</string>
-    <!--    Internship certificates to all performing CAs.<br /><br />-->
-    <!--    Letter of recommendation to best performing CAs.<br /><br />-->
-    <!--    Free accommodation inside IIT ISM Dhanbad for top performing CA's during the fest.<br /><br />-->
-    <!--    Exclusive Goodies for top performing CA's and a chance to win monetary rewards!</string>-->
-
-    <string name="dept_events">Departmental Events</string>
-    <string name="club_events">Club Events</string>
-    <string name="about_institute_legacy">Established in 1926, the Indian Institute of Technology (Indian School of Mines) Dhanbad stands as a prestigious engineering and research institution in the heart of the Coal Capital of India, Dhanbad. Approaching its centenary, IIT (ISM) holds the esteemed Institute of National Importance and has evolved from its initial focus on Earth Sciences and Engineering to encompass 18 academic departments across various technical disciplines. Standing as the third oldest among IITs, IIT (ISM) has experienced significant growth beyond its roots in Earth Sciences. Notably, it achieved the 26th position in the QS World University Rankings for Mining and Mineral Engineering in 2022.</string>
+    <string name="trivia">Trivia</string>
+    <string name="coming_soon">Coming Soon</string>
 </resources>

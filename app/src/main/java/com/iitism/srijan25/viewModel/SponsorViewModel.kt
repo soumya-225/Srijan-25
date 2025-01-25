@@ -16,16 +16,11 @@ class SponsorViewModel(application: Application) : AndroidViewModel(application)
     private val _sponsorData = MutableLiveData<List<SponsorData>>()
     val sponsorData: LiveData<List<SponsorData>> get() = _sponsorData
 
-    private val _showLoading = MutableLiveData<Boolean>()
-    val showLoading: LiveData<Boolean> get() = _showLoading
-
     fun fetchSponsorData() {
         viewModelScope.launch {
             try {
-                _showLoading.value = true
-
                 val assetManager = getApplication<Application>().assets
-                val inputStream: InputStream = assetManager.open("sponsors25.json")
+                val inputStream: InputStream = assetManager.open("sponsors_data.json")
                 val size = inputStream.available()
                 val buffer = ByteArray(size)
                 inputStream.read(buffer)
@@ -35,10 +30,8 @@ class SponsorViewModel(application: Application) : AndroidViewModel(application)
                 val gson = Gson()
                 val sponsors = gson.fromJson(json, Array<SponsorData>::class.java)
                 _sponsorData.value = sponsors.toList()
-                _showLoading.value = false
             } catch (e: IOException) {
                 Log.d("SponsorViewModel", e.toString())
-                _showLoading.value = false
             }
         }
     }

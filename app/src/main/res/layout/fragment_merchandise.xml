@@ -1,225 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/grunge"
-    tools:context=".ui.EventsFragment">
+    android:background="@drawable/background_2">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:shapeAppearance="@style/ShapeAppearance.MyApp.MediumComponent.Rounded">
-
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/app_bar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimaryVariant"
-            app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/background_3"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
-            app:navigationIconTint="@color/primary"
+            app:navigationIconTint="?attr/colorOnPrimary"
             app:title="Buy Merchandise"
             app:titleTextColor="?attr/colorOnPrimary" />
     </com.google.android.material.appbar.AppBarLayout>
 
-<!--    <androidx.viewpager2.widget.ViewPager2-->
-<!--        android:id="@+id/view_pager_carousel_merch"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="250dp"-->
-<!--        android:background="@drawable/nav_item_background"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/app_bar_layout" />-->
     <ImageView
         android:id="@+id/iv_tshirt"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="240dp"
         android:background="@drawable/nav_item_background"
-        android:src="@drawable/tshirt25"
-        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"/>
+        android:contentDescription="@string/srijan_25_tshirt"
+        android:src="@drawable/tshirt_srijan25"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout" />
+
     <ImageView
         android:id="@+id/iv_hoodie"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="240dp"
         android:background="@drawable/nav_item_background"
-        app:layout_constraintTop_toBottomOf="@id/iv_tshirt"
-        android:src="@drawable/hoodie25" />
+        android:contentDescription="@string/srijan_25_hoodie"
+        android:src="@drawable/hoodie_srijan25"
+        app:layout_constraintTop_toBottomOf="@id/iv_tshirt" />
+
     <ImageView
-        app:layout_constraintBottom_toTopOf="@id/PlaceOrder"
         android:id="@+id/iv_size"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/iv_hoodie"
+        android:layout_height="200dp"
         android:background="@drawable/nav_item_background"
-        android:src="@drawable/size_chart25" />
-    <!--       <TextView-->
-    <!--           style="@style/h4"-->
-    <!--           android:layout_width="wrap_content"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:layout_gravity="start"-->
-    <!--           android:padding="5dp"-->
-    <!--           android:layout_marginTop="16dp"-->
-    <!--           android:text="Name"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           android:textStyle="bold" />-->
+        android:contentDescription="@string/srijan_25_size_chart"
+        android:padding="16dp"
+        android:src="@drawable/size_chart_srijan25"
+        app:layout_constraintBottom_toTopOf="@id/PlaceOrder"
+        app:layout_constraintTop_toBottomOf="@id/iv_hoodie" />
 
-    <!--       <EditText-->
-    <!--           android:id="@+id/etName"-->
-    <!--           android:layout_width="match_parent"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           style="@style/h4"-->
-    <!--           android:background="@drawable/border2"-->
-    <!--           android:inputType="text"-->
-    <!--           android:padding="10dp"/>-->
-    <!--       <TextView-->
-    <!--           style="@style/h4"-->
-    <!--           android:layout_width="wrap_content"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:layout_gravity="start"-->
-    <!--           android:padding="5dp"-->
-    <!--           android:layout_marginTop="16dp"-->
-    <!--           android:text="Email Id"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           android:textStyle="bold" />-->
-
-    <!--       <EditText-->
-    <!--           android:id="@+id/etEmail"-->
-    <!--           android:layout_width="match_parent"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           style="@style/h4"-->
-    <!--           android:background="@drawable/border2"-->
-    <!--           android:inputType="text"-->
-    <!--           android:padding="10dp"/>-->
-    <!--       <TextView-->
-    <!--           style="@style/h4"-->
-    <!--           android:layout_width="wrap_content"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:layout_gravity="start"-->
-    <!--           android:padding="5dp"-->
-    <!--           android:layout_marginTop="16dp"-->
-    <!--           android:text="Admission No."-->
-    <!--           android:textColor="@color/text"-->
-    <!--           android:textStyle="bold" />-->
-
-    <!--       <EditText-->
-    <!--           android:id="@+id/etAdm"-->
-    <!--           android:layout_width="match_parent"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           style="@style/h4"-->
-    <!--           android:background="@drawable/border2"-->
-    <!--           android:inputType="text"-->
-    <!--           android:padding="10dp"/>-->
-    <!--       <TextView-->
-    <!--           style="@style/h4"-->
-    <!--           android:layout_width="wrap_content"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:layout_gravity="start"-->
-    <!--           android:padding="5dp"-->
-    <!--           android:layout_marginTop="16dp"-->
-    <!--           android:text="Hostel"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           android:textStyle="bold" />-->
-    <!--       <Spinner-->
-    <!--           android:id="@+id/hostel_spinner"-->
-    <!--           android:layout_width="match_parent"-->
-    <!--           android:layout_height="40dp"-->
-    <!--           android:spinnerMode="dropdown"-->
-    <!--           android:background="@drawable/border2"/>-->
-    <!--       <TextView-->
-    <!--           style="@style/h4"-->
-    <!--           android:layout_width="wrap_content"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:layout_gravity="start"-->
-    <!--           android:padding="5dp"-->
-    <!--           android:layout_marginTop="16dp"-->
-    <!--           android:text="Room Number"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           android:textStyle="bold" />-->
-
-    <!--       <EditText-->
-    <!--           android:id="@+id/etRoom"-->
-    <!--           android:layout_width="match_parent"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           style="@style/h4"-->
-    <!--           android:background="@drawable/border2"-->
-    <!--           android:inputType="text"-->
-    <!--           android:padding="10dp"/>-->
-    <!--       <TextView-->
-    <!--           style="@style/h4"-->
-    <!--           android:layout_width="wrap_content"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:layout_gravity="start"-->
-    <!--           android:padding="5dp"-->
-    <!--           android:layout_marginTop="16dp"-->
-    <!--           android:text="contact Number"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           android:textStyle="bold" />-->
-
-    <!--       <EditText-->
-    <!--           android:id="@+id/etcontact"-->
-    <!--           android:layout_width="match_parent"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           style="@style/h4"-->
-    <!--           android:background="@drawable/border2"-->
-    <!--           android:inputType="text"-->
-    <!--           android:padding="10dp"/>-->
-
-    <!--       <TextView-->
-    <!--           style="@style/h4"-->
-    <!--           android:layout_width="wrap_content"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:layout_gravity="start"-->
-    <!--           android:padding="5dp"-->
-    <!--           android:layout_marginTop="16dp"-->
-    <!--           android:text="Size"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           android:textStyle="bold" />-->
-    <!--       <Spinner-->
-    <!--           android:id="@+id/size_spinner"-->
-    <!--           android:layout_width="match_parent"-->
-    <!--           android:layout_height="40dp"-->
-    <!--           android:spinnerMode="dropdown"-->
-    <!--           android:background="@drawable/border2" />-->
-    <!--       <TextView-->
-    <!--           style="@style/h4"-->
-    <!--           android:layout_width="wrap_content"-->
-    <!--           android:layout_height="wrap_content"-->
-    <!--           android:layout_gravity="start"-->
-    <!--           android:padding="5dp"-->
-    <!--           android:layout_marginTop="16dp"-->
-    <!--           android:text="Payment Screenshot with Transaction ID"-->
-    <!--           android:textColor="@color/text"-->
-    <!--           android:textStyle="bold" />-->
-    <!--       <ImageView-->
-    <!--           android:id="@+id/payment_screenshot"-->
-    <!--           android:layout_width="100dp"-->
-    <!--           android:layout_height="100dp"-->
-    <!--           android:src="@drawable/choose_img"-->
-    <!--           android:backgroundTint="@color/white"-->
-    <!--           android:layout_marginStart="8dp">-->
-
-    <!--       </ImageView>-->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/PlaceOrder"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="0dp"
-        android:background="?attr/colorPrimary"
-        android:text="Place Order"
+        android:background="@drawable/background_3"
+        android:fontFamily="@font/med_reg"
+        android:text="@string/place_order"
         android:textColor="?attr/colorOnPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
