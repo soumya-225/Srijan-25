@@ -21,8 +21,9 @@
             app:titleTextColor="?attr/colorOnPrimary" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ImageView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/coming_soon"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
+        tools:listitem="@layout/item_rv_schedule"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

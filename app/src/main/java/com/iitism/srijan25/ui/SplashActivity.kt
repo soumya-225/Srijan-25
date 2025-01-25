@@ -22,15 +22,10 @@ class SplashActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
-//        val drawable = binding.lottieAnimationView.drawable
-//        val lottieAnimationView = binding.lottieAnimationView
-//        lottieAnimationView.setAnimation(R.raw.animation)
-//        lottieAnimationView.playAnimation()
-
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 2500)
+        }, 2000)
     }
 }
