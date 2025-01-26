@@ -5,14 +5,14 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
-import com.iitism.srijan25.model.CoreTeamDataModel
+import com.iitism.srijan25.model.CoreTeam
 import kotlinx.coroutines.launch
 import java.io.InputStream
 
 class CoreTeamViewModel(private val application: Context) : ViewModel() {
 
-    private val _coreTeamList = mutableListOf<CoreTeamDataModel>()
-    val coreTeamList: List<CoreTeamDataModel>
+    private val _coreTeamList = mutableListOf<CoreTeam>()
+    val coreTeamList: List<CoreTeam>
         get() = _coreTeamList
 
     private var error: String? = null
@@ -30,7 +30,7 @@ class CoreTeamViewModel(private val application: Context) : ViewModel() {
                 val json = String(buffer, Charsets.UTF_8)
                 val gson = Gson()
 
-                val coreTeamGet = gson.fromJson(json, Array<CoreTeamDataModel>::class.java)
+                val coreTeamGet = gson.fromJson(json, Array<CoreTeam>::class.java)
                 _coreTeamList.addAll(coreTeamGet)
 
             } catch (e: Exception) {

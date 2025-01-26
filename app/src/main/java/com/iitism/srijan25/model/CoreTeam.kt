@@ -1,6 +1,6 @@
 package com.iitism.srijan25.model
 
-data class CoreTeamDataModel (
+data class CoreTeam (
     var name:String,
     var instagramUrl : String?,
     var linkedinUrl : String?,

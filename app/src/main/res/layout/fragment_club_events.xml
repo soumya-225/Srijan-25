@@ -280,41 +280,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/culinary"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="2dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/culinary_background"
-                    android:foreground="@drawable/item_background"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/img_12" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_margin="40dp"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/knights_quest"
-                    android:text="@string/culinary"
-                    android:textColor="#FFFFFF"
-                    android:textSize="40sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_margin="40dp"
-                    android:text="@string/explore"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
                 android:id="@+id/fashion"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"

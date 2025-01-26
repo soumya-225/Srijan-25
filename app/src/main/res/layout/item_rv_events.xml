@@ -30,6 +30,8 @@
             android:fontFamily="@font/med_reg"
             android:padding="8dp"
             android:text="Event Name"
+            android:singleLine="true"
+            android:ellipsize="end"
             android:textAlignment="center"
             android:textColor="@color/primary"
             android:textSize="24sp"

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.iitism.srijan25.ui.MainFragment"
-        android:label="MainFragment" >
+        android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_aboutFragment"
             app:destination="@id/aboutFragment" />
@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/galleryFragment"
         android:name="com.iitism.srijan25.ui.GalleryFragment"
-        android:label="GalleryFragment" >
+        android:label="GalleryFragment">
         <action
             android:id="@+id/action_galleryFragment_to_imageViewFragment"
             app:destination="@id/imageViewFragment" />
@@ -39,7 +39,7 @@
     <fragment
         android:id="@+id/imageViewFragment"
         android:name="com.iitism.srijan25.ui.ImageViewFragment"
-        android:label="ImageViewFragment" >
+        android:label="ImageViewFragment">
         <argument
             android:name="image"
             app:argType="string" />
@@ -56,7 +56,7 @@
     <fragment
         android:id="@+id/eventsFragment"
         android:name="com.iitism.srijan25.ui.EventsFragment"
-        android:label="EventsFragment" >
+        android:label="EventsFragment">
         <action
             android:id="@+id/action_eventsFragment_to_eventsListFragment"
             app:destination="@id/eventsListFragment" />
@@ -75,5 +75,21 @@
         android:id="@+id/eventsListFragment"
         android:name="com.iitism.srijan25.ui.EventsListFragment"
         android:label="fragment_events_list"
-        tools:layout="@layout/fragment_events_list" />
+        tools:layout="@layout/fragment_events_list">
+        <argument
+            android:name="category"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_eventsListFragment_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventDetailsFragment"
+        android:name="com.iitism.srijan25.ui.EventDetailsFragment"
+        android:label="fragment_event_details"
+        tools:layout="@layout/fragment_event_details">
+        <argument
+            android:name="event"
+            app:argType="com.iitism.srijan25.model.EventNew" />
+    </fragment>
 </navigation>

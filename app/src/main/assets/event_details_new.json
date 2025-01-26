@@ -1,6 +1,7 @@
 [
   {
-    "1": [
+    "id": "1",
+    "events": [
       {
         "name": "SRIJAN THROUGH MY LENS",
         "registerLink": "https://unstop.com/o/Sas8ti1?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl",
@@ -70,7 +71,8 @@
     ]
   },
   {
-    "2": [
+    "id": "2",
+    "events": [
       {
         "name": "HUSTLE HERD",
         "registerLink": "https://unstop.com/o/YKcwjRM?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl",
@@ -129,7 +131,8 @@
     ]
   },
   {
-    "3": [
+    "id": "3",
+    "events": [
       {
         "name": "MELA QUIZ",
         "registerLink": "https://unstop.com/o/NSeGyTr?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl",
@@ -166,7 +169,8 @@
     ]
   },
   {
-    "4": [
+    "id": "4",
+    "events": [
       {
         "name": "ISM’s GOT LATENT",
         "registerLink": "https://unstop.com/o/vuWSgE2?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl",
@@ -192,7 +196,8 @@
     ]
   },
   {
-    "5": [
+    "id": "5",
+    "events": [
       {
         "name": "PODFEST",
         "registerLink": "https://unstop.com/o/3Lutxkp?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl",
@@ -262,7 +267,8 @@
     ]
   },
   {
-    "6": [
+    "id": "6",
+    "events": [
       {
         "name": "HOONKAAR",
         "registerLink": "https://unstop.com/o/z5jQyid?lb=R7BCeSFa&utm_medium=Share&utm_source=shortUrl",
@@ -288,7 +294,8 @@
     ]
   },
   {
-    "7": [
+    "id": "7",
+    "events": [
       {
         "name": "Harmony – The Iconic Band Competition",
         "registerLink": "https://unstop.com/o/SqAzNZo?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl",
@@ -314,7 +321,8 @@
     ]
   },
   {
-    "8": [
+    "id": "8",
+    "events": [
       {
         "name": "PARIDHAAN",
         "registerLink": "https://unstop.com/o/Z64Bls1?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl",
@@ -340,7 +348,8 @@
     ]
   },
   {
-    "9": [
+    "id": "9",
+    "events": [
       {
         "name": "DOODLE DASH",
         "registerLink": "https://unstop.com/o/mA5q02X?lb=2em26DhD&utm_medium=Share&utm_source=shortUrl",

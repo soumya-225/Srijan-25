@@ -10,9 +10,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.iitism.srijan25.R
-import com.iitism.srijan25.model.CoreTeamDataModel
+import com.iitism.srijan25.model.CoreTeam
 
-class CoreTeamAdapter(private val dataList: List<CoreTeamDataModel>) :
+class CoreTeamAdapter(private val dataList: List<CoreTeam>) :
     RecyclerView.Adapter<CoreTeamAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

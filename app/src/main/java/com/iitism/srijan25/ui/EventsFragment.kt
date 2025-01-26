@@ -13,6 +13,7 @@ import com.iitism.srijan25.databinding.FragmentClubEventsBinding
 class EventsFragment : Fragment() {
     private lateinit var binding: FragmentClubEventsBinding
     private lateinit var navController: NavController
+    private lateinit var category: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,45 +27,55 @@ class EventsFragment : Fragment() {
         }
 
         binding.cinema.setOnClickListener {
-            navController.navigate(R.id.action_eventsFragment_to_eventsListFragment)
+            category="1"
+            navigateAction(category)
         }
 
         binding.dance.setOnClickListener {
-            navController.navigate(R.id.action_eventsFragment_to_eventsListFragment)
+            category="2"
+            navigateAction(category)
         }
 
         binding.literary.setOnClickListener {
-            navController.navigate(R.id.action_eventsFragment_to_eventsListFragment)
+            category="5"
+            navigateAction(category)
         }
 
         binding.music.setOnClickListener {
-            navController.navigate(R.id.action_eventsFragment_to_eventsListFragment)
+            category="7"
+            navigateAction(category)
         }
 
         binding.comedy.setOnClickListener {
-            navController.navigate(R.id.action_eventsFragment_to_eventsListFragment)
+            category="4"
+            navigateAction(category)
         }
 
         binding.trivia.setOnClickListener {
-            navController.navigate(R.id.action_eventsFragment_to_eventsListFragment)
+            category="3"
+            navigateAction(category)
         }
 
         binding.drama.setOnClickListener {
-            navController.navigate(R.id.action_eventsFragment_to_eventsListFragment)
-        }
-
-        binding.culinary.setOnClickListener {
-            navController.navigate(R.id.action_eventsFragment_to_eventsListFragment)
+            category="6"
+            navigateAction(category)
         }
 
         binding.fashion.setOnClickListener {
-            navController.navigate(R.id.action_eventsFragment_to_eventsListFragment)
+            category="8"
+            navigateAction(category)
         }
 
         binding.finearts.setOnClickListener {
-            navController.navigate(R.id.action_eventsFragment_to_eventsListFragment)
+            category="9"
+            navigateAction(category)
         }
 
         return binding.root
+    }
+
+    private fun navigateAction(category: String){
+        val action =EventsFragmentDirections.actionEventsFragmentToEventsListFragment(category)
+        navController.navigate(action)
     }
 }

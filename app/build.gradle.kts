@@ -77,4 +77,5 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.database)
+    implementation(kotlin("reflect"))
 }
